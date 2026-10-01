@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+material_practico/datos/
+.ipynb_checkpoints/
+*.log
+*.aux
+*.toc
+*.out
+*.synctex.gz
+~$*.docx
