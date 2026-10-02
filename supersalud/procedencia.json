@@ -1,0 +1,42 @@
+{
+  "rama_origen": "origin/dev",
+  "commit_origen": "6aed21ddb5d4a48c5a16bb171548534b59d2da1a",
+  "archivos": [
+    {
+      "archivo": "ProfesorSesion1SuperSalud_BigData.ipynb",
+      "ruta_original": "ProfesorSesion1SuperSalud_BigData.ipynb",
+      "sha256_original": "a315c1cdf058899415acb0307146569eaec0729139b489ef8f401a3a44fbbf4f",
+      "sha256_integrado": "a766f7e390d8a2fa85246cf76ad62e4ddf1b07d9a60bf9e47cbcd0b4325834dd",
+      "celdas": 89,
+      "cambio": "Enlace inicial de Colab actualizado a dev/supersalud; código y salidas conservados",
+      "ejecutado_en_integracion": false
+    },
+    {
+      "archivo": "ProfesorSesion2SuperSalud_BigData.ipynb",
+      "ruta_original": "ProfesorSesion2SuperSalud_BigData.ipynb",
+      "sha256_original": "dad5bce11c115d343fd196b4b25b9097951f77dc83e360dab22dc769d01eba87",
+      "sha256_integrado": "3163aa3b379e077cb296445e7fc0cfa4a77d293846d24b30d7adb4e757a055b8",
+      "celdas": 89,
+      "cambio": "Enlace inicial de Colab actualizado a dev/supersalud; código y salidas conservados",
+      "ejecutado_en_integracion": false
+    },
+    {
+      "archivo": "ProfesorSesion3Supersalud_BigData.ipynb",
+      "ruta_original": "ProfesorSesion3Supersalud_BigData.ipynb",
+      "sha256_original": "4fc9deaaee6cfe0186d63d52f3966b6d2e196832354a03e00fb8ee61eb9fa108",
+      "sha256_integrado": "056c4e95becc80441bf96f186e794c6a25dd464d7434c4ddedd6e1b250e2c4d9",
+      "celdas": 41,
+      "cambio": "Enlace inicial de Colab actualizado a dev/supersalud; código y salidas conservados",
+      "ejecutado_en_integracion": false
+    },
+    {
+      "archivo": "ProfesorSesion4Supersalud_BigData.ipynb",
+      "ruta_original": "ProfesorSesion4Supersalud_BigData.ipynb",
+      "sha256_original": "96e6862ed5e47005a5cd677f369bec03df9b834b7ceddea418189e7885a050bb",
+      "sha256_integrado": "8c1cc035647a14339e407ea59b08b9070cb5619db03b1d87e59a2cafac9b1dcf",
+      "celdas": 76,
+      "cambio": "Enlace inicial de Colab actualizado a dev/supersalud; código y salidas conservados",
+      "ejecutado_en_integracion": false
+    }
+  ]
+}
