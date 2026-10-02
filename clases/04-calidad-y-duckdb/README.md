@@ -1,34 +1,20 @@
-# Clase 04 — Calidad y rendimiento agrícola
+# Clase 04: Calidad e integración
 
-[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
+Preparado por el PhD Esteban Hernández, CyberColombia.
 
-Fin de semana 2 · Sábado · 7 h 30 min efectivas.
+Sábado 10/10/2026. 7 h 30 min de clase efectiva.
 
-## Bloques temáticos
-
-| Segmento | Temas y actividades |
+| Segmento | Temas y ejercicios |
 |---|---|
-| Mañana · antes del receso | Tipos, ausencias, duplicados y rendimiento t/ha. |
-| Mañana · después del receso | E05: calidad AGROSAVIA y conciliación. |
-| Tarde · después del almuerzo y antes del receso | E06: EVA, SQL y unión territorial. |
-| Tarde · después del receso | Cobertura del cruce y revisión entre pares; Entrega del pipeline y tarea autónoma. |
+| Mañana · antes del receso | E05: calidad de suelos y conciliación |
+| Mañana · después del receso | P03: calidad PQRS sin exclusiones injustificadas; Consulta diferida Polars/DuckDB y selección de motores |
+| Tarde · después del almuerzo y antes del receso | E06: EVA, rendimiento t/ha e integración SQL; Cobertura y cardinalidad de las uniones |
+| Tarde · después del receso | Auditoría, cobertura y revisión de controles; Cierre y preparación de Spark |
 
-## Talleres y evidencias
+Producto: Controles de calidad y consulta conciliada.
 
-### [E05 Calidad de análisis de suelo](../../talleres/E05.md)
+Consultar el [calendario contractual](../../docs/calendario.md). Todas las horas se imparten en línea; el trabajo autónomo es opcional.
 
-Construir un flujo auditable que conserve los datos que requieren revisión y calcule poblaciones analíticas explícitas.
+Talleres: [E05](../../talleres/E05.md), [E06](../../talleres/E06.md), [P03](../../talleres/P03.md).
 
-**Entrega:** Para este corte: 92.738 originales = 0 duplicados exactos + 92.727 aptos para pH + 11 en revisión. 2.138 registros requieren revisar correspondencia territorial. Entregar reporte, reglas y dos ejemplos comentados.
-
-### [E06 Rendimiento agrícola e integración SQL](../../talleres/E06.md)
-
-Calcular indicadores con denominadores correctos y conectar datos de suelo con producción sin multiplicar filas.
-
-**Entrega:** 159.616 filas EVA cumplen el dominio del cociente. Se obtienen 107.620 grupos municipio–cultivo–estado–año; 55.498 tienen pH agregado en el cruce. El LEFT JOIN debe conservar los 107.620 grupos.
-
-## Preparación y trabajo autónomo
-
-Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
-
-Fin de semana 2: 1 h 45 min para revisar territorios sin correspondencia y documentar el contrato de calidad.
+[Mapa de ejercicios, prerrequisitos y evaluación](../../docs/mapa-ejercicios.md).

@@ -1,34 +1,20 @@
-# Clase 02 — Descarga y perfilado
+# Clase 02: Ingesta y perfilado
 
-[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
+Preparado por el PhD Esteban Hernández, CyberColombia.
 
-Fin de semana 1 · Sábado · 7 h 30 min efectivas.
+Sábado 03/10/2026. 7 h 30 min de clase efectiva.
 
-## Bloques temáticos
-
-| Segmento | Temas y actividades |
+| Segmento | Temas y ejercicios |
 |---|---|
-| Mañana · antes del receso | Entorno Python y estructura del kit. |
-| Mañana · después del receso | E02: descarga, SHA-256 y perfilado. |
-| Tarde · después del almuerzo y antes del receso | E03: DIVIPOLA y claves territoriales. |
-| Tarde · después del receso | Revisión del perfil y decisiones de calidad; Diccionario y tarea autónoma. |
+| Mañana · antes del receso | Entorno, estructura y verificación del kit; P01: manifiesto PQRS y lectura de las muestras |
+| Mañana · después del receso | E02: descarga selectiva, SHA-256 y perfil tabular; Tipos, ausencias, unidades y discusión del perfil |
+| Tarde · después del almuerzo y antes del receso | E03: DIVIPOLA y claves territoriales; P01: lectura por bloques y presupuesto de RAM |
+| Tarde · después del receso | Revisión por pares y faltantes territoriales; Contrato inicial y diccionario de variables; Entrega y preparación del siguiente encuentro |
 
-## Talleres y evidencias
+Producto: Manifiesto, perfil y claves territoriales.
 
-### [E02 Descarga y perfil inicial](../../talleres/E02.md)
+Consultar el [calendario contractual](../../docs/calendario.md). Todas las horas se imparten en línea; el trabajo autónomo es opcional.
 
-Adquirir datos verificables y localizar problemas antes de transformar.
+Talleres: [E02](../../talleres/E02.md), [E03](../../talleres/E03.md), [P01](../../talleres/P01.md).
 
-**Entrega:** Controles de entrada: 92.738 filas AGROSAVIA, 166.732 EVA y 1.122 DIVIPOLA. perfil.csv contiene 57 filas, una por columna de los tres archivos.
-
-### [E03 Identidad territorial y vigencias](../../talleres/E03.md)
-
-Construir una dimensión territorial confiable y evitar uniones ambiguas.
-
-**Entrega:** Entregar dimensión propuesta, llave de unión y listado de códigos no encontrados. En el corte EVA suministrado el control posterior encuentra cero códigos ausentes en DIVIPOLA.
-
-## Preparación y trabajo autónomo
-
-Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
-
-Fin de semana 1: 45 minutos para completar la pregunta, el diccionario y la ficha de procedencia.
+[Mapa de ejercicios, prerrequisitos y evaluación](../../docs/mapa-ejercicios.md).

@@ -1,26 +1,18 @@
-# Clase 03 — Arquitecturas y formatos
+# Clase 03: Arquitecturas, formatos y pipelines
 
-[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
+Preparado por el PhD Esteban Hernández, CyberColombia.
 
-Fin de semana 2 · Viernes · 3 h 45 min efectivas.
+Viernes 09/10/2026. 3 h 45 min de clase efectiva.
 
-## Bloques temáticos
-
-| Segmento | Temas y actividades |
+| Segmento | Temas y ejercicios |
 |---|---|
-| Antes del receso | Warehouse, lake, lakehouse, HDFS y NoSQL; E04: CSV, JSON, Parquet y contrato. |
-| Después del receso | Diseño de capas raw, curada y analítica; Comparación de decisiones y preguntas. |
+| Antes del receso | Relacional, warehouse, lake y formatos; contraste conceptual con Zarr; E04: contrato de datos y capas del producto; P02: CSV, proyección y Parquet particionado |
+| Después del receso | P02: configuración, fallo controlado y reejecución; ETL/ELT, monitoreo y decisiones de arquitectura; Defensa breve del contrato |
 
-## Talleres y evidencias
+Producto: Parquet, contrato y traza de reejecución.
 
-### [E04 Formatos y contrato de datos](../../talleres/E04.md)
+Consultar el [calendario contractual](../../docs/calendario.md). Todas las horas se imparten en línea; el trabajo autónomo es opcional.
 
-Seleccionar formatos según el uso y documentar el contrato antes de depurar.
+Talleres: [E04](../../talleres/E04.md), [P02](../../talleres/P02.md).
 
-**Entrega:** Entregar un contrato con campo, tipo, ausencia, regla, tratamiento y procedencia. La decisión de arquitectura debe explicar CSV para intercambio, JSON para API y Parquet para análisis.
-
-## Preparación y trabajo autónomo
-
-Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
-
-La carga autónoma del módulo se consolida al finalizar el sábado; no se añade otra actividad obligatoria.
+[Mapa de ejercicios, prerrequisitos y evaluación](../../docs/mapa-ejercicios.md).

@@ -1,0 +1,516 @@
+{
+  "titulo": "Curso de Postgrado: BigData, Especialización en Bases de datos",
+  "autor": "Preparado por el PhD Esteban Hernández, CyberColombia",
+  "zona_horaria": "America/Bogota",
+  "inicio": "2026-10-02",
+  "fin_contractual": "2026-11-07",
+  "minutos_clase": 3840,
+  "autonomo_computable_minutos": 0,
+  "criterio": "64 horas efectivas de clase en línea, confirmado por el docente. Una hora equivale a 60 minutos. Recesos y almuerzos excluidos.",
+  "sesiones": [
+    {
+      "sesion": 1,
+      "fecha": "2026-10-02",
+      "fecha_texto": "Viernes 02/10/2026",
+      "tema": "Fundamentos y escala",
+      "practica": "E01 / T01: pregunta, procedencia y capacidad",
+      "producto": "Ficha de problema y presupuesto de recursos",
+      "horario": "18:00–22:00",
+      "minutos_clase": 225,
+      "agenda": [
+        [
+          "18:00–18:20",
+          "Organización, diagnóstico y unidades de los dos dominios"
+        ],
+        [
+          "18:20–19:35",
+          "Cinco V y T01: cálculo de 2 GB, 20 GB y 2 TB"
+        ],
+        [
+          "19:35–20:00",
+          "Restricciones, escalamiento y Amdahl"
+        ],
+        [
+          "20:00–20:15",
+          "Coffee break"
+        ],
+        [
+          "20:15–21:30",
+          "E01: casos, procedencia, ciclo de vida y ficha"
+        ],
+        [
+          "21:30–22:00",
+          "Discusión y cierre"
+        ]
+      ]
+    },
+    {
+      "sesion": 2,
+      "fecha": "2026-10-03",
+      "fecha_texto": "Sábado 03/10/2026",
+      "tema": "Ingesta y perfilado",
+      "practica": "E02–E03 / P01: descargas, PQRS y DIVIPOLA",
+      "producto": "Manifiesto, perfil y claves territoriales",
+      "horario": "08:00–17:00",
+      "minutos_clase": 450,
+      "agenda": [
+        [
+          "08:00–08:45",
+          "Entorno, estructura y verificación del kit"
+        ],
+        [
+          "08:45–09:30",
+          "P01: manifiesto PQRS y lectura de las muestras"
+        ],
+        [
+          "09:30–09:45",
+          "Receso de la mañana"
+        ],
+        [
+          "09:45–11:15",
+          "E02: descarga selectiva, SHA-256 y perfil tabular"
+        ],
+        [
+          "11:15–12:00",
+          "Tipos, ausencias, unidades y discusión del perfil"
+        ],
+        [
+          "12:00–13:00",
+          "Almuerzo"
+        ],
+        [
+          "13:00–14:30",
+          "E03: DIVIPOLA y claves territoriales"
+        ],
+        [
+          "14:30–15:00",
+          "P01: lectura por bloques y presupuesto de RAM"
+        ],
+        [
+          "15:00–15:15",
+          "Receso de la tarde"
+        ],
+        [
+          "15:15–16:00",
+          "Revisión por pares y faltantes territoriales"
+        ],
+        [
+          "16:00–16:45",
+          "Contrato inicial y diccionario de variables"
+        ],
+        [
+          "16:45–17:00",
+          "Entrega y preparación del siguiente encuentro"
+        ]
+      ]
+    },
+    {
+      "sesion": 3,
+      "fecha": "2026-10-09",
+      "fecha_texto": "Viernes 09/10/2026",
+      "tema": "Arquitecturas, formatos y pipelines",
+      "practica": "E04 / P02: contrato, CSV y Parquet",
+      "producto": "Parquet, contrato y traza de reejecución",
+      "horario": "18:00–22:00",
+      "minutos_clase": 225,
+      "agenda": [
+        [
+          "18:00–18:45",
+          "Relacional, warehouse, lake y formatos; contraste conceptual con Zarr"
+        ],
+        [
+          "18:45–19:15",
+          "E04: contrato de datos y capas del producto"
+        ],
+        [
+          "19:15–20:00",
+          "P02: CSV, proyección y Parquet particionado"
+        ],
+        [
+          "20:00–20:15",
+          "Coffee break"
+        ],
+        [
+          "20:15–21:00",
+          "P02: configuración, fallo controlado y reejecución"
+        ],
+        [
+          "21:00–21:45",
+          "ETL/ELT, monitoreo y decisiones de arquitectura"
+        ],
+        [
+          "21:45–22:00",
+          "Defensa breve del contrato"
+        ]
+      ]
+    },
+    {
+      "sesion": 4,
+      "fecha": "2026-10-10",
+      "fecha_texto": "Sábado 10/10/2026",
+      "tema": "Calidad e integración",
+      "practica": "E05–E06 / P03: suelos, calidad PQRS y EVA",
+      "producto": "Controles de calidad y consulta conciliada",
+      "horario": "08:00–17:00",
+      "minutos_clase": 450,
+      "agenda": [
+        [
+          "08:00–09:30",
+          "E05: calidad de suelos y conciliación"
+        ],
+        [
+          "09:30–09:45",
+          "Receso de la mañana"
+        ],
+        [
+          "09:45–10:45",
+          "P03: calidad PQRS sin exclusiones injustificadas"
+        ],
+        [
+          "10:45–12:00",
+          "Consulta diferida Polars/DuckDB y selección de motores"
+        ],
+        [
+          "12:00–13:00",
+          "Almuerzo"
+        ],
+        [
+          "13:00–14:30",
+          "E06: EVA, rendimiento t/ha e integración SQL"
+        ],
+        [
+          "14:30–15:00",
+          "Cobertura y cardinalidad de las uniones"
+        ],
+        [
+          "15:00–15:15",
+          "Receso de la tarde"
+        ],
+        [
+          "15:15–16:30",
+          "Auditoría, cobertura y revisión de controles"
+        ],
+        [
+          "16:30–17:00",
+          "Cierre y preparación de Spark"
+        ]
+      ]
+    },
+    {
+      "sesion": 5,
+      "fecha": "2026-10-16",
+      "fecha_texto": "Viernes 16/10/2026",
+      "tema": "Procesamiento con Spark",
+      "practica": "E07: planes, particiones y equivalencia Spark/DuckDB",
+      "producto": "Plan explicado y control de equivalencia",
+      "horario": "18:00–21:15",
+      "minutos_clase": 180,
+      "agenda": [
+        [
+          "18:00–18:30",
+          "Motores y entorno Spark"
+        ],
+        [
+          "18:30–19:15",
+          "Driver, particiones, transformaciones y plan"
+        ],
+        [
+          "19:15–20:00",
+          "E07: agregación y acción"
+        ],
+        [
+          "20:00–20:15",
+          "Coffee break"
+        ],
+        [
+          "20:15–21:00",
+          "E07: equivalencia con DuckDB"
+        ],
+        [
+          "21:00–21:15",
+          "Plan, controles y cierre"
+        ]
+      ]
+    },
+    {
+      "sesion": 6,
+      "fecha": "2026-10-17",
+      "fecha_texto": "Sábado 17/10/2026",
+      "tema": "Consultas e integración distribuida",
+      "practica": "E07–E09: joins, shapes DANE/IGAC, SoilGrids y WoSIS",
+      "producto": "Consulta, mapa y alcance espacial",
+      "horario": "08:00–17:00",
+      "minutos_clase": 450,
+      "agenda": [
+        [
+          "08:00–09:30",
+          "Joins, claves, cardinalidad y planes"
+        ],
+        [
+          "09:30–09:45",
+          "Receso de la mañana"
+        ],
+        [
+          "09:45–12:00",
+          "E07: equivalencia, ventanas y ranking"
+        ],
+        [
+          "12:00–13:00",
+          "Almuerzo"
+        ],
+        [
+          "13:00–15:00",
+          "E08: shapes DANE, geometrías IGAC y cobertura"
+        ],
+        [
+          "15:00–15:15",
+          "Receso de la tarde"
+        ],
+        [
+          "15:15–16:30",
+          "E09: SoilGrids, WoSIS, profundidad y unidades"
+        ],
+        [
+          "16:30–17:00",
+          "Revisión del soporte espacial y entrega"
+        ]
+      ]
+    },
+    {
+      "sesion": 7,
+      "fecha": "2026-10-23",
+      "fecha_texto": "Viernes 23/10/2026",
+      "tema": "Rendimiento y escalabilidad",
+      "practica": "E10 / P04: tiempo, RAM y motores con PQRS real",
+      "producto": "Tabla experimental e informe de rendimiento",
+      "horario": "18:00–21:15",
+      "minutos_clase": 180,
+      "agenda": [
+        [
+          "18:00–18:30",
+          "Protocolo experimental, caché y RSS"
+        ],
+        [
+          "18:30–20:00",
+          "E10/P04: consulta equivalente y mediciones PQRS"
+        ],
+        [
+          "20:00–20:15",
+          "Coffee break"
+        ],
+        [
+          "20:15–21:00",
+          "Repeticiones, planes y comparación CSV–Parquet"
+        ],
+        [
+          "21:00–21:15",
+          "Informe y decisión de estrategia"
+        ]
+      ]
+    },
+    {
+      "sesion": 8,
+      "fecha": "2026-10-24",
+      "fecha_texto": "Sábado 24/10/2026",
+      "tema": "Streaming de eventos",
+      "practica": "E11 / I01: NASA, CHIRPS, eventos, ventanas y recuperación",
+      "producto": "Traza de eventos y análisis de recuperación",
+      "horario": "08:00–17:00",
+      "minutos_clase": 450,
+      "agenda": [
+        [
+          "08:00–08:45",
+          "NASA, CHIRPS, escalas y unidades"
+        ],
+        [
+          "08:45–09:30",
+          "I01: traza finita y conceptos de eventos"
+        ],
+        [
+          "09:30–09:45",
+          "Receso de la mañana"
+        ],
+        [
+          "09:45–12:00",
+          "E11: Spark, ventanas y watermark"
+        ],
+        [
+          "12:00–13:00",
+          "Almuerzo"
+        ],
+        [
+          "13:00–15:00",
+          "E11: tardanza, estado, checkpoint y recuperación"
+        ],
+        [
+          "15:00–15:15",
+          "Receso de la tarde"
+        ],
+        [
+          "15:15–16:30",
+          "Colas, garantías y auditoría de la reproducción"
+        ],
+        [
+          "16:30–17:00",
+          "Entrega experimental"
+        ]
+      ]
+    },
+    {
+      "sesion": 9,
+      "fecha": "2026-10-30",
+      "fecha_texto": "Viernes 30/10/2026",
+      "tema": "Analítica y gobernanza",
+      "practica": "E12: rendimiento por cultivo, evaluación temporal y gobernanza",
+      "producto": "Evaluación temporal y ficha de gobernanza",
+      "horario": "18:00–21:15",
+      "minutos_clase": 180,
+      "agenda": [
+        [
+          "18:00–18:30",
+          "Métrica, población, tiempo y fuga de información"
+        ],
+        [
+          "18:30–20:00",
+          "E12: persistencia, rendimiento y MAE por cultivo"
+        ],
+        [
+          "20:00–20:15",
+          "Coffee break"
+        ],
+        [
+          "20:15–20:30",
+          "E12: error por cultivo y cobertura"
+        ],
+        [
+          "20:30–21:00",
+          "Gobernanza y revisión crítica de índices compuestos"
+        ],
+        [
+          "21:00–21:15",
+          "Definición del producto integrador"
+        ]
+      ]
+    },
+    {
+      "sesion": 10,
+      "fecha": "2026-10-31",
+      "fecha_texto": "Sábado 31/10/2026",
+      "tema": "Integración y auditoría del proyecto",
+      "practica": "E13: reconstrucción, pruebas y auditoría cruzada",
+      "producto": "Producto candidato y lista de hallazgos",
+      "horario": "08:00–17:00",
+      "minutos_clase": 450,
+      "agenda": [
+        [
+          "08:00–09:30",
+          "E13: reconstrucción desde originales y contratos"
+        ],
+        [
+          "09:30–09:45",
+          "Receso de la mañana"
+        ],
+        [
+          "09:45–12:00",
+          "Auditoría cruzada de datos, código y resultados"
+        ],
+        [
+          "12:00–13:00",
+          "Almuerzo"
+        ],
+        [
+          "13:00–15:00",
+          "Corrección de hallazgos y revisión del informe"
+        ],
+        [
+          "15:00–15:15",
+          "Receso de la tarde"
+        ],
+        [
+          "15:15–16:30",
+          "Validación del producto candidato y límites"
+        ],
+        [
+          "16:30–17:00",
+          "Entrega candidata y preparación de la clínica"
+        ]
+      ]
+    },
+    {
+      "sesion": 11,
+      "fecha": "2026-11-06",
+      "fecha_texto": "Viernes 06/11/2026",
+      "tema": "Clínica de proyectos y ensayo de defensa",
+      "practica": "E13: correcciones, límites e informe final",
+      "producto": "Producto corregido, informe y ensayo",
+      "horario": "18:00–21:15",
+      "minutos_clase": 180,
+      "agenda": [
+        [
+          "18:00–18:45",
+          "Clínica de bloqueos, recursos y calidad"
+        ],
+        [
+          "18:45–20:00",
+          "E13: correcciones y validación entre pares"
+        ],
+        [
+          "20:00–20:15",
+          "Coffee break"
+        ],
+        [
+          "20:15–21:00",
+          "Ensayo de defensa y discusión de límites"
+        ],
+        [
+          "21:00–21:15",
+          "Entrega final y organización de sustentaciones"
+        ]
+      ]
+    },
+    {
+      "sesion": 12,
+      "fecha": "2026-11-07",
+      "fecha_texto": "Sábado 07/11/2026",
+      "tema": "Sustentación y cierre contractual",
+      "practica": "E13: defensa, retroalimentación y entrega verificable",
+      "producto": "Producto final, sustentación y acta de cierre",
+      "horario": "08:00–16:30",
+      "minutos_clase": 420,
+      "agenda": [
+        [
+          "08:00–09:30",
+          "Sustentaciones y preguntas técnicas"
+        ],
+        [
+          "09:30–09:45",
+          "Receso de la mañana"
+        ],
+        [
+          "09:45–12:00",
+          "Sustentaciones y discusión de resultados"
+        ],
+        [
+          "12:00–13:00",
+          "Almuerzo"
+        ],
+        [
+          "13:00–15:00",
+          "Sustentaciones restantes y auditoría final"
+        ],
+        [
+          "15:00–15:15",
+          "Receso de la tarde"
+        ],
+        [
+          "15:15–16:00",
+          "Retroalimentación y evaluación individual"
+        ],
+        [
+          "16:00–16:30",
+          "Acta, entregas verificables y cierre contractual"
+        ]
+      ]
+    }
+  ]
+}
