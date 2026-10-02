@@ -1,62 +1,26 @@
-# Clase 07 — Medición y optimización
+# Clase 07 — Rendimiento del procesamiento
 
-[Índice del curso](../../README.md) · [Entorno](../../docs/entorno.md) · [Proyecto y evaluación](../../proyecto/README.md)
+[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
 
-**Fin de semana 4 · Viernes · 3 h 45 min efectivos · RA4.**
+Fin de semana 4 · Viernes · 3 h 45 min efectivas.
 
-## Objetivo
-
-Diseñar e interpretar un experimento reproducible de formatos.
-
-## Preparación
-
-Revisar las evidencias de la clase anterior y conservar las salidas de los laboratorios. Consultar las dependencias de ejecución en la guía de entorno.
-
-## Bloques de la clase
+## Bloques temáticos
 
 | Segmento | Temas y actividades |
 |---|---|
-| Antes del receso | Hipótesis de rendimiento, variables controladas, equipo, hilos y memoria; sesgos de caché y diseño del experimento CSV–Parquet. Ejercicio 07.1. |
-| Después del receso | Ejecución del benchmark, orden alternado, calentamiento y medianas; igualdad de resultados, tamaño de archivos y límites de las conclusiones. Ejercicios 07.2 y 07.3. |
+| Antes del receso | Diseño de experimentos y sesgos de medición; E10: CSV–Parquet, calentamiento y repetición. |
+| Después del receso | E10: interpretación de medidas y planes; Informe experimental y preparación de eventos. |
 
-## Ejercicios propuestos
+## Talleres y evidencias
 
-### 07.1 — Diseño experimental
+### [E10 Rendimiento del procesamiento](../../talleres/E10.md)
 
-Declarar hipótesis, consulta, tamaño, equipo, hilos y memoria. Identificar variables controladas y sesgos por caché.
+Medir tiempo y tamaño de archivos preservando una consulta equivalente.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** benchmark.csv debe contener dos filas con igual población: 159.616 registros aptos para rendimiento. Las medianas de tiempo se miden en cada equipo y no tienen un valor esperado obligatorio.
 
-### 07.2 — Benchmark CSV–Parquet
+## Preparación y trabajo autónomo
 
-Ejecutar el script: seis iteraciones por formato con orden alternado; excluir la iteración 0 del cálculo de la mediana, como hace el código.
+Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
-
-### 07.3 — Interpretación
-
-Tabular medianas y tamaños de archivo. Verificar igualdad de respuestas y explicar por qué no se exige que un formato siempre gane. Proponer una mejora sin afirmar resultados no medidos.
-
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
-
-## Material y ejecución
-
-[Programa académico](../../01_Programa_academico_Big_Data_64_horas.docx) · [Guía docente](../../02_Guia_academica_Big_Data_material_docente.docx). La guía docente contiene orientaciones y respuestas.
-
-- [04_benchmark.py](../../material_practico/04_benchmark.py)
-
-Desde `material_practico/`, con el entorno del curso activo y los prerrequisitos disponibles:
-
-```sh
-python 04_benchmark.py
-```
-
-## Entrega y revisión
-
-Primera parte de E4: diseño experimental, tiempos y conclusiones con límites.
-
-Avance del informe E4 (20 % junto con streaming). Se revisa corrección, evidencia, reproducibilidad y razonamiento; ejecutar sin explicar no completa la actividad.
-
-## Trabajo autónomo
-
-Sin carga adicional; la interpretación final se consolida después de la clase 8.
+La carga autónoma del módulo se consolida al finalizar el sábado; no se añade otra actividad obligatoria.

@@ -14,3 +14,10 @@ material_practico/datos/
 *.out
 *.synctex.gz
 ~$*.docx
+
+# Fuentes descargadas y resultados reproducibles
+kit/data/raw/
+kit/salidas/
+*.part
+*.nueva
+historico/pedidos/material_practico/datos/

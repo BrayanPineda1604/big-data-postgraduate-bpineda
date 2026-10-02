@@ -1,0 +1,113 @@
+{
+  "fecha_corte": "2026-10-02",
+  "fuentes": [
+    {
+      "id": "nasa",
+      "archivo": "nasa.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,PRECTOTCORR&community=AG&longitude=-73.36&latitude=5.54&start=20250101&end=20250131&format=JSON",
+      "bytes": 1555,
+      "sha256": "75afac1b833d0a070185a179db271eff476b42ba1f526beaa4248d3287d348c1",
+      "metodo": "http",
+      "alcance": "muestra"
+    },
+    {
+      "id": "agrosavia",
+      "archivo": "agrosavia.csv",
+      "url": "https://www.datos.gov.co/api/views/ch4u-f3i5/rows.csv?accessType=DOWNLOAD",
+      "bytes": 20379743,
+      "sha256": "1615e281290bcf505ae2f63865abbf2c25a7c17fffaf81dfbb1c6a81062d6f0f",
+      "metodo": "http",
+      "alcance": "completo"
+    },
+    {
+      "id": "igac_correlacion",
+      "archivo": "igac_correlacion.json",
+      "url": "https://mapas.igac.gov.co/server/rest/services/agrologia/correlacionsuelosnacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=10&f=json",
+      "bytes": 11827,
+      "sha256": "2fbd47e2d48638b37a388b553794ed376938b97f93bac5841c16ace1b1f648f8",
+      "metodo": "http",
+      "alcance": "muestra"
+    },
+    {
+      "id": "soilgrids",
+      "archivo": "soilgrids.tif",
+      "url": "https://maps.isric.org/mapserv?map=/map/phh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_0-5cm_mean&FORMAT=image/tiff&SUBSETTINGCRS=http://www.opengis.net/def/crs/EPSG/0/4326&SUBSET=long(-73.4,-73.3)&SUBSET=lat(5.5,5.6)",
+      "bytes": 1815,
+      "sha256": "8df24c4db0e0a05d49b7819aa122a787b9ed5ce95f9ef9843e036188fd6e0fc8",
+      "metodo": "http",
+      "alcance": "muestra"
+    },
+    {
+      "id": "wosis",
+      "archivo": "wosis.json",
+      "url": "https://maps.isric.org/mapserv?map=%2Fmap%2Fwosis_latest.map&SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Awosis_latest_phaq&COUNT=10&OUTPUTFORMAT=geojson&FILTER=%3CFilter+xmlns%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22%3E%3CPropertyIsEqualTo%3E%3CValueReference%3Ecountry_name%3C%2FValueReference%3E%3CLiteral%3EColombia%3C%2FLiteral%3E%3C%2FPropertyIsEqualTo%3E%3C%2FFilter%3E",
+      "bytes": 7399,
+      "sha256": "66ed7895b4fdeed6029aa8627916b4c6f00adbcda4db979a4c17722a5fd090c1",
+      "metodo": "http",
+      "alcance": "muestra"
+    },
+    {
+      "id": "chirps",
+      "archivo": "chirps.tif",
+      "url": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/latam/tifs/chirps-v3.0.2025.01.tif",
+      "bytes": 4212510,
+      "sha256": "b4cb24217be955d8634f574db89625d00b9fc21f39e4a8a664d1c562d5a4d9a1",
+      "metodo": "http",
+      "alcance": "muestra"
+    },
+    {
+      "id": "eva",
+      "archivo": "eva.csv",
+      "url": "https://www.datos.gov.co/api/views/uejq-wxrr/rows.csv?accessType=DOWNLOAD",
+      "bytes": 27489649,
+      "sha256": "4df00a59a79f5905a5adc1d8b918af828e8e3eed9060c7793392bbad70375d73",
+      "metodo": "http",
+      "alcance": "completo"
+    },
+    {
+      "id": "divipola",
+      "archivo": "divipola.csv",
+      "url": "https://www.datos.gov.co/api/views/gdxc-w37w/rows.csv?accessType=DOWNLOAD",
+      "bytes": 70850,
+      "sha256": "159b4b84595a11be5bf623fdf25c6fd5c9ac8c3ed898cf7928b2b3f321b9b492",
+      "metodo": "http",
+      "alcance": "completo"
+    },
+    {
+      "id": "igac_capacidad",
+      "archivo": "igac_capacidad.json",
+      "url": "https://mapas.igac.gov.co/server/rest/services/agrologia/capacidaddeusodelastierrasterritorionacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=5&f=geojson",
+      "bytes": 95845,
+      "sha256": "1adeac3cd46c2ad8faa7433e8d65b11e9058354080a3712b9a53886901d34346",
+      "metodo": "http",
+      "alcance": "muestra"
+    },
+    {
+      "id": "igac_quimica",
+      "archivo": "igac_quimica.json",
+      "url": "https://mapas.igac.gov.co/server/rest/services/agrologia/distribucionycalidaddelaspropiedadesquimicasterritorionacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=5&f=geojson",
+      "bytes": 30182,
+      "sha256": "23737d7768483356ebb6c008099aadc72b0156ede4ef127f790e9d5b0b0e0307",
+      "metodo": "http",
+      "alcance": "muestra"
+    },
+    {
+      "id": "dane_departamentos",
+      "archivo": "dane_departamentos.zip",
+      "url": "https://geoportal.dane.gov.co/descargas/mgn_2025/MGN2025_DPTO_POLITICO.zip",
+      "bytes": 12524421,
+      "sha256": "0b793191d2451a1bc02be42425d94f1df556bcf5f22220511a1d87af7f4e7000",
+      "metodo": "manual",
+      "alcance": "completo"
+    },
+    {
+      "id": "dane_municipios",
+      "archivo": "dane_municipios.zip",
+      "url": "https://geoportal.dane.gov.co/descargas/mgn_2025/MGN2025_MPIO_GRAFICO.zip",
+      "bytes": 71576494,
+      "sha256": "a3c01393059be8f2947de5e0a828faa4c7a43119819a667a8124854340bc141f",
+      "metodo": "manual",
+      "alcance": "completo"
+    }
+  ]
+}

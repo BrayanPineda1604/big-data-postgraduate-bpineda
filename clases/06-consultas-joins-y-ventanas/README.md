@@ -1,64 +1,40 @@
-# Clase 06 — Agregaciones, joins y ventanas
+# Clase 06 — Territorio y propiedades del suelo
 
-[Índice del curso](../../README.md) · [Entorno](../../docs/entorno.md) · [Proyecto y evaluación](../../proyecto/README.md)
+[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
 
-**Fin de semana 3 · Sábado · 7 h 30 min efectivos · RA3.**
+Fin de semana 3 · Sábado · 7 h 30 min efectivas.
 
-## Objetivo
-
-Reproducir consultas entre motores y justificar joins y ventanas.
-
-## Preparación
-
-Revisar las evidencias de la clase anterior y conservar las salidas de los laboratorios. Consultar las dependencias de ejecución en la guía de entorno.
-
-## Bloques de la clase
+## Bloques temáticos
 
 | Segmento | Temas y actividades |
 |---|---|
-| Mañana · antes del receso | Agregaciones por ciudad y conciliación exacta de conteos e importes entre DuckDB y Spark. Ejercicio 06.1. |
-| Mañana · después del receso y antes del almuerzo | Enriquecimiento ciudad–región: left join, broadcast, conservación de filas, claves duplicadas y regiones nulas. Ejercicio 06.2. |
-| Tarde · después del almuerzo y antes del receso | Ventanas, row_number, top 3 por ciudad y desempate por id; consulta adicional por categoría. Ejercicio 06.3. |
-| Tarde · después del receso | Comparación de la consulta adicional entre motores, interpretación del plan y justificación del join; revisión de E3. Cierre de ejercicios 06.2 y 06.3. |
+| Mañana · antes del receso | E07: validación de resultados y joins. |
+| Mañana · después del receso | E08: shapes DANE e intersección IGAC. |
+| Tarde · después del almuerzo y antes del receso | E09: SoilGrids, WoSIS y escala espacial. |
+| Tarde · después del receso | QGIS, mapas, cobertura y limitaciones; Entrega geográfica y tarea autónoma. |
 
-## Ejercicios propuestos
+## Talleres y evidencias
 
-### 06.1 — Conciliación entre motores
+### [E07 Spark y equivalencia de resultados](../../talleres/E07.md)
 
-Ejecutar nuevamente el script y comprobar igualdad exacta de conteos e importes por ciudad entre DuckDB y Spark.
+Comprender ejecución distribuida y demostrar que cambiar de motor no debe alterar el significado del cálculo.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** control_spark.json debe indicar cero diferencias respecto a DuckDB para el corte docente. Entregar un plan explicado y una consulta de ventana.
 
-### 06.2 — Enriquecimiento
+### [E08 Shapes y capacidad de uso](../../talleres/E08.md)
 
-Explicar el left join y broadcast de la dimensión ciudad–región. Comprobar conservación de filas y ausencia de regiones nulas; discutir claves duplicadas.
+Integrar geometrías oficiales y calcular áreas de intersección sin confundir las muestras temáticas con cobertura completa.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** 1.122 geometrías municipales leídas y 15 intersecciones de área positiva en la copia suministrada. Entregar mapa, tabla y explicación del denominador territorial.
 
-### 06.3 — Ventanas y consulta adicional
+### [E09 Propiedades del suelo y profundidad](../../talleres/E09.md)
 
-Verificar los tres pedidos de mayor importe por ciudad y el desempate por id. Implementar una agregación por categoría y compararla con DuckDB.
+Distinguir clases cartográficas, mediciones por horizonte y predicciones ráster, evitando comparaciones sin soporte espacial.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** Reporte de unidades, método y profundidad; 1.660 celdas con pH positivo dentro del dominio tras separar los 188 ceros. Entregar un mapa con alcance y una lista de condiciones para validar predicciones.
 
-## Material y ejecución
+## Preparación y trabajo autónomo
 
-[Programa académico](../../01_Programa_academico_Big_Data_64_horas.docx) · [Guía docente](../../02_Guia_academica_Big_Data_material_docente.docx). La guía docente contiene orientaciones y respuestas.
+Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
 
-- [03_spark_lotes.py](../../material_practico/03_spark_lotes.py)
-
-Desde `material_practico/`, con el entorno del curso activo y los prerrequisitos disponibles:
-
-```sh
-python 03_spark_lotes.py
-```
-
-## Entrega y revisión
-
-E3: consultas, comparación entre motores, top 3 y justificación del plan y del join.
-
-E3: 10 % del curso. Se revisa corrección, evidencia, reproducibilidad y razonamiento; ejecutar sin explicar no completa la actividad.
-
-## Trabajo autónomo
-
-1 h 45 min después de esta clase: consolidar el pipeline, añadir la consulta y justificar el join.
+Fin de semana 3: 1 h 45 min para interpretar planes, corregir mapas y explicar cobertura.

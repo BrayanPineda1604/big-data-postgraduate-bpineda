@@ -1,62 +1,26 @@
-# Clase 09 — Analítica, evaluación y gobernanza
+# Clase 09 — Analítica y gobernanza
 
-[Índice del curso](../../README.md) · [Entorno](../../docs/entorno.md) · [Proyecto y evaluación](../../proyecto/README.md)
+[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
 
-**Fin de semana 5 · Viernes · 3 h 45 min efectivos · RA5.**
+Fin de semana 5 · Viernes · 3 h 45 min efectivas.
 
-## Objetivo
-
-Evaluar un modelo introductorio y documentar su gobernanza.
-
-## Preparación
-
-Revisar las evidencias de la clase anterior y conservar las salidas de los laboratorios. Consultar las dependencias de ejecución en la guía de entorno.
-
-## Bloques de la clase
+## Bloques temáticos
 
 | Segmento | Temas y actividades |
 |---|---|
-| Antes del receso | Definición de entrega tardía, variables disponibles y fuga de información; separación temporal, línea base y regresión logística. Ejercicio 09.1 e inicio de 09.2. |
-| Después del receso | Precisión, recall, F1, matriz de confusión y prevalencia; interpretación del modelo; origen, linaje, acceso, retención y límites de los datos. Cierre de 09.2 y ejercicio 09.3. |
+| Antes del receso | Predicción temporal, fuga y línea base; E12: persistencia del rendimiento agrícola. |
+| Después del receso | E12: MAE, cobertura y ficha de gobernanza; Preparación de la integración final. |
 
-## Ejercicios propuestos
+## Talleres y evidencias
 
-### 09.1 — Objetivo y fuga de información
+### [E12 Línea base temporal y gobernanza](../../talleres/E12.md)
 
-Definir entrega tardía como delivery_minutes > 60. Explicar por qué delivery_minutes no puede usarse como predictor y revisar la separación temporal.
+Evaluar predicción sin fuga de información y documentar las responsabilidades del producto.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** 15.267 pares consecutivos para 2024 y 15.503 para 2025. Reportar MAE por año y desagregado por cultivo. La persistencia es una línea base, no un modelo agronómico validado para recomendar prácticas.
 
-### 09.2 — Línea base y modelo
+## Preparación y trabajo autónomo
 
-Ejecutar el script de modelo; comparar baseline y regresión logística con precisión, recall, F1, matriz de confusión y prevalencia. Interpretar resultados sin exigir superioridad del modelo.
+Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
-
-### 09.3 — Gobernanza e integración
-
-Documentar origen sintético, linaje, acceso, retención y limitaciones. Revisar qué evidencias faltan para reproducir el proyecto.
-
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
-
-## Material y ejecución
-
-[Programa académico](../../01_Programa_academico_Big_Data_64_horas.docx) · [Guía docente](../../02_Guia_academica_Big_Data_material_docente.docx). La guía docente contiene orientaciones y respuestas.
-
-- [06_modelo.py](../../material_practico/06_modelo.py)
-
-Desde `material_practico/`, con el entorno del curso activo y los prerrequisitos disponibles:
-
-```sh
-python 06_modelo.py
-```
-
-## Entrega y revisión
-
-Métricas comentadas, ficha de gobernanza y borrador del informe final.
-
-Avance formativo del proyecto E5. Se revisa corrección, evidencia, reproducibilidad y razonamiento; ejecutar sin explicar no completa la actividad.
-
-## Trabajo autónomo
-
-1 h 45 min antes de la clase 10: preparar informe y presentación; esta es la carga autónoma del módulo 5.
+Fin de semana 5: 1 h 45 min entre las sesiones 9 y 10 para preparar informe y defensa.

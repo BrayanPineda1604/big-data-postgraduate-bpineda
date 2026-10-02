@@ -1,64 +1,34 @@
-# Clase 02 — Entorno, datos sintéticos y exploración
+# Clase 02 — Descarga y perfilado
 
-[Índice del curso](../../README.md) · [Entorno](../../docs/entorno.md) · [Proyecto y evaluación](../../proyecto/README.md)
+[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
 
-**Fin de semana 1 · Sábado · 7 h 30 min efectivos · RA1.**
+Fin de semana 1 · Sábado · 7 h 30 min efectivas.
 
-## Objetivo
-
-Preparar el entorno e interpretar el conjunto de pedidos.
-
-## Preparación
-
-Revisar las evidencias de la clase anterior y conservar las salidas de los laboratorios. Consultar las dependencias de ejecución en la guía de entorno.
-
-## Bloques de la clase
+## Bloques temáticos
 
 | Segmento | Temas y actividades |
 |---|---|
-| Mañana · antes del receso | Entorno Python y Java, dependencias y verificación de instalación; registro de versiones e incidencias. Ejercicio 02.1. |
-| Mañana · después del receso y antes del almuerzo | Generación de pedidos sintéticos, reproducibilidad y lectura de pedidos.csv y esperado.json. Ejercicio 02.2. |
-| Tarde · después del almuerzo y antes del receso | Perfilado de tipos, nulos, duplicados, ciudades y categorías; diferencias entre duplicados y registros inválidos. Ejercicio 02.3. |
-| Tarde · después del receso | Diccionario de datos, unidades y rangos; interpretación del perfil y revisión de la ficha del problema para E1. Cierre del ejercicio 02.3. |
+| Mañana · antes del receso | Entorno Python y estructura del kit. |
+| Mañana · después del receso | E02: descarga, SHA-256 y perfilado. |
+| Tarde · después del almuerzo y antes del receso | E03: DIVIPOLA y claves territoriales. |
+| Tarde · después del receso | Revisión del perfil y decisiones de calidad; Diccionario y tarea autónoma. |
 
-## Ejercicios propuestos
+## Talleres y evidencias
 
-### 02.1 — Verificación del entorno
+### [E02 Descarga y perfil inicial](../../talleres/E02.md)
 
-Comprobar Python, Java y bibliotecas con la guía de entorno. Registrar versiones y cualquier incidencia.
+Adquirir datos verificables y localizar problemas antes de transformar.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** Controles de entrada: 92.738 filas AGROSAVIA, 166.732 EVA y 1.122 DIVIPOLA. perfil.csv contiene 57 filas, una por columna de los tres archivos.
 
-### 02.2 — Generación reproducible
+### [E03 Identidad territorial y vigencias](../../talleres/E03.md)
 
-Ejecutar el generador con 20 000 registros; revisar pedidos.csv y esperado.json. Explicar por qué aparecen más de 20 000 filas.
+Construir una dimensión territorial confiable y evitar uniones ambiguas.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** Entregar dimensión propuesta, llave de unión y listado de códigos no encontrados. En el corte EVA suministrado el control posterior encuentra cero códigos ausentes en DIVIPOLA.
 
-### 02.3 — Perfil y diccionario
+## Preparación y trabajo autónomo
 
-Calcular filas, tipos, nulos, duplicados, ciudades y categorías; describir columnas, unidades y rangos. Distinguir duplicados de registros inválidos.
+Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
-
-## Material y ejecución
-
-[Programa académico](../../01_Programa_academico_Big_Data_64_horas.docx) · [Guía docente](../../02_Guia_academica_Big_Data_material_docente.docx). La guía docente contiene orientaciones y respuestas.
-
-- [01_generar_datos.py](../../material_practico/01_generar_datos.py)
-
-Desde `material_practico/`, con el entorno del curso activo y los prerrequisitos disponibles:
-
-```sh
-python 01_generar_datos.py --n 20000
-```
-
-## Entrega y revisión
-
-E1: ficha del problema, perfil inicial y diccionario de datos.
-
-E1: 10 % del curso. Se revisa corrección, evidencia, reproducibilidad y razonamiento; ejecutar sin explicar no completa la actividad.
-
-## Trabajo autónomo
-
-45 min después de esta clase: precisar el problema y completar el diccionario para E1.
+Fin de semana 1: 45 minutos para completar la pregunta, el diccionario y la ficha de procedencia.

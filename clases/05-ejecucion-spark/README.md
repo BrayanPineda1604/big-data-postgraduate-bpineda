@@ -1,62 +1,26 @@
-# Clase 05 — Modelo de ejecución de Spark
+# Clase 05 — Ejecución con Spark
 
-[Índice del curso](../../README.md) · [Entorno](../../docs/entorno.md) · [Proyecto y evaluación](../../proyecto/README.md)
+[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
 
-**Fin de semana 3 · Viernes · 3 h 45 min efectivos · RA3.**
+Fin de semana 3 · Viernes · 3 h 45 min efectivas.
 
-## Objetivo
-
-Explicar evaluación diferida, particiones, acciones y transformaciones.
-
-## Preparación
-
-Revisar las evidencias de la clase anterior y conservar las salidas de los laboratorios. Consultar las dependencias de ejecución en la guía de entorno.
-
-## Bloques de la clase
+## Bloques temáticos
 
 | Segmento | Temas y actividades |
 |---|---|
-| Antes del receso | Arquitectura de Spark: driver, ejecutores y particiones; SparkSession, evaluación diferida, transformaciones y acciones. Ejercicio 05.1. |
-| Después del receso | Ejecución local del procesamiento por lotes; trabajos, etapas, agregaciones e intercambios en explain(formatted); límites del modo local. Ejercicios 05.2 y 05.3. |
+| Antes del receso | Driver, ejecutores, particiones y evaluación diferida; E07: agregación y explicación del plan. |
+| Después del receso | E07: equivalencia con DuckDB y ventanas; Interpretación de shuffle y costos. |
 
-## Ejercicios propuestos
+## Talleres y evidencias
 
-### 05.1 — Lectura del flujo
+### [E07 Spark y equivalencia de resultados](../../talleres/E07.md)
 
-Identificar SparkSession, lectura, transformaciones y acciones en el script de lotes; dibujar driver y ejecutores.
+Comprender ejecución distribuida y demostrar que cambiar de motor no debe alterar el significado del cálculo.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** control_spark.json debe indicar cero diferencias respecto a DuckDB para el corte docente. Entregar un plan explicado y una consulta de ventana.
 
-### 05.2 — Primera ejecución
+## Preparación y trabajo autónomo
 
-Con las salidas de la clase 4 disponibles, ejecutar el script de Spark. Identificar qué operaciones disparan trabajos y revisar el resumen.
+Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
-
-### 05.3 — Plan de ejecución
-
-Leer explain(formatted), localizar agregaciones e intercambios y explicar qué puede observarse en local[2] y qué no demuestra sobre un clúster.
-
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
-
-## Material y ejecución
-
-[Programa académico](../../01_Programa_academico_Big_Data_64_horas.docx) · [Guía docente](../../02_Guia_academica_Big_Data_material_docente.docx). La guía docente contiene orientaciones y respuestas.
-
-- [03_spark_lotes.py](../../material_practico/03_spark_lotes.py)
-
-Desde `material_practico/`, con el entorno del curso activo y los prerrequisitos disponibles:
-
-```sh
-python 03_spark_lotes.py
-```
-
-## Entrega y revisión
-
-Plan de ejecución anotado y explicación de las primeras transformaciones.
-
-Avance formativo de E3. Se revisa corrección, evidencia, reproducibilidad y razonamiento; ejecutar sin explicar no completa la actividad.
-
-## Trabajo autónomo
-
-Sin carga adicional; la consolidación se asigna después de la clase 6.
+La carga autónoma del módulo se consolida al finalizar el sábado; no se añade otra actividad obligatoria.
