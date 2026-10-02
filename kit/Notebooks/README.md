@@ -4,7 +4,7 @@ Preparado por el PhD Esteban Hernández, CyberColombia.
 
 P01: 3 de octubre. P02: 9 de octubre. P03: 10 de octubre. P04: 23 de octubre. I01: 24 de octubre. Los notebooks acompañan los talleres y comparten las horas de clase; no añaden entregas obligatorias.
 
-Instalar `requirements.txt`, `requirements_pqrs.txt` y `requirements_notebooks.txt`. Abrir desde `kit/` o `kit/Notebooks/`, usar el mismo entorno Python y ejecutar en orden. Cada notebook prepara sus dependencias de datos para permitir ejecución independiente.
+Preparar WSL, Ubuntu-26.04 y el único entorno `.venv` de la raíz según [la guía de instalación](../../docs/instalacion-wsl.md). Abrir desde `kit/` o `kit/Notebooks/`, usar el mismo entorno Python y ejecutar en orden. Cada notebook prepara sus dependencias de datos para permitir ejecución independiente.
 
 Los notebooks históricos se conservan en `supersalud/`, con su procedencia y limitaciones, y no son la guía de ejecución actual.
 
@@ -18,3 +18,5 @@ Los notebooks históricos se conservan en `supersalud/`, con su procedencia y li
 | [04 Rendimiento y eventos](04_Rendimiento_y_eventos.ipynb) | P04 · clase 7; I01 · clase 8 | Equivalencia entre motores y traza finita NASA |
 
 El notebook 04 se usa en dos momentos: detenerse tras el benchmark en clase 7 y ejecutar la sección de eventos en clase 8. Los eventos requieren `data/raw/nasa.json`, que se descarga desde el manifiesto agroambiental. Los notebooks no incorporan descargas de 1,816 GB como paso automático.
+
+Seleccionar el kernel **BigData · WSL Ubuntu 26.04 · Python 3.12**. Todas las dependencias se instalan en Ubuntu mediante el procedimiento de esa guía.

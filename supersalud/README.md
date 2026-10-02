@@ -55,3 +55,7 @@ Esta actualización de `dev` integra la organización realizada en `main` e inco
 ## Ruta vigente para ejecutar
 
 Usar [los notebooks actuales](../kit/Notebooks/README.md) y el [mapa de ejercicios](../docs/mapa-ejercicios.md). Los originales de este anexo permanecen sin nuevas modificaciones.
+
+## Instalación vigente
+
+Los comandos de instalación guardados en los originales son históricos. Para utilizarlos en el curso, adaptar las prácticas al entorno [WSL 2 con Ubuntu-26.04](../docs/instalacion-wsl.md). No seguir rutas de instalación nativas de Windows, macOS o Colab como alternativa a la guía vigente.

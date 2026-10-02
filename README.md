@@ -8,6 +8,10 @@ Preparado por el PhD Esteban Hernández, CyberColombia.
 
 El curso emplea dos dominios abiertos: PQRS/PQRD de Supersalud y datos agroambientales de suelo, territorio, rendimiento agrícola y clima. Los dominios conservan sus unidades; no se unen filas de reportes de salud con muestras de suelo.
 
+## Preparar el equipo
+
+Seguir la [guía Windows → WSL 2 → Ubuntu-26.04](docs/instalacion-wsl.md): listar distribuciones, instalar Ubuntu-26.04, entrar a `/`, clonar el repositorio y preparar Python 3.12, Java, Jupyter y las bibliotecas dentro de Ubuntu. Esta es la base de todas las instrucciones vigentes de instalación.
+
 ## Encuentros
 
 | Fecha | Clase | Horario | Horas efectivas |
