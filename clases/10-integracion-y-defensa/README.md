@@ -1,28 +1,20 @@
-# Clase 10 — Integración y defensa
+# Clase 10: Integración y auditoría del proyecto
 
-[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
+Preparado por el PhD Esteban Hernández, CyberColombia.
 
-Fin de semana 5 · Sábado · 7 h 30 min efectivas.
+Sábado 31/10/2026. 7 h 30 min de clase efectiva.
 
-## Bloques temáticos
-
-| Segmento | Temas y actividades |
+| Segmento | Temas y ejercicios |
 |---|---|
-| Mañana · antes del receso | E13: reconstrucción desde datos originales. |
-| Mañana · después del receso | Revisión cruzada y cierre del informe. |
-| Tarde · después del almuerzo y antes del receso | Defensas de equipos y discusión. |
-| Tarde · después del receso | Defensas y retroalimentación individual; Cierre y reflexión sobre límites. |
+| Mañana · antes del receso | E13: reconstrucción desde originales y contratos |
+| Mañana · después del receso | Auditoría cruzada de datos, código y resultados |
+| Tarde · después del almuerzo y antes del receso | Corrección de hallazgos y revisión del informe |
+| Tarde · después del receso | Validación del producto candidato y límites; Entrega candidata y preparación de la clínica |
 
-## Talleres y evidencias
+Producto: Producto candidato y lista de hallazgos.
 
-### [E13 Producto integrador reproducible](../../talleres/E13.md)
+Consultar el [calendario contractual](../../docs/calendario.md). Todas las horas se imparten en línea; el trabajo autónomo es opcional.
 
-Construir una evidencia técnica defendible que reúna las competencias del curso.
+Talleres: [E13](../../talleres/E13.md).
 
-**Entrega:** Paquete ejecutable, informe de 8–12 páginas y defensa de 8 minutos más preguntas. El equipo revisor debe reconstruir los controles sin editar datos originales ni rutas absolutas del docente.
-
-## Preparación y trabajo autónomo
-
-Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
-
-El trabajo autónomo del módulo se realiza entre las clases 9 y 10; no se añade carga posterior obligatoria.
+[Mapa de ejercicios, prerrequisitos y evaluación](../../docs/mapa-ejercicios.md).

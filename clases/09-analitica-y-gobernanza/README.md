@@ -1,26 +1,18 @@
-# Clase 09 — Analítica y gobernanza
+# Clase 09: Analítica y gobernanza
 
-[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
+Preparado por el PhD Esteban Hernández, CyberColombia.
 
-Fin de semana 5 · Viernes · 3 h 45 min efectivas.
+Viernes 30/10/2026. 3 h de clase efectiva.
 
-## Bloques temáticos
-
-| Segmento | Temas y actividades |
+| Segmento | Temas y ejercicios |
 |---|---|
-| Antes del receso | Predicción temporal, fuga y línea base; E12: persistencia del rendimiento agrícola. |
-| Después del receso | E12: MAE, cobertura y ficha de gobernanza; Preparación de la integración final. |
+| Antes del receso | Métrica, población, tiempo y fuga de información; E12: persistencia, rendimiento y MAE por cultivo |
+| Después del receso | E12: error por cultivo y cobertura; Gobernanza y revisión crítica de índices compuestos; Definición del producto integrador |
 
-## Talleres y evidencias
+Producto: Evaluación temporal y ficha de gobernanza.
 
-### [E12 Línea base temporal y gobernanza](../../talleres/E12.md)
+Consultar el [calendario contractual](../../docs/calendario.md). Todas las horas se imparten en línea; el trabajo autónomo es opcional.
 
-Evaluar predicción sin fuga de información y documentar las responsabilidades del producto.
+Talleres: [E12](../../talleres/E12.md).
 
-**Entrega:** 15.267 pares consecutivos para 2024 y 15.503 para 2025. Reportar MAE por año y desagregado por cultivo. La persistencia es una línea base, no un modelo agronómico validado para recomendar prácticas.
-
-## Preparación y trabajo autónomo
-
-Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
-
-Fin de semana 5: 1 h 45 min entre las sesiones 9 y 10 para preparar informe y defensa.
+[Mapa de ejercicios, prerrequisitos y evaluación](../../docs/mapa-ejercicios.md).

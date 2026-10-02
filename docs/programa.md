@@ -1,8 +1,10 @@
 # Programa académico de 64 horas
 
-Este programa desarrolla competencias de ingeniería y análisis de datos mediante el caso SUELO SABIO. Los estudiantes construirán un flujo reproducible que conecta análisis de laboratorio de suelos, división territorial, producción agrícola y fuentes agroclimáticas. La pregunta conductora es qué puede afirmarse sobre las propiedades del suelo y el rendimiento agrícola con la información pública disponible, y qué evidencia adicional hace falta para decidir a escala de parcela.
+Preparado por el PhD Esteban Hernández, CyberColombia.
 
-Esta edición sustituye el caso sintético de pedidos y las consignas prácticas de la edición de septiembre de 2026. Mantiene los fundamentos de Big Data y la exigencia de posgrado. Todos los ejercicios aplicados utilizan archivos abiertos originales o productos derivados trazables. Las hipótesis de escalamiento y los cambios en el orden de llegada se distinguen de observaciones reales.
+Curso de Postgrado: BigData, Especialización en Bases de datos. Preparado por el PhD Esteban Hernández, CyberColombia. El programa desarrolla competencias de ingeniería de datos sobre dos dominios abiertos: reportes administrativos de salud (PQRS/PQRD de Supersalud) y datos agroambientales de suelo, territorio, producción agrícola y clima. Cada dominio conserva su unidad y significado. El vínculo común es el diseño de ingesta, contratos, calidad, formatos, ejecución y evidencia reproducible.
+
+La organización vigente integra los datasets descargados, las presentaciones institucionales y los ejercicios reproducibles. Las prácticas se ejecutan en un portátil, comienzan con cortes manejables y avanzan a 2.444.766 reportes PQRS, sin fabricar filas para simular volumen. Los escenarios de 2 GB, 20 GB y 2 TB son cálculos de capacidad, claramente separados de los archivos observados.
 
 ## Propósito y resultados de aprendizaje
 
@@ -14,27 +16,28 @@ Diseñar, ejecutar y evaluar un sistema local de ingesta, calidad, integración 
 - RA4. Comparar DuckDB y Spark local, medir formatos y explicar particiones, joins, ventanas y eventos tardíos.
 - RA5. Evaluar una línea base temporal, documentar incertidumbre y defender un producto reproducible con límites explícitos.
 
-## Bloques y carga académica
+## Horario y carga académica
 
 | Componente | Tiempo efectivo |
 | --- | --- |
-| Viernes: antes y después del receso | 3 h 45 min |
-| Sábado: mañana y tarde, antes y después de cada receso; almuerzo entre jornadas | 7 h 30 min |
-| Cinco fines de semana | 56 h 15 min |
-| Trabajo autónomo guiado | 7 h 45 min |
-| Total académico, excluidas pausas | 64 h |
+| Viernes 2 y 9 de octubre, 18:00–22:00 | 3 h 45 min cada uno |
+| Viernes 16, 23 y 30 de octubre y 6 de noviembre, 18:00–21:15 | 3 h cada uno |
+| Sábados 3, 10, 17, 24 y 31 de octubre, 08:00–17:00 | 7 h 30 min cada uno |
+| Sábado 7 de noviembre, 08:00–16:30 | 7 h |
+| Total de clase en línea, excluidas pausas | 64 h |
 
-Se conservan diez sesiones online, cinco viernes y cinco sábados. Las 64 horas incluyen 7 h 45 min autónomas, como en el programa anterior. La instalación y la comprobación inicial se realizan durante la sesión 2, no como una carga obligatoria adicional. Si una institución exige 64 horas exclusivamente sincrónicas, deberá programar 7 h 45 min adicionales de interacción.
+Doce sesiones online en seis fines de semana, del 2 de octubre al 7 de noviembre de 2026. Las 64 horas corresponden íntegramente a docencia en línea. El trabajo autónomo opcional no se descuenta de esta obligación. La instalación y la comprobación inicial disponen de un bloque durante la sesión 2.
 
 ## Estructura curricular
 
-| Fin de semana | Núcleo y ejercicios | Autónomo |
+| Fechas | Núcleo y ejercicios | Clase efectiva |
 | --- | --- | --- |
-| 1 | Fundamentos, descarga y perfilado. E01–E03. | 45 min |
-| 2 | Arquitecturas, Parquet, calidad y SQL. E04–E06. | 1 h 45 min |
-| 3 | Spark, geometrías y propiedades del suelo. E07–E09. | 1 h 45 min |
-| 4 | Benchmark y reproducción de eventos climáticos. E10–E11. | 1 h 45 min |
-| 5 | Línea base, gobernanza e integración. E12–E13. | 1 h 45 min |
+| 02/10/2026 y 03/10/2026 | Fundamentos y escala / Ingesta y perfilado | 11 h 15 min |
+| 09/10/2026 y 10/10/2026 | Arquitecturas, formatos y pipelines / Calidad e integración | 11 h 15 min |
+| 16/10/2026 y 17/10/2026 | Procesamiento con Spark / Consultas e integración distribuida | 10 h 30 min |
+| 23/10/2026 y 24/10/2026 | Rendimiento y escalabilidad / Streaming de eventos | 10 h 30 min |
+| 30/10/2026 y 31/10/2026 | Analítica y gobernanza / Integración y auditoría del proyecto | 10 h 30 min |
+| 06/11/2026 y 07/11/2026 | Clínica de proyectos y ensayo de defensa / Sustentación y cierre contractual | 10 h |
 
 ## Fundamentos que se conservan
 
@@ -46,10 +49,10 @@ Los archivos tabulares de esta cohorte caben en un portátil. Su tamaño no demu
 
 | Evidencia | Peso |
 | --- | --- |
-| E01–E03: procedencia, descarga y perfilado | 10 % |
-| E04–E06: calidad, formatos y SQL | 10 % |
+| E01–E03 + P01: procedencia, descarga y perfilado | 10 % |
+| E04–E06 + P02–P03: calidad, formatos y SQL | 10 % |
 | E07–E09: Spark e integración geográfica | 10 % |
-| E10–E11: experimento y eventos | 20 % |
+| E10/P04 + I01/E11: experimento y eventos | 20 % |
 | E12–E13: proyecto e informe técnico | 35 % |
 | Sustentación individual | 15 % |
 
@@ -57,4 +60,22 @@ La rúbrica valora corrección y conservación de unidades (30 %), reproducibili
 
 ## Producto integrador
 
-Cada equipo presenta un pipeline ejecutable, un catálogo de fuentes, tablas Parquet, una consulta equivalente entre motores, un mapa con cobertura explícita, un experimento de rendimiento, evidencia de eventos y una evaluación temporal. El informe de 8 a 12 páginas debe separar resultados observados, estimaciones, limitaciones y propuesta de escalamiento. La defensa dura 8 minutos más 4 de preguntas; hasta ocho equipos caben en el bloque final previsto. Con más equipos se utilizan salas simultáneas y evaluadores adicionales dentro del mismo horario.
+Cada equipo elige dominio agroambiental o PQRS y presenta un pipeline ejecutable de uno de los dominios, un catálogo de fuentes, tablas Parquet, una consulta equivalente entre motores, un mapa agroambiental o una tabla territorial PQRS con cobertura explícita, un experimento de rendimiento, evidencia de eventos y una evaluación temporal. El informe de 8 a 12 páginas debe separar resultados observados, estimaciones, limitaciones y propuesta de escalamiento. La sustentación final se realiza el 7 de noviembre. La sesión del 6 permite ensayar, corregir y validar el producto dentro de las horas contratadas. Planificar 15 minutos por equipo incluyendo preguntas y transición; ajustar el número de turnos al grupo real.
+
+## Dos dominios y una secuencia común
+
+| Dominio | Uso central | Límites |
+| --- | --- | --- |
+| PQRS de salud | Perfil, lectura por bloques, Parquet, contratos y comparación de motores | Reportes administrativos; no equivalen a personas únicas ni prevalencia. |
+| Agroambiental | DIVIPOLA, shapes, propiedades del suelo, EVA, clima y análisis temporal | Escalas y unidades distintas; muestra municipal no representa automáticamente toda la superficie. |
+
+La introducción usa las cinco V, costos de movimiento, escalamiento y Amdahl. Después se construye un producto: conservar originales, definir contrato, tipar, controlar calidad, publicar Parquet, consultar, medir y defender el resultado. Polars y DuckDB trabajan localmente; Spark permite estudiar planes y shuffle. Dask, Zarr, GPU y plataformas gestionadas se presentan como alternativas de arquitectura, sin añadir instalaciones obligatorias ni laboratorios extra.
+
+## Prerrequisitos operativos y progresión
+
+- Saber usar una terminal, tipos básicos de Python y SELECT/GROUP BY en SQL. El diagnóstico inicial orienta la ayuda docente.
+- Iniciar con las tres muestras reales de 1.000 filas PQRS y los CSV agroambientales. Las muestras son las primeras filas y sirven para probar código; no tienen representatividad estadística.
+- Usar datos completos PQRS en la sesión 7 después de validar la consulta con muestras. Descargar un corte por vez o acceder a la copia docente.
+- E01–E13 y P01–P04 comparten los bloques del programa. P01–P03 complementan los talleres de las sesiones 2–4; P04 forma parte de la sesión 7. No se añaden horas.
+
+Las prácticas P01–P04 e I01 se evalúan dentro de las entregas existentes, sin pesos adicionales. Consultar el [mapa de ejercicios](mapa-ejercicios.md) y el [proyecto por dominio](../proyecto/README.md).

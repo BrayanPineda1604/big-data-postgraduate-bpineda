@@ -1,26 +1,18 @@
-# Clase 07 — Rendimiento del procesamiento
+# Clase 07: Rendimiento y escalabilidad
 
-[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
+Preparado por el PhD Esteban Hernández, CyberColombia.
 
-Fin de semana 4 · Viernes · 3 h 45 min efectivas.
+Viernes 23/10/2026. 3 h de clase efectiva.
 
-## Bloques temáticos
-
-| Segmento | Temas y actividades |
+| Segmento | Temas y ejercicios |
 |---|---|
-| Antes del receso | Diseño de experimentos y sesgos de medición; E10: CSV–Parquet, calentamiento y repetición. |
-| Después del receso | E10: interpretación de medidas y planes; Informe experimental y preparación de eventos. |
+| Antes del receso | Protocolo experimental, caché y RSS; E10/P04: consulta equivalente y mediciones PQRS |
+| Después del receso | Repeticiones, planes y comparación CSV–Parquet; Informe y decisión de estrategia |
 
-## Talleres y evidencias
+Producto: Tabla experimental e informe de rendimiento.
 
-### [E10 Rendimiento del procesamiento](../../talleres/E10.md)
+Consultar el [calendario contractual](../../docs/calendario.md). Todas las horas se imparten en línea; el trabajo autónomo es opcional.
 
-Medir tiempo y tamaño de archivos preservando una consulta equivalente.
+Talleres: [E10](../../talleres/E10.md), [P04](../../talleres/P04.md).
 
-**Entrega:** benchmark.csv debe contener dos filas con igual población: 159.616 registros aptos para rendimiento. Las medianas de tiempo se miden en cada equipo y no tienen un valor esperado obligatorio.
-
-## Preparación y trabajo autónomo
-
-Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
-
-La carga autónoma del módulo se consolida al finalizar el sábado; no se añade otra actividad obligatoria.
+[Mapa de ejercicios, prerrequisitos y evaluación](../../docs/mapa-ejercicios.md).

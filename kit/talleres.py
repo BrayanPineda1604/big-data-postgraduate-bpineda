@@ -178,6 +178,21 @@ def modelo():
         test=valid[valid['anio']==year]
         if test.empty:raise ValueError(f'Sin pares consecutivos para {year}')
         reports.append({'anio':year,'n':len(test),'MAE_t_ha':float(mean_absolute_error(test['rendimiento_t_ha'],test['prediccion'])),'modelo':'persistencia del año anterior'})
+    # E12: conservar denominadores y distinguir escalas por cultivo y estado físico.
+    detail=[]
+    for year in [2024,2025]:
+        target=df[df['anio'].eq(year)]
+        evaluable=valid[valid['anio'].eq(year)]
+        for (crop,state), group in target.groupby(['cultivo','estado_fisico'],dropna=False):
+            test=evaluable[evaluable['cultivo'].eq(crop)&evaluable['estado_fisico'].eq(state)]
+            detail.append({'anio':year,'cultivo':crop,'estado_fisico':state,
+                'filas_objetivo':len(group),'pares_evaluables':len(test),
+                'sin_anio_previo':len(group)-len(test),'cobertura':len(test)/len(group),
+                'MAE_t_ha':float(mean_absolute_error(test['rendimiento_t_ha'],test['prediccion'])) if len(test) else None})
+    pd.DataFrame(detail).to_csv(OUT/'evaluacion_por_cultivo.csv',index=False)
+    for report in reports:
+        total=len(df[df['anio'].eq(report['anio'])])
+        report.update(filas_objetivo=total,sin_anio_previo=total-report['n'],cobertura=report['n']/total)
     valid.to_csv(OUT/'predicciones_persistencia.csv',index=False)
     save_json('evaluacion_modelo.json',reports);print(reports)
 def main():

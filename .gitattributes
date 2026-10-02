@@ -1,0 +1,2 @@
+# Conservar bytes y SHA-256 de las muestras originales con CRLF.
+kit/data/pqrs_muestras/*.csv -text whitespace=cr-at-eol

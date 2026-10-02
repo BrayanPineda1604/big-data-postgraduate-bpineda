@@ -1,0 +1,3776 @@
+[
+  {
+    "title": "Programa académico de 64 horas",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Preparado por el PhD Esteban Hernández, CyberColombia."
+      },
+      {
+        "type": "p",
+        "text": "Curso de Postgrado: BigData, Especialización en Bases de datos. Preparado por el PhD Esteban Hernández, CyberColombia. El programa desarrolla competencias de ingeniería de datos sobre dos dominios abiertos: reportes administrativos de salud (PQRS/PQRD de Supersalud) y datos agroambientales de suelo, territorio, producción agrícola y clima. Cada dominio conserva su unidad y significado. El vínculo común es el diseño de ingesta, contratos, calidad, formatos, ejecución y evidencia reproducible."
+      },
+      {
+        "type": "p",
+        "text": "La organización vigente integra los datasets descargados, las presentaciones institucionales y los ejercicios reproducibles. Las prácticas se ejecutan en un portátil, comienzan con cortes manejables y avanzan a 2.444.766 reportes PQRS, sin fabricar filas para simular volumen. Los escenarios de 2 GB, 20 GB y 2 TB son cálculos de capacidad, claramente separados de los archivos observados."
+      },
+      {
+        "type": "h",
+        "text": "Propósito y resultados de aprendizaje"
+      },
+      {
+        "type": "p",
+        "text": "Diseñar, ejecutar y evaluar un sistema local de ingesta, calidad, integración y análisis que conserve la procedencia y el significado de los datos. El estudiante debe justificar cuándo un portátil es suficiente y qué cambiaría al crecer el volumen, la concurrencia o las exigencias de actualización."
+      },
+      {
+        "type": "p",
+        "text": "- RA1. Formular una pregunta verificable, identificar la unidad de análisis y evaluar cobertura, licencias y límites de las fuentes."
+      },
+      {
+        "type": "p",
+        "text": "- RA2. Descargar y verificar archivos, conservar el corte original, tipar variables y reportar datos aptos y pendientes de revisión."
+      },
+      {
+        "type": "p",
+        "text": "- RA3. Integrar códigos territoriales, tablas y geometrías sin multiplicar observaciones ni confundir escalas espaciales."
+      },
+      {
+        "type": "p",
+        "text": "- RA4. Comparar DuckDB y Spark local, medir formatos y explicar particiones, joins, ventanas y eventos tardíos."
+      },
+      {
+        "type": "p",
+        "text": "- RA5. Evaluar una línea base temporal, documentar incertidumbre y defender un producto reproducible con límites explícitos."
+      },
+      {
+        "type": "h",
+        "text": "Horario y carga académica"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Componente",
+          "Tiempo efectivo"
+        ],
+        "rows": [
+          [
+            "Viernes 2 y 9 de octubre, 18:00–22:00",
+            "3 h 45 min cada uno"
+          ],
+          [
+            "Viernes 16, 23 y 30 de octubre y 6 de noviembre, 18:00–21:15",
+            "3 h cada uno"
+          ],
+          [
+            "Sábados 3, 10, 17, 24 y 31 de octubre, 08:00–17:00",
+            "7 h 30 min cada uno"
+          ],
+          [
+            "Sábado 7 de noviembre, 08:00–16:30",
+            "7 h"
+          ],
+          [
+            "Total de clase en línea, excluidas pausas",
+            "64 h"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Doce sesiones online en seis fines de semana, del 2 de octubre al 7 de noviembre de 2026. Las 64 horas corresponden íntegramente a docencia en línea. El trabajo autónomo opcional no se descuenta de esta obligación. La instalación y la comprobación inicial disponen de un bloque durante la sesión 2."
+      },
+      {
+        "type": "h",
+        "text": "Estructura curricular"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Fechas",
+          "Núcleo y ejercicios",
+          "Clase efectiva"
+        ],
+        "rows": [
+          [
+            "02/10/2026 y 03/10/2026",
+            "Fundamentos y escala / Ingesta y perfilado",
+            "11 h 15 min"
+          ],
+          [
+            "09/10/2026 y 10/10/2026",
+            "Arquitecturas, formatos y pipelines / Calidad e integración",
+            "11 h 15 min"
+          ],
+          [
+            "16/10/2026 y 17/10/2026",
+            "Procesamiento con Spark / Consultas e integración distribuida",
+            "10 h 30 min"
+          ],
+          [
+            "23/10/2026 y 24/10/2026",
+            "Rendimiento y escalabilidad / Streaming de eventos",
+            "10 h 30 min"
+          ],
+          [
+            "30/10/2026 y 31/10/2026",
+            "Analítica y gobernanza / Integración y auditoría del proyecto",
+            "10 h 30 min"
+          ],
+          [
+            "06/11/2026 y 07/11/2026",
+            "Clínica de proyectos y ensayo de defensa / Sustentación y cierre contractual",
+            "10 h"
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Fundamentos que se conservan"
+      },
+      {
+        "type": "p",
+        "text": "Volumen, velocidad, variedad y veracidad; escalamiento vertical y horizontal; ley de Amdahl; latencia y throughput; ciclo de vida del dato; sistemas distribuidos y tolerancia a fallos. Warehouse, lake y lakehouse, papel de Hadoop/HDFS y modelos NoSQL se estudian mediante decisiones de arquitectura. La implementación se concentra en Python, DuckDB, Parquet, Spark local y herramientas geográficas de escritorio."
+      },
+      {
+        "type": "p",
+        "text": "Los archivos tabulares de esta cohorte caben en un portátil. Su tamaño no demuestra una necesidad de cómputo distribuido. La complejidad surge también de esquemas heterogéneos, profundidades, fechas, escalas, geometrías y versiones territoriales. Spark local permite estudiar ejecución y planes; sus tiempos no predicen el rendimiento de un clúster."
+      },
+      {
+        "type": "h",
+        "text": "Evaluación"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Evidencia",
+          "Peso"
+        ],
+        "rows": [
+          [
+            "E01–E03 + P01: procedencia, descarga y perfilado",
+            "10 %"
+          ],
+          [
+            "E04–E06 + P02–P03: calidad, formatos y SQL",
+            "10 %"
+          ],
+          [
+            "E07–E09: Spark e integración geográfica",
+            "10 %"
+          ],
+          [
+            "E10/P04 + I01/E11: experimento y eventos",
+            "20 %"
+          ],
+          [
+            "E12–E13: proyecto e informe técnico",
+            "35 %"
+          ],
+          [
+            "Sustentación individual",
+            "15 %"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "La rúbrica valora corrección y conservación de unidades (30 %), reproducibilidad y trazabilidad (25 %), justificación técnica (25 %) y comunicación de limitaciones (20 %), aplicada dentro de cada entrega. Se penaliza afirmar cobertura nacional a partir de muestras, sumar rendimientos, convertir ausencias a cero, introducir fuga temporal o presentar asociaciones como causalidad. La nota mínima y las reglas de asistencia corresponden al programa institucional."
+      },
+      {
+        "type": "h",
+        "text": "Producto integrador"
+      },
+      {
+        "type": "p",
+        "text": "Cada equipo elige dominio agroambiental o PQRS y presenta un pipeline ejecutable de uno de los dominios, un catálogo de fuentes, tablas Parquet, una consulta equivalente entre motores, un mapa agroambiental o una tabla territorial PQRS con cobertura explícita, un experimento de rendimiento, evidencia de eventos y una evaluación temporal. El informe de 8 a 12 páginas debe separar resultados observados, estimaciones, limitaciones y propuesta de escalamiento. La sustentación final se realiza el 7 de noviembre. La sesión del 6 permite ensayar, corregir y validar el producto dentro de las horas contratadas. Planificar 15 minutos por equipo incluyendo preguntas y transición; ajustar el número de turnos al grupo real."
+      },
+      {
+        "type": "h",
+        "text": "Dos dominios y una secuencia común"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Dominio",
+          "Uso central",
+          "Límites"
+        ],
+        "rows": [
+          [
+            "PQRS de salud",
+            "Perfil, lectura por bloques, Parquet, contratos y comparación de motores",
+            "Reportes administrativos; no equivalen a personas únicas ni prevalencia."
+          ],
+          [
+            "Agroambiental",
+            "DIVIPOLA, shapes, propiedades del suelo, EVA, clima y análisis temporal",
+            "Escalas y unidades distintas; muestra municipal no representa automáticamente toda la superficie."
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "La introducción usa las cinco V, costos de movimiento, escalamiento y Amdahl. Después se construye un producto: conservar originales, definir contrato, tipar, controlar calidad, publicar Parquet, consultar, medir y defender el resultado. Polars y DuckDB trabajan localmente; Spark permite estudiar planes y shuffle. Dask, Zarr, GPU y plataformas gestionadas se presentan como alternativas de arquitectura, sin añadir instalaciones obligatorias ni laboratorios extra."
+      },
+      {
+        "type": "h",
+        "text": "Prerrequisitos operativos y progresión"
+      },
+      {
+        "type": "p",
+        "text": "- Saber usar una terminal, tipos básicos de Python y SELECT/GROUP BY en SQL. El diagnóstico inicial orienta la ayuda docente."
+      },
+      {
+        "type": "p",
+        "text": "- Iniciar con las tres muestras reales de 1.000 filas PQRS y los CSV agroambientales. Las muestras son las primeras filas y sirven para probar código; no tienen representatividad estadística."
+      },
+      {
+        "type": "p",
+        "text": "- Usar datos completos PQRS en la sesión 7 después de validar la consulta con muestras. Descargar un corte por vez o acceder a la copia docente."
+      },
+      {
+        "type": "p",
+        "text": "- E01–E13 y P01–P04 comparten los bloques del programa. P01–P03 complementan los talleres de las sesiones 2–4; P04 forma parte de la sesión 7. No se añaden horas."
+      },
+      {
+        "type": "p",
+        "text": "Las prácticas P01–P04 e I01 se evalúan dentro de las entregas existentes, sin pesos adicionales. Consultar el [mapa de ejercicios](mapa-ejercicios.md) y el [proyecto por dominio](../proyecto/README.md)."
+      }
+    ]
+  },
+  {
+    "title": "Calendario contractual y distribución por fechas",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Las fechas de las primeras diez sesiones coinciden con las presentaciones institucionales vigentes. Se agregan los encuentros del 6 y 7 de noviembre de 2026 para cumplir el cierre contractual. El 31 de octubre queda destinado a integración y auditoría, y la sustentación final se traslada al 7 de noviembre."
+      },
+      {
+        "type": "h",
+        "text": "Cómputo contractual confirmado"
+      },
+      {
+        "type": "p",
+        "text": "El curso comprende 64 horas efectivas de clase en línea: 3.840 minutos de 60 minutos por hora. El trabajo autónomo no integra esa suma. Los recesos y el almuerzo se excluyen. La ampliación fuera de clase es opcional y no condiciona la realización de los talleres o la evaluación."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Organización",
+          "Tiempo efectivo"
+        ],
+        "rows": [
+          [
+            "12 encuentros con horarios originales",
+            "67 h 30 min"
+          ],
+          [
+            "Reducción de cuatro viernes: 45 min cada uno",
+            "−3 h"
+          ],
+          [
+            "Reducción del sábado 7 de noviembre",
+            "−30 min"
+          ],
+          [
+            "Docencia en línea resultante",
+            "64 h"
+          ]
+        ],
+        "widths": [
+          0.73,
+          0.27
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Se conservan completos los encuentros del 2, 3, 9 y 10 de octubre. Los viernes 16, 23 y 30 de octubre y 6 de noviembre terminan a las 21:15, con 3 horas efectivas. Los sábados 17, 24 y 31 de octubre conservan 7 h 30 min efectivas. El sábado 7 de noviembre termina a las 16:30, con 7 horas efectivas."
+      },
+      {
+        "type": "h",
+        "text": "Distribución de temas por fechas"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Sesión / fecha",
+          "Tema y práctica",
+          "Clase efectiva"
+        ],
+        "rows": [
+          [
+            "01 · Viernes 02/10/2026",
+            "Fundamentos y escala. E01 / T01: pregunta, procedencia y capacidad",
+            "3 h 45 min"
+          ],
+          [
+            "02 · Sábado 03/10/2026",
+            "Ingesta y perfilado. E02–E03 / P01: descargas, PQRS y DIVIPOLA",
+            "7 h 30 min"
+          ],
+          [
+            "03 · Viernes 09/10/2026",
+            "Arquitecturas, formatos y pipelines. E04 / P02: contrato, CSV y Parquet",
+            "3 h 45 min"
+          ],
+          [
+            "04 · Sábado 10/10/2026",
+            "Calidad e integración. E05–E06 / P03: suelos, calidad PQRS y EVA",
+            "7 h 30 min"
+          ],
+          [
+            "05 · Viernes 16/10/2026",
+            "Procesamiento con Spark. E07: planes, particiones y equivalencia Spark/DuckDB",
+            "3 h"
+          ],
+          [
+            "06 · Sábado 17/10/2026",
+            "Consultas e integración distribuida. E07–E09: joins, shapes DANE/IGAC, SoilGrids y WoSIS",
+            "7 h 30 min"
+          ],
+          [
+            "07 · Viernes 23/10/2026",
+            "Rendimiento y escalabilidad. E10 / P04: tiempo, RAM y motores con PQRS real",
+            "3 h"
+          ],
+          [
+            "08 · Sábado 24/10/2026",
+            "Streaming de eventos. E11 / I01: NASA, CHIRPS, eventos, ventanas y recuperación",
+            "7 h 30 min"
+          ],
+          [
+            "09 · Viernes 30/10/2026",
+            "Analítica y gobernanza. E12: rendimiento por cultivo, evaluación temporal y gobernanza",
+            "3 h"
+          ],
+          [
+            "10 · Sábado 31/10/2026",
+            "Integración y auditoría del proyecto. E13: reconstrucción, pruebas y auditoría cruzada",
+            "7 h 30 min"
+          ],
+          [
+            "11 · Viernes 06/11/2026",
+            "Clínica de proyectos y ensayo de defensa. E13: correcciones, límites e informe final",
+            "3 h"
+          ],
+          [
+            "12 · Sábado 07/11/2026",
+            "Sustentación y cierre contractual. E13: defensa, retroalimentación y entrega verificable",
+            "7 h"
+          ]
+        ],
+        "widths": [
+          0.26,
+          0.55,
+          0.19
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Horarios y productos de cada encuentro"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Fecha",
+          "Horario de Colombia",
+          "Producto"
+        ],
+        "rows": [
+          [
+            "Viernes 02/10/2026",
+            "18:00–22:00",
+            "Ficha de problema y presupuesto de recursos"
+          ],
+          [
+            "Sábado 03/10/2026",
+            "08:00–17:00",
+            "Manifiesto, perfil y claves territoriales"
+          ],
+          [
+            "Viernes 09/10/2026",
+            "18:00–22:00",
+            "Parquet, contrato y traza de reejecución"
+          ],
+          [
+            "Sábado 10/10/2026",
+            "08:00–17:00",
+            "Controles de calidad y consulta conciliada"
+          ],
+          [
+            "Viernes 16/10/2026",
+            "18:00–21:15",
+            "Plan explicado y control de equivalencia"
+          ],
+          [
+            "Sábado 17/10/2026",
+            "08:00–17:00",
+            "Consulta, mapa y alcance espacial"
+          ],
+          [
+            "Viernes 23/10/2026",
+            "18:00–21:15",
+            "Tabla experimental e informe de rendimiento"
+          ],
+          [
+            "Sábado 24/10/2026",
+            "08:00–17:00",
+            "Traza de eventos y análisis de recuperación"
+          ],
+          [
+            "Viernes 30/10/2026",
+            "18:00–21:15",
+            "Evaluación temporal y ficha de gobernanza"
+          ],
+          [
+            "Sábado 31/10/2026",
+            "08:00–17:00",
+            "Producto candidato y lista de hallazgos"
+          ],
+          [
+            "Viernes 06/11/2026",
+            "18:00–21:15",
+            "Producto corregido, informe y ensayo"
+          ],
+          [
+            "Sábado 07/11/2026",
+            "08:00–16:30",
+            "Producto final, sustentación y acta de cierre"
+          ]
+        ],
+        "widths": [
+          0.23,
+          0.22,
+          0.55
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Carga por fin de semana"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Fechas de 2026",
+          "Clases",
+          "Horas efectivas"
+        ],
+        "rows": [
+          [
+            "02/10/2026 y 03/10/2026",
+            "1–2",
+            "11 h 15 min"
+          ],
+          [
+            "09/10/2026 y 10/10/2026",
+            "3–4",
+            "11 h 15 min"
+          ],
+          [
+            "16/10/2026 y 17/10/2026",
+            "5–6",
+            "10 h 30 min"
+          ],
+          [
+            "23/10/2026 y 24/10/2026",
+            "7–8",
+            "10 h 30 min"
+          ],
+          [
+            "30/10/2026 y 31/10/2026",
+            "9–10",
+            "10 h 30 min"
+          ],
+          [
+            "06/11/2026 y 07/11/2026",
+            "11–12",
+            "10 h"
+          ],
+          [
+            "Total",
+            "12",
+            "64 h"
+          ]
+        ],
+        "widths": [
+          0.47,
+          0.16,
+          0.37
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Recesos y almuerzo"
+      },
+      {
+        "type": "p",
+        "text": "Viernes: coffee break 20:00–20:15. Sábados: receso de la mañana 09:30–09:45, almuerzo 12:00–13:00 y receso de la tarde 15:00–15:15. Estos períodos se mantienen incluso en el último encuentro, que termina a las 16:30."
+      },
+      {
+        "type": "h",
+        "text": "Descargas, talleres y continuidad"
+      },
+      {
+        "type": "p",
+        "text": "La instalación, el perfilado inicial y la descarga selectiva tienen espacio en la sesión 2. El docente conserva una copia validada para evitar que una descarga nacional de 1,816 GB consuma el bloque de práctica. Antes del 23 de octubre se comprueba la consulta en las muestras PQRS. Los completos permiten observar escala real; el camino con muestras conserva los criterios de equivalencia en un portátil limitado. No se exige duplicar fuera de clase todas las rutas o descargar capas globales."
+      },
+      {
+        "type": "p",
+        "text": "Los talleres P01–P04 comparten los bloques de E01–E13. Los shapes DANE/IGAC, DIVIPOLA, SoilGrids y WoSIS se aplican el 17 de octubre. El rendimiento agrícola se introduce el 10 y se evalúa temporalmente el 30. NASA y CHIRPS apoyan los eventos del 24. Los ejercicios siguen utilizando observaciones abiertas, conservan originales y declaran unidades, cobertura y límites."
+      },
+      {
+        "type": "h",
+        "text": "Hitos del proyecto"
+      },
+      {
+        "type": "p",
+        "text": "31 de octubre: producto candidato reproducible y auditoría cruzada. 6 de noviembre: clínica, correcciones y ensayo de defensa dentro de la clase. 7 de noviembre: sustentación, evaluación individual, entrega final y cierre contractual. La jornada final reserva 345 minutos a sustentaciones y preguntas, 45 a retroalimentación y 30 al acta y cierre. Con 15 minutos por equipo ofrece 23 cupos; el docente ajusta los turnos a la cantidad real de equipos y puede iniciar sustentaciones en la sesión del día 6."
+      },
+      {
+        "type": "h",
+        "text": "Agenda detallada"
+      },
+      {
+        "type": "h",
+        "text": "Sesión 01: Viernes 02/10/2026"
+      },
+      {
+        "type": "p",
+        "text": "Fundamentos y escala. 18:00–22:00. 3 h 45 min efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "18:00–18:20",
+            "Organización, diagnóstico y unidades de los dos dominios"
+          ],
+          [
+            "18:20–19:35",
+            "Cinco V y T01: cálculo de 2 GB, 20 GB y 2 TB"
+          ],
+          [
+            "19:35–20:00",
+            "Restricciones, escalamiento y Amdahl"
+          ],
+          [
+            "20:00–20:15",
+            "Coffee break"
+          ],
+          [
+            "20:15–21:30",
+            "E01: casos, procedencia, ciclo de vida y ficha"
+          ],
+          [
+            "21:30–22:00",
+            "Discusión y cierre"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Ficha de problema y presupuesto de recursos."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 02: Sábado 03/10/2026"
+      },
+      {
+        "type": "p",
+        "text": "Ingesta y perfilado. 08:00–17:00. 7 h 30 min efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "08:00–08:45",
+            "Entorno, estructura y verificación del kit"
+          ],
+          [
+            "08:45–09:30",
+            "P01: manifiesto PQRS y lectura de las muestras"
+          ],
+          [
+            "09:30–09:45",
+            "Receso de la mañana"
+          ],
+          [
+            "09:45–11:15",
+            "E02: descarga selectiva, SHA-256 y perfil tabular"
+          ],
+          [
+            "11:15–12:00",
+            "Tipos, ausencias, unidades y discusión del perfil"
+          ],
+          [
+            "12:00–13:00",
+            "Almuerzo"
+          ],
+          [
+            "13:00–14:30",
+            "E03: DIVIPOLA y claves territoriales"
+          ],
+          [
+            "14:30–15:00",
+            "P01: lectura por bloques y presupuesto de RAM"
+          ],
+          [
+            "15:00–15:15",
+            "Receso de la tarde"
+          ],
+          [
+            "15:15–16:00",
+            "Revisión por pares y faltantes territoriales"
+          ],
+          [
+            "16:00–16:45",
+            "Contrato inicial y diccionario de variables"
+          ],
+          [
+            "16:45–17:00",
+            "Entrega y preparación del siguiente encuentro"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Manifiesto, perfil y claves territoriales."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 03: Viernes 09/10/2026"
+      },
+      {
+        "type": "p",
+        "text": "Arquitecturas, formatos y pipelines. 18:00–22:00. 3 h 45 min efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "18:00–18:45",
+            "Relacional, warehouse, lake y formatos; contraste conceptual con Zarr"
+          ],
+          [
+            "18:45–19:15",
+            "E04: contrato de datos y capas del producto"
+          ],
+          [
+            "19:15–20:00",
+            "P02: CSV, proyección y Parquet particionado"
+          ],
+          [
+            "20:00–20:15",
+            "Coffee break"
+          ],
+          [
+            "20:15–21:00",
+            "P02: configuración, fallo controlado y reejecución"
+          ],
+          [
+            "21:00–21:45",
+            "ETL/ELT, monitoreo y decisiones de arquitectura"
+          ],
+          [
+            "21:45–22:00",
+            "Defensa breve del contrato"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Parquet, contrato y traza de reejecución."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 04: Sábado 10/10/2026"
+      },
+      {
+        "type": "p",
+        "text": "Calidad e integración. 08:00–17:00. 7 h 30 min efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "08:00–09:30",
+            "E05: calidad de suelos y conciliación"
+          ],
+          [
+            "09:30–09:45",
+            "Receso de la mañana"
+          ],
+          [
+            "09:45–10:45",
+            "P03: calidad PQRS sin exclusiones injustificadas"
+          ],
+          [
+            "10:45–12:00",
+            "Consulta diferida Polars/DuckDB y selección de motores"
+          ],
+          [
+            "12:00–13:00",
+            "Almuerzo"
+          ],
+          [
+            "13:00–14:30",
+            "E06: EVA, rendimiento t/ha e integración SQL"
+          ],
+          [
+            "14:30–15:00",
+            "Cobertura y cardinalidad de las uniones"
+          ],
+          [
+            "15:00–15:15",
+            "Receso de la tarde"
+          ],
+          [
+            "15:15–16:30",
+            "Auditoría, cobertura y revisión de controles"
+          ],
+          [
+            "16:30–17:00",
+            "Cierre y preparación de Spark"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Controles de calidad y consulta conciliada."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 05: Viernes 16/10/2026"
+      },
+      {
+        "type": "p",
+        "text": "Procesamiento con Spark. 18:00–21:15. 3 h efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "18:00–18:30",
+            "Motores y entorno Spark"
+          ],
+          [
+            "18:30–19:15",
+            "Driver, particiones, transformaciones y plan"
+          ],
+          [
+            "19:15–20:00",
+            "E07: agregación y acción"
+          ],
+          [
+            "20:00–20:15",
+            "Coffee break"
+          ],
+          [
+            "20:15–21:00",
+            "E07: equivalencia con DuckDB"
+          ],
+          [
+            "21:00–21:15",
+            "Plan, controles y cierre"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Plan explicado y control de equivalencia."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 06: Sábado 17/10/2026"
+      },
+      {
+        "type": "p",
+        "text": "Consultas e integración distribuida. 08:00–17:00. 7 h 30 min efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "08:00–09:30",
+            "Joins, claves, cardinalidad y planes"
+          ],
+          [
+            "09:30–09:45",
+            "Receso de la mañana"
+          ],
+          [
+            "09:45–12:00",
+            "E07: equivalencia, ventanas y ranking"
+          ],
+          [
+            "12:00–13:00",
+            "Almuerzo"
+          ],
+          [
+            "13:00–15:00",
+            "E08: shapes DANE, geometrías IGAC y cobertura"
+          ],
+          [
+            "15:00–15:15",
+            "Receso de la tarde"
+          ],
+          [
+            "15:15–16:30",
+            "E09: SoilGrids, WoSIS, profundidad y unidades"
+          ],
+          [
+            "16:30–17:00",
+            "Revisión del soporte espacial y entrega"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Consulta, mapa y alcance espacial."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 07: Viernes 23/10/2026"
+      },
+      {
+        "type": "p",
+        "text": "Rendimiento y escalabilidad. 18:00–21:15. 3 h efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "18:00–18:30",
+            "Protocolo experimental, caché y RSS"
+          ],
+          [
+            "18:30–20:00",
+            "E10/P04: consulta equivalente y mediciones PQRS"
+          ],
+          [
+            "20:00–20:15",
+            "Coffee break"
+          ],
+          [
+            "20:15–21:00",
+            "Repeticiones, planes y comparación CSV–Parquet"
+          ],
+          [
+            "21:00–21:15",
+            "Informe y decisión de estrategia"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Tabla experimental e informe de rendimiento."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 08: Sábado 24/10/2026"
+      },
+      {
+        "type": "p",
+        "text": "Streaming de eventos. 08:00–17:00. 7 h 30 min efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "08:00–08:45",
+            "NASA, CHIRPS, escalas y unidades"
+          ],
+          [
+            "08:45–09:30",
+            "I01: traza finita y conceptos de eventos"
+          ],
+          [
+            "09:30–09:45",
+            "Receso de la mañana"
+          ],
+          [
+            "09:45–12:00",
+            "E11: Spark, ventanas y watermark"
+          ],
+          [
+            "12:00–13:00",
+            "Almuerzo"
+          ],
+          [
+            "13:00–15:00",
+            "E11: tardanza, estado, checkpoint y recuperación"
+          ],
+          [
+            "15:00–15:15",
+            "Receso de la tarde"
+          ],
+          [
+            "15:15–16:30",
+            "Colas, garantías y auditoría de la reproducción"
+          ],
+          [
+            "16:30–17:00",
+            "Entrega experimental"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Traza de eventos y análisis de recuperación."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 09: Viernes 30/10/2026"
+      },
+      {
+        "type": "p",
+        "text": "Analítica y gobernanza. 18:00–21:15. 3 h efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "18:00–18:30",
+            "Métrica, población, tiempo y fuga de información"
+          ],
+          [
+            "18:30–20:00",
+            "E12: persistencia, rendimiento y MAE por cultivo"
+          ],
+          [
+            "20:00–20:15",
+            "Coffee break"
+          ],
+          [
+            "20:15–20:30",
+            "E12: error por cultivo y cobertura"
+          ],
+          [
+            "20:30–21:00",
+            "Gobernanza y revisión crítica de índices compuestos"
+          ],
+          [
+            "21:00–21:15",
+            "Definición del producto integrador"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Evaluación temporal y ficha de gobernanza."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 10: Sábado 31/10/2026"
+      },
+      {
+        "type": "p",
+        "text": "Integración y auditoría del proyecto. 08:00–17:00. 7 h 30 min efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "08:00–09:30",
+            "E13: reconstrucción desde originales y contratos"
+          ],
+          [
+            "09:30–09:45",
+            "Receso de la mañana"
+          ],
+          [
+            "09:45–12:00",
+            "Auditoría cruzada de datos, código y resultados"
+          ],
+          [
+            "12:00–13:00",
+            "Almuerzo"
+          ],
+          [
+            "13:00–15:00",
+            "Corrección de hallazgos y revisión del informe"
+          ],
+          [
+            "15:00–15:15",
+            "Receso de la tarde"
+          ],
+          [
+            "15:15–16:30",
+            "Validación del producto candidato y límites"
+          ],
+          [
+            "16:30–17:00",
+            "Entrega candidata y preparación de la clínica"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Producto candidato y lista de hallazgos."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 11: Viernes 06/11/2026"
+      },
+      {
+        "type": "p",
+        "text": "Clínica de proyectos y ensayo de defensa. 18:00–21:15. 3 h efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "18:00–18:45",
+            "Clínica de bloqueos, recursos y calidad"
+          ],
+          [
+            "18:45–20:00",
+            "E13: correcciones y validación entre pares"
+          ],
+          [
+            "20:00–20:15",
+            "Coffee break"
+          ],
+          [
+            "20:15–21:00",
+            "Ensayo de defensa y discusión de límites"
+          ],
+          [
+            "21:00–21:15",
+            "Entrega final y organización de sustentaciones"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Producto corregido, informe y ensayo."
+      },
+      {
+        "type": "h",
+        "text": "Sesión 12: Sábado 07/11/2026"
+      },
+      {
+        "type": "p",
+        "text": "Sustentación y cierre contractual. 08:00–16:30. 7 h efectivas."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Horario",
+          "Actividad"
+        ],
+        "rows": [
+          [
+            "08:00–09:30",
+            "Sustentaciones y preguntas técnicas"
+          ],
+          [
+            "09:30–09:45",
+            "Receso de la mañana"
+          ],
+          [
+            "09:45–12:00",
+            "Sustentaciones y discusión de resultados"
+          ],
+          [
+            "12:00–13:00",
+            "Almuerzo"
+          ],
+          [
+            "13:00–15:00",
+            "Sustentaciones restantes y auditoría final"
+          ],
+          [
+            "15:00–15:15",
+            "Receso de la tarde"
+          ],
+          [
+            "15:15–16:00",
+            "Retroalimentación y evaluación individual"
+          ],
+          [
+            "16:00–16:30",
+            "Acta, entregas verificables y cierre contractual"
+          ]
+        ],
+        "widths": [
+          0.25,
+          0.75
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Producto: Producto final, sustentación y acta de cierre."
+      }
+    ]
+  },
+  {
+    "title": "Catálogo de fuentes y tamaños",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "El corte agroambiental conserva doce archivos originales, 136,4 MB. Supersalud aporta tres CSV completos adicionales, 1.816.243.049 bytes (1,816 GB decimales), y tres muestras reales de 1.000 filas, 2.234.994 bytes en total. Son quince fuentes/archivos originales de trabajo; las muestras se derivan de los tres CSV, sin contarse como otras fuentes. Las versiones, separadores, tamaños y hashes están en fuentes.json y pqrs_fuentes.json."
+      },
+      {
+        "type": "h",
+        "text": "D01 AGROSAVIA"
+      },
+      {
+        "type": "p",
+        "text": "92.738 filas y 32 columnas. Análisis de laboratorio con fechas, territorio, cultivo y propiedades químicas."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: agrosavia.csv. Descarga observada: 20.380 MB (20,379,743 bytes). Alcance: completo."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E01, E02, E04, E05, E06 y E13. pH no disponible: 11 filas."
+      },
+      {
+        "type": "p",
+        "text": "Atención: Conservar ND, unidades y método analítico. No hay coordenadas de muestras en este CSV. No asignarles las coordenadas municipales de DIVIPOLA."
+      },
+      {
+        "type": "url",
+        "text": "https://www.datos.gov.co/api/views/ch4u-f3i5/rows.csv?accessType=DOWNLOAD"
+      },
+      {
+        "type": "h",
+        "text": "D02 DIVIPOLA"
+      },
+      {
+        "type": "p",
+        "text": "1.122 registros y 7 columnas. Corte declarado: 30 de diciembre de 2024."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: divipola.csv. Descarga observada: 0.071 MB (70,850 bytes). Alcance: completo."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E03, E05, E06 y E13. Clave municipal de cinco caracteres."
+      },
+      {
+        "type": "p",
+        "text": "Atención: Incluye 1.103 municipios, 18 áreas no municipalizadas y una isla. Un punto territorial no es un polígono ni la posición de una muestra de suelo."
+      },
+      {
+        "type": "url",
+        "text": "https://www.datos.gov.co/api/views/gdxc-w37w/rows.csv?accessType=DOWNLOAD"
+      },
+      {
+        "type": "h",
+        "text": "D03 MGN departamentos 2025"
+      },
+      {
+        "type": "p",
+        "text": "33 polígonos, incluido Bogotá D.C. ZIP con SHP, SHX, DBF y PRJ."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: dane_departamentos.zip. Descarga observada: 12.524 MB (12,524,421 bytes). Alcance: completo."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E08 y E13. Contexto cartográfico departamental."
+      },
+      {
+        "type": "p",
+        "text": "Atención: Descarga por navegador. Mantener componentes juntos y revisar el archivo PRJ. Los límites del MGN se usan con finalidad geoestadística."
+      },
+      {
+        "type": "url",
+        "text": "https://geoportal.dane.gov.co/descargas/mgn_2025/MGN2025_DPTO_POLITICO.zip"
+      },
+      {
+        "type": "h",
+        "text": "D04 MGN municipios 2025"
+      },
+      {
+        "type": "p",
+        "text": "1.122 geometrías. Campo mpio_cdpmp de cinco caracteres."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: dane_municipios.zip. Descarga observada: 71.576 MB (71,576,494 bytes). Alcance: completo."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E03, E08 y E13. Cruce territorial y geometrías."
+      },
+      {
+        "type": "p",
+        "text": "Atención: mpio_ccdgo tiene solo tres caracteres. Usar mpio_cdpmp; no unir por nombres ni por códigos municipales incompletos. El corte cartográfico es 2025."
+      },
+      {
+        "type": "url",
+        "text": "https://geoportal.dane.gov.co/descargas/mgn_2025/MGN2025_MPIO_GRAFICO.zip"
+      },
+      {
+        "type": "h",
+        "text": "D05 EVA UPRA 2019 a 2025"
+      },
+      {
+        "type": "p",
+        "text": "166.732 filas, 18 columnas. Área sembrada y cosechada, producción y rendimiento."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: eva.csv. Descarga observada: 27.490 MB (27,489,649 bytes). Alcance: completo."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E06, E07, E10, E12 y E13. Rendimiento por cultivo, territorio y período."
+      },
+      {
+        "type": "p",
+        "text": "Atención: Cultivos transitorios cambian su referencia metodológica desde 2022. Comparar períodos compatibles y estado físico. No sumar ni promediar sin ponderación rendimientos t/ha."
+      },
+      {
+        "type": "url",
+        "text": "https://www.datos.gov.co/api/views/uejq-wxrr/rows.csv?accessType=DOWNLOAD"
+      },
+      {
+        "type": "h",
+        "text": "D06 Correlación de suelos IGAC"
+      },
+      {
+        "type": "p",
+        "text": "10 registros de atributos de unidades cartográficas a escala 1:100.000. Esta muestra no incluye geometría."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: igac_correlacion.json. Descarga observada: 0.012 MB (11,827 bytes). Alcance: muestra."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E01, E04 y E09. Contraste de esquemas, taxonomía y metadatos."
+      },
+      {
+        "type": "p",
+        "text": "Atención: No se puede dibujar un mapa a partir de estos diez atributos sin obtener geometrías. No confundir unidades cartográficas con muestras puntuales."
+      },
+      {
+        "type": "url",
+        "text": "https://mapas.igac.gov.co/server/rest/services/agrologia/correlacionsuelosnacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=10&f=json"
+      },
+      {
+        "type": "h",
+        "text": "D07 Capacidad de uso IGAC"
+      },
+      {
+        "type": "p",
+        "text": "Cinco polígonos con clase y descripción de capacidad. GeoJSON en EPSG:4326."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: igac_capacidad.json. Descarga observada: 0.096 MB (95,845 bytes). Alcance: muestra."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E08 y E13. Intersección y limitaciones de uso."
+      },
+      {
+        "type": "p",
+        "text": "Atención: La muestra no representa el país. Capacidad de uso no es rendimiento agrícola medido. Recalcular área después de intersectar."
+      },
+      {
+        "type": "url",
+        "text": "https://mapas.igac.gov.co/server/rest/services/agrologia/capacidaddeusodelastierrasterritorionacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=5&f=geojson"
+      },
+      {
+        "type": "h",
+        "text": "D08 Propiedades químicas IGAC"
+      },
+      {
+        "type": "p",
+        "text": "Cinco polígonos con clases de pH, aluminio, fósforo y otras propiedades."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: igac_quimica.json. Descarga observada: 0.030 MB (30,182 bytes). Alcance: muestra."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E08, E09 y E13. Calidad química y comparación de escalas."
+      },
+      {
+        "type": "p",
+        "text": "Atención: Los intervalos como ≤ 5.5 son categorías, no números puntuales. No sustituir el intervalo por su extremo ni derivar un índice de salud sin justificación."
+      },
+      {
+        "type": "url",
+        "text": "https://mapas.igac.gov.co/server/rest/services/agrologia/distribucionycalidaddelaspropiedadesquimicasterritorionacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=5&f=geojson"
+      },
+      {
+        "type": "h",
+        "text": "D09 SoilGrids pH"
+      },
+      {
+        "type": "p",
+        "text": "Recorte GeoTIFF de 44 × 42 celdas, media predicha de pH a 0–5 cm. Caja: longitud -73,4 a -73,3; latitud 5,5 a 5,6."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: soilgrids.tif. Descarga observada: 0.002 MB (1,815 bytes). Alcance: muestra."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E09 y E13. Datos ráster y factores de escala."
+      },
+      {
+        "type": "p",
+        "text": "Atención: Dividir valores por 10. Se detectaron 188 celdas cero sin NoData declarado: ponerlas en revisión y excluirlas provisionalmente de la media interpretativa. No descargar el mundo completo."
+      },
+      {
+        "type": "url",
+        "text": "https://maps.isric.org/mapserv?map=/map/phh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_0-5cm_mean&FORMAT=image/tiff&SUBSETTINGCRS=http://www.opengis.net/def/crs/EPSG/0/4326&SUBSET=long(-73.4,-73.3)&SUBSET=lat(5.5,5.6)"
+      },
+      {
+        "type": "h",
+        "text": "D10 WoSIS Colombia"
+      },
+      {
+        "type": "p",
+        "text": "Diez registros de horizontes/capas de tres perfiles, filtrados para Colombia."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: wosis.json. Descarga observada: 0.007 MB (7,399 bytes). Alcance: muestra."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E09 y E13. Profundidad, método y licencia por registro."
+      },
+      {
+        "type": "p",
+        "text": "Atención: No son diez perfiles independientes. Las coordenadas y profundidades deben coincidir antes de contrastar con SoilGrids. Revisar licencia de cada proveedor."
+      },
+      {
+        "type": "url",
+        "text": "https://maps.isric.org/mapserv?map=%2Fmap%2Fwosis_latest.map&SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Awosis_latest_phaq&COUNT=10&OUTPUTFORMAT=geojson&FILTER=%3CFilter+xmlns%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22%3E%3CPropertyIsEqualTo%3E%3CValueReference%3Ecountry_name%3C%2FValueReference%3E%3CLiteral%3EColombia%3C%2FLiteral%3E%3C%2FPropertyIsEqualTo%3E%3C%2FFilter%3E"
+      },
+      {
+        "type": "h",
+        "text": "D11 NASA POWER"
+      },
+      {
+        "type": "p",
+        "text": "31 días de enero de 2025. Temperatura T2M y precipitación PRECTOTCORR para 5,54 N, -73,36."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: nasa.json. Descarga observada: 0.002 MB (1,555 bytes). Alcance: muestra."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E11 y E13. JSON, agregación temporal y reproducción de eventos."
+      },
+      {
+        "type": "p",
+        "text": "Atención: Punto demostrativo, no observación directa en una finca. Mantener el estándar temporal del archivo. -999 es dato faltante, no lluvia negativa."
+      },
+      {
+        "type": "url",
+        "text": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,PRECTOTCORR&community=AG&longitude=-73.36&latitude=5.54&start=20250101&end=20250131&format=JSON"
+      },
+      {
+        "type": "h",
+        "text": "D12 CHIRPS v3"
+      },
+      {
+        "type": "p",
+        "text": "GeoTIFF mensual de Latinoamérica, enero de 2025. 1.720 × 1.900 celdas."
+      },
+      {
+        "type": "p",
+        "text": "Archivo docente: chirps.tif. Descarga observada: 4.213 MB (4,212,510 bytes). Alcance: muestra."
+      },
+      {
+        "type": "p",
+        "text": "Propósito: E11 y E13. Recorte ráster y comparación de lluvia mensual."
+      },
+      {
+        "type": "p",
+        "text": "Atención: No sumar lluvia entre píxeles como si fueran días. En este archivo hay valores -9999 y no se declara NoData; enmascarar negativos antes de resumir. No descargar todo el histórico."
+      },
+      {
+        "type": "url",
+        "text": "https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/latam/tifs/chirps-v3.0.2025.01.tif"
+      },
+      {
+        "type": "p",
+        "text": "Conjunto completo del kit: 136,4 MB de archivos originales, con los shapefiles todavía comprimidos. Extraer shapes y crear salidas aumenta el espacio. Para prácticas tabulares bastan AGROSAVIA, EVA y DIVIPOLA, aproximadamente 48 MB. El docente distribuye la copia fechada antes de la sesión; cada estudiante verifica las huellas y practica una descarga pequeña."
+      },
+      {
+        "type": "h",
+        "text": "D13 PQRS/PQRD Supersalud 2023-II"
+      },
+      {
+        "type": "p",
+        "text": "Archivo PQRD_2023_II.csv: 716,697 reportes, 38 columnas, 532.70 MB. Separador ';'; codificación utf-8-sig. El campo periodo almacena el año; corte_archivo se añade para conservar el semestre y archivo de origen. Muestra derivada de las primeras 1.000 filas: 0.752 MB. Uso: P01–P04, contratos, calidad y medición. Procedencia: Superintendencia Nacional de Salud, licencia CC BY 4.0 según metadatos conservados."
+      },
+      {
+        "type": "url",
+        "text": "https://mapas.supersalud.gov.co/arcgisportal/sharing/rest/content/items/515d4c6366854f549b24c704320f10f4/data"
+      },
+      {
+        "type": "p",
+        "text": "Descarga comprobada por lectura HTTP Range de la cabecera y coincidencia de sus 38 columnas el 2 de octubre de 2026. La copia local completa tiene hash registrado y perfil reproducible. Descargar un archivo por vez o usar la copia docente; no materializar los tres CSV originales juntos en RAM."
+      },
+      {
+        "type": "h",
+        "text": "D14 PQRS/PQRD Supersalud 2024-I"
+      },
+      {
+        "type": "p",
+        "text": "Archivo PQRD_2024_I.csv: 781,601 reportes, 38 columnas, 576.71 MB. Separador ','; codificación utf-8-sig. El campo periodo almacena el año; corte_archivo se añade para conservar el semestre y archivo de origen. Muestra derivada de las primeras 1.000 filas: 0.737 MB. Uso: P01–P04, contratos, calidad y medición. Procedencia: Superintendencia Nacional de Salud, licencia CC BY 4.0 según metadatos conservados."
+      },
+      {
+        "type": "url",
+        "text": "https://mapas.supersalud.gov.co/arcgisportal/sharing/rest/content/items/b52330a16b3940c39d38cb164c9dc014/data"
+      },
+      {
+        "type": "p",
+        "text": "Descarga comprobada por lectura HTTP Range de la cabecera y coincidencia de sus 38 columnas el 2 de octubre de 2026. La copia local completa tiene hash registrado y perfil reproducible. Descargar un archivo por vez o usar la copia docente; no materializar los tres CSV originales juntos en RAM."
+      },
+      {
+        "type": "h",
+        "text": "D15 PQRS/PQRD Supersalud 2024-II"
+      },
+      {
+        "type": "p",
+        "text": "Archivo PQRD_2024_II.csv: 946,468 reportes, 38 columnas, 706.84 MB. Separador ';'; codificación utf-8-sig. El campo periodo almacena el año; corte_archivo se añade para conservar el semestre y archivo de origen. Muestra derivada de las primeras 1.000 filas: 0.746 MB. Uso: P01–P04, contratos, calidad y medición. Procedencia: Superintendencia Nacional de Salud, licencia CC BY 4.0 según metadatos conservados."
+      },
+      {
+        "type": "url",
+        "text": "https://mapas.supersalud.gov.co/arcgisportal/sharing/rest/content/items/b257c9907b754b0cabb55a32e706bdee/data"
+      },
+      {
+        "type": "p",
+        "text": "Descarga comprobada por lectura HTTP Range de la cabecera y coincidencia de sus 38 columnas el 2 de octubre de 2026. La copia local completa tiene hash registrado y perfil reproducible. Descargar un archivo por vez o usar la copia docente; no materializar los tres CSV originales juntos en RAM."
+      },
+      {
+        "type": "p",
+        "text": "OBJECTID se trata como clave candidata local al archivo; su unicidad se mide antes de usarlo. id_afec identifica afectados y no se presupone clave de reclamo. Se distinguen ubicación del peticionario, afectado y entidad. La dimensión territorial puede contextualizar cada dominio por separado; no hay unión fila a fila entre reportes de salud y muestras de suelo. Los códigos sin cruce se conservan para revisar vigencia, extensión y normalización con evidencia."
+      }
+    ]
+  },
+  {
+    "title": "Entorno y procedimiento de descarga",
+    "blocks": [
+      {
+        "type": "h",
+        "text": "Preparación del portátil"
+      },
+      {
+        "type": "p",
+        "text": "Python 3.12, terminal y editor de texto son suficientes para iniciar. Se recomienda 16 GB de RAM; con 8 GB se trabaja con dos hilos, un departamento y muestras geográficas. Reservar 5 GB para kit y salidas y, como presupuesto preventivo, 10–15 GB para todo el entorno con Python, Spark, Java y QGIS. No se requiere GPU ni nube. La instalación de bibliotecas puede consumir cientos de MB y Spark y QGIS pueden añadir varios GB instalados; estos son rangos de planificación, no mediciones del archivo de datos."
+      },
+      {
+        "type": "p",
+        "text": "QGIS es opcional para ejecutar los scripts y necesario para la práctica visual de mapas. Descargarlo desde qgis.org y registrar la versión instalada. Spark 4.0.1 se introduce en la sesión 5 y requiere JDK completo Java 17 o 21; para una cohorte estable se recomienda fijar JDK completo Java 17 o 21 y no actualizar en mitad del curso."
+      },
+      {
+        "type": "h",
+        "text": "Instalación en macOS y Linux"
+      },
+      {
+        "type": "code",
+        "text": "cd /ruta/al/kit\npython3 -m venv .venv\nsource .venv/bin/activate\npython -m pip install -r requirements.txt\npython 00_datos.py --listar\npython 00_datos.py --verificar"
+      },
+      {
+        "type": "h",
+        "text": "Instalación en Windows con CMD"
+      },
+      {
+        "type": "code",
+        "text": "cd C:\\curso\\kit\npy -3.12 -m venv .venv\n.venv\\Scripts\\activate.bat\npython -m pip install -r requirements.txt\npython 00_datos.py --verificar"
+      },
+      {
+        "type": "p",
+        "text": "Los comandos Windows anteriores corresponden a CMD. Si se usa PowerShell, abrir CMD para seguir esta guía sin cambiar políticas del sistema. Un error de “módulo no encontrado” se resuelve comprobando que python y pip pertenecen al entorno activado. No instalar todas las dependencias en el Python del sistema."
+      },
+      {
+        "type": "h",
+        "text": "Tres rutas para obtener los datos"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Ruta A, recomendada para clase: descomprimir el paquete docente, que ya contiene data/raw. Ejecutar --verificar. Permite continuar sin Internet una vez instalado el software.",
+          "Ruta B, práctica de descarga: crear una carpeta nueva, copiar 00_datos.py y fuentes.json, y ejecutar --descargar con los IDs requeridos. No descargar todas las fuentes simultáneamente.",
+          "Ruta C, contingencia: copiar una carpeta raw de respaldo verificada mediante --respaldo. El script comprueba el SHA-256 antes de incorporar archivos."
+        ]
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar agrosavia divipola eva\npython 00_datos.py --descargar igac_capacidad igac_quimica\npython 00_datos.py --descargar soilgrids wosis nasa chirps\npython 00_datos.py --respaldo \"/ruta/kit_original/data/raw\" --verificar"
+      },
+      {
+        "type": "p",
+        "text": "Las URLs exactas están en fuentes.json y en el catálogo de este libro. El descargador limita cada respuesta a tres veces el tamaño de referencia o 2 MB, lo que sea mayor. Rechaza páginas HTML, no sobrescribe archivos existentes y conserva una descarga que cambió como .nueva. Un SHA-256 distinto puede deberse a nuevos datos o a cambios de serialización: el docente revisa esquema, valores y conteos antes de aprobar otro corte. No se considera que un HTTP 200 por sí solo sea una descarga válida."
+      },
+      {
+        "type": "h",
+        "text": "Descarga manual de los shapes DANE"
+      },
+      {
+        "type": "url",
+        "text": "https://geoportal.dane.gov.co/servicios/descarga-y-metadatos/datos-geoestadisticos/"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Abrir el catálogo vigente y buscar MGN2025-Nivel. Seleccionar los enlaces de Nivel Departamento y Nivel Municipio en formato Shapefile.",
+          "Guardar los ZIP sin modificar como dane_departamentos.zip y dane_municipios.zip dentro de data/raw. Tamaños observados: 12,52 MB y 71,58 MB. Las etiquetas del catálogo pueden diferir del tamaño descargado.",
+          "Verificar con 00_datos.py --verificar. Para QGIS, extraer cada ZIP a una carpeta propia y abrir su .shp. Conservar .shx, .dbf y .prj en la misma carpeta.",
+          "Si el portal responde 403 o la descarga tarda, usar la copia docente. No insistir con múltiples descargas. El enlace antiguo del MGN devolvió 404 y no debe quedar como dependencia del taller."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "No descargar MGN2025_00_COLOMBIA.zip con todos los niveles: el catálogo anuncia aproximadamente 1,5 GB y contiene detalle que no requiere el curso. Los dos ZIP seleccionados incluyen exclusivamente los niveles necesarios. No se reemplazan polígonos por puntos de DIVIPOLA para evitar esa descarga."
+      },
+      {
+        "type": "h",
+        "text": "Verificación y organización"
+      },
+      {
+        "type": "code",
+        "text": "kit/\n  fuentes.json\n  00_datos.py\n  talleres.py\n  spark_taller.py\n  data/raw/       # originales sin editar\n  salidas/        # resultados reconstruibles\n  entregas/      # informes personales"
+      },
+      {
+        "type": "p",
+        "text": "Leer salidas/verificacion.json: archivo presente, huella coincidente, conteo esperado, JSON sin error de API y ZIP íntegro. Los scripts reconstruyen y sobrescriben sus salidas homónimas; las conclusiones del estudiante se guardan en entregas. En nuevas descargas registrar fecha, versión, licencia, URL, tamaño y huella. Para reproducibilidad guardar también python --version y python -m pip freeze."
+      },
+      {
+        "type": "h",
+        "text": "Preparación del dominio PQRS"
+      },
+      {
+        "type": "code",
+        "text": "python -m pip install -r requirements_pqrs.txt\npython pqrs_descarga.py --listar\npython pqrs_talleres.py perfil\npython pqrs_talleres.py formatos"
+      },
+      {
+        "type": "p",
+        "text": "Por defecto se utilizan las tres muestras incluidas en data/pqrs_muestras. Para datos completos: descargar selectivamente y señalar la carpeta con --datos y --completo. No se incluye otra copia de 1,82 GB en el ZIP docente."
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_descarga.py --descargar 2024_I\npython pqrs_descarga.py --verificar\npython pqrs_talleres.py perfil --completo --datos data/pqrs_completos"
+      },
+      {
+        "type": "p",
+        "text": "La verificación completa requiere los tres cortes; si solo se descargó uno, la comprobación informará los que faltan. Para probar un único CSV con pandas, usar su separador y chunksize según P01. Los scripts de prácticas completas están diseñados para los tres cortes. La descarga rechaza HTML, limita cada archivo a 1,5 veces el tamaño de referencia y conserva como .nueva una fuente cuyo hash cambió."
+      },
+      {
+        "type": "p",
+        "text": "Espacio: 5 GB para la ruta de muestras y datos agroambientales; reservar 8 GB para los tres CSV PQRS, Parquet, temporales y salidas. Con herramientas instaladas, planificar 15–20 GB libres para la ruta completa. Son presupuestos preventivos, no tamaños de instalación medidos. Usar SSD y bloques de 25.000 filas; bajar a 5.000–10.000 si la RAM es limitada. Con 8 GB se recomienda mantener el benchmark pandas en muestras y ampliar completos con DuckDB/Polars."
+      },
+      {
+        "type": "h",
+        "text": "Notebooks actuales"
+      },
+      {
+        "type": "code",
+        "text": "python -m pip install -r requirements_notebooks.txt\npython -m ipykernel install --prefix .venv --name bigdata\n# Abrir Notebooks/ desde Jupyter o un editor compatible"
+      },
+      {
+        "type": "p",
+        "text": "Seleccionar el kernel del mismo entorno Python. Los cuatro notebooks nuevos usan rutas relativas, muestras abiertas y ejercicios acotados. Los notebooks históricos de Supersalud se conservan por procedencia y no se ejecutan de corrido como guía vigente. Las rutas /content, desactivación TLS, GPU y funciones de correo no forman parte de la práctica actual."
+      }
+    ]
+  },
+  {
+    "title": "Modo de presentar y conducir el curso",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "La presentación institucional introduce la pregunta y el concepto. La guía contiene pasos, datos y criterios. El notebook permite observar y modificar el procedimiento. El cierre exige evidencia propia y una explicación del resultado. Cada recurso tiene una función y los mismos IDs de actividad."
+      },
+      {
+        "type": "h",
+        "text": "Ritmo de cada bloque online"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Abrir con una pregunta verificable y declarar el dato o supuesto que se usará.",
+          "Exponer un concepto durante 10–20 min y demostrar una operación breve con el archivo real.",
+          "Trabajar en salas de dos o tres estudiantes con una consigna y producto concreto. Alternar quién ejecuta, quién revisa y quién documenta.",
+          "Compartir una tabla o control agregado y discutir unidades, denominador y límite de interpretación.",
+          "Registrar en entregas/ el resultado y la decisión. El docente consulta los controles del corte y evita evaluar solo la cantidad de herramientas utilizadas."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Presentaciones centrales y material de ampliación"
+      },
+      {
+        "type": "p",
+        "text": "Sesión 1: cinco V, restricciones y ficha de problema. Sesión 2: ingesta, perfil y códigos. Sesión 3: formatos, contrato y reejecución. Sesión 4: calidad, consulta e integración. La introducción a eventos se ubica en la sesión 8. Las presentaciones vigentes distribuyen Spark, rendimiento, eventos y analítica en las sesiones 5, 7, 8 y 9. No requieren ejecutar Spark ni instalar Dask, GPU o plataformas gestionadas en el primer fin de semana."
+      },
+      {
+        "type": "h",
+        "text": "Datos observados y supuestos de capacidad"
+      },
+      {
+        "type": "p",
+        "text": "Los tamaños descargados y conteos del kit se identifican como observados. T01 trabaja escenarios de capacidad, no descargas de esos tamaños. Fórmulas: RAM estimada = factor de materialización × bytes; tiempo aislado = bytes/tasa efectiva; cola acumulada = (entrada − servicio) × tiempo mientras la entrada supera al servicio. Los factores son hipótesis que deben medirse para un equipo y carga de trabajo concretos."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Tamaño hipotético",
+          "RAM si factor = 3",
+          "Descarga a 12,5 MB/s"
+        ],
+        "rows": [
+          [
+            "2 GB",
+            "6 GB",
+            "2 min 40 s"
+          ],
+          [
+            "20 GB",
+            "60 GB",
+            "26 min 40 s"
+          ],
+          [
+            "2 TB",
+            "6 TB",
+            "44 h 26 min 40 s"
+          ]
+        ],
+        "widths": [
+          0.3,
+          0.3,
+          0.4
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Unidades decimales. Los tiempos son estimaciones de operaciones aisladas, sin sumarlos como un pipeline universal. Streaming, filtros, caché, compresión y concurrencia pueden cambiar las medidas. T01: 25 min para calcular la tabla, comparar un portátil con 10 GB de RAM utilizable y justificar el procesamiento por bloques o remoto. Entrega: estrategia por tamaño, restricciones y dos supuestos."
+      },
+      {
+        "type": "h",
+        "text": "Profundidad de posgrado"
+      },
+      {
+        "type": "p",
+        "text": "Cada taller pide hipótesis, criterio de aceptación, evidencia y una crítica. Una operación correcta se acompaña de cardinalidad, procedencia, unidades y condiciones en las que el resultado deja de ser válido. La ampliación puede investigar un método o motor diferente, pero no añade otra entrega obligatoria fuera de las 64 horas."
+      },
+      {
+        "type": "h",
+        "text": "Matriz de coherencia"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Sesiones",
+          "Evidencia central",
+          "Recursos"
+        ],
+        "rows": [
+          [
+            "1–2",
+            "Ficha, manifiestos y perfil",
+            "E01–E03, P01, T01"
+          ],
+          [
+            "3–4",
+            "Parquet, contratos y controles",
+            "E04–E06, P02–P03"
+          ],
+          [
+            "5–6",
+            "Equivalencia, consultas y mapas",
+            "E07–E09"
+          ],
+          [
+            "7–8",
+            "Rendimiento y traza de eventos",
+            "E10–E11, P04, I01"
+          ],
+          [
+            "9–10",
+            "Evaluación temporal y auditoría",
+            "E12–E13"
+          ],
+          [
+            "11–12",
+            "Correcciones y defensa final",
+            "E13"
+          ]
+        ],
+        "widths": [
+          0.15,
+          0.43,
+          0.42
+        ]
+      }
+    ]
+  },
+  {
+    "title": "E01 Pregunta y procedencia",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 1. Trabajo activo orientativo: 75 minutos, integrado con demostración y discusión según la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Formular una pregunta sobre uno de los dos dominios de datos y distinguir observación, estimación y predicción. La decisión propuesta es priorizar territorios para revisión técnica, sin prescribir fertilización."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D01 AGROSAVIA: agrosavia.csv, 20.380 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D05 EVA UPRA 2019 a 2025: eva.csv, 27.490 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D06 Correlación de suelos IGAC: igac_correlacion.json, 0.012 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar agrosavia eva igac_correlacion"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Leer la descripción de D01, D05, D06 y los cortes PQRS D13–D15; consultar sus fuentes desde el catálogo.",
+          "Completar una ficha por fuente con entidad, unidad de observación, fecha, escala, licencia y pregunta posible.",
+          "Comparar una muestra de laboratorio, un registro cultivo–municipio–período y una unidad cartográfica. Escribir por qué no son filas intercambiables.",
+          "Formular una pregunta descriptiva, por ejemplo distribución del pH de muestras por municipio, y una de evaluación, por ejemplo estabilidad del rendimiento de un cultivo entre años.",
+          "Estimar almacenamiento y memoria usando el tamaño observado, sin duplicar filas para aparentar Big Data. Justificar una arquitectura inicial local."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --listar"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "Entregar una página con pregunta, unidad de análisis, fuentes, criterio de éxito y dos límites. Debe distinguir datos propios del proyecto de fuentes abiertas externas."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "No afirmar que todo municipio está muestreado ni que cada análisis corresponde a una parcela única. Los diez registros de correlación IGAC solo permiten explorar su esquema."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Explicar qué exigencia de actualización o concurrencia justificaría abandonar la arquitectura local."
+      },
+      {
+        "type": "p",
+        "text": "Para PQRS, la ficha puede preguntar por variación de reportes por mes, entidad y territorio. Distinguir un reporte administrativo de una persona, episodio clínico o medida de incidencia. Comparar las unidades de los dos dominios sin unir sus filas."
+      }
+    ]
+  },
+  {
+    "title": "E02 Descarga y perfil inicial",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 2. Trabajo activo orientativo: 90 minutos, integrado con demostración y discusión según la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Adquirir datos verificables y localizar problemas antes de transformar."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D01 AGROSAVIA: agrosavia.csv, 20.380 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D05 EVA UPRA 2019 a 2025: eva.csv, 27.490 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D02 DIVIPOLA: divipola.csv, 0.071 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar agrosavia eva divipola"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Activar el entorno según el capítulo de preparación. Verificar la copia docente antes de iniciar cualquier nueva descarga.",
+          "En una carpeta separada copiar 00_datos.py y fuentes.json y descargar DIVIPOLA. Comparar hash y tamaño con el respaldo.",
+          "Consultar AGROSAVIA y EVA con los comandos de descarga. Si ya están presentes, explicar por qué el script los conserva.",
+          "Ejecutar perfil; abrir perfil.csv y comparar vacíos, ND y valores distintos. Leer las fechas como texto antes de elegir el formato.",
+          "Seleccionar cinco variables de suelo y documentar nombre original, significado, unidad pendiente de verificar, dominio y marcador de ausencia."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --verificar\npython talleres.py perfil"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "Controles de entrada: 92.738 filas AGROSAVIA, 166.732 EVA y 1.122 DIVIPOLA. perfil.csv contiene 57 filas, una por columna de los tres archivos."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "Un CSV pequeño en disco puede ocupar varias veces su tamaño en memoria. No abrir los 166.732 registros en una tabla de diapositivas. ND no significa cero."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Detectar qué campos exigirían una tabla de métodos analíticos para comparaciones científicas."
+      }
+    ]
+  },
+  {
+    "title": "E03 Identidad territorial y vigencias",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 2. Trabajo activo orientativo: 90 minutos, integrado con demostración y discusión según la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Construir una dimensión territorial confiable y evitar uniones ambiguas."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D02 DIVIPOLA: divipola.csv, 0.071 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D04 MGN municipios 2025: dane_municipios.zip, 71.576 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D05 EVA UPRA 2019 a 2025: eva.csv, 27.490 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar divipola dane_municipios eva"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Cargar DIVIPOLA con dtype=str y revisar que Código Municipio tenga cinco caracteres.",
+          "Contar los tipos de entidad: 1.103 municipios, 18 áreas no municipalizadas y una isla. Conservar esta clasificación.",
+          "Revisar en el shape la diferencia entre mpio_ccdgo (tres caracteres) y mpio_cdpmp (cinco). No extraer todos los niveles nacionales.",
+          "Comparar los códigos EVA con DIVIPOLA mediante anti-join. Usar código y año, y registrar que DIVIPOLA declara corte 2024 mientras el shape es 2025.",
+          "Proponer un procedimiento para municipios creados o segregados: tabla de equivalencias con vigencia y procedencia. No repartir áreas o producción sin evidencia."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "import pandas as pd\nd = pd.read_csv('data/raw/divipola.csv', dtype=str)\nc = d['Código Municipio'].str.zfill(5)\nassert c.is_unique\nprint(c.str.len().value_counts())"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "Entregar dimensión propuesta, llave de unión y listado de códigos no encontrados. En el corte EVA suministrado el control posterior encuentra cero códigos ausentes en DIVIPOLA."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "Cero códigos ausentes no prueba equivalencia histórica de límites. Las coordenadas de DIVIPOLA no georreferencian los análisis de AGROSAVIA."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Comparar nombres duplicados entre departamentos y explicar por qué el nombre municipal aislado no sirve como llave."
+      }
+    ]
+  },
+  {
+    "title": "E04 Formatos y contrato de datos",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 3. Trabajo activo orientativo: 30 minutos, integrado con demostración y discusión según la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Seleccionar formatos según el uso y documentar el contrato antes de depurar."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D01 AGROSAVIA: agrosavia.csv, 20.380 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D06 Correlación de suelos IGAC: igac_correlacion.json, 0.012 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "D11 NASA POWER: nasa.json, 0.002 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar agrosavia igac_correlacion nasa"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Comparar el CSV de AGROSAVIA, el JSON de NASA y los atributos IGAC. Identificar encabezados, jerarquías y tipos aparentes.",
+          "Definir el contrato de pH: conservar texto original, separar conversión numérica, rango físico y disponibilidad territorial.",
+          "Decidir qué conservar en raw, qué derivar en Parquet y qué resumir en una tabla analítica.",
+          "Inspeccionar la proyección Parquet de P02; comparar su esquema con los 38 campos originales. El taller E05 se ejecuta en la sesión 4, después de explicar las reglas de calidad.",
+          "Documentar particiones potenciales por año y por qué no crear miles de archivos por municipio en un conjunto pequeño."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_talleres.py formatos"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "Entregar un contrato con campo, tipo, ausencia, regla, tratamiento y procedencia. La decisión de arquitectura debe explicar CSV para intercambio, JSON para API y Parquet para análisis."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "Comprimir o particionar no corrige errores semánticos. Parquet no convierte una carpeta en lakehouse ni aporta por sí solo transacciones."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Añadir al contrato el método de pH y la profundidad necesaria para comparar mediciones con SoilGrids."
+      }
+    ]
+  },
+  {
+    "title": "E05 Calidad de análisis de suelo",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 4. Trabajo activo orientativo: 90 minutos, integrado con demostración y discusión según la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Construir un flujo auditable que conserve los datos que requieren revisión y calcule poblaciones analíticas explícitas."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D01 AGROSAVIA: agrosavia.csv, 20.380 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D02 DIVIPOLA: divipola.csv, 0.071 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar agrosavia divipola"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Leer las 32 columnas originales como texto. Definir duplicado exacto como igualdad en todas ellas, incluido Secuencial.",
+          "Transformar pH con conversión tolerante; marcar ausencias, valores fuera de 0–14 y conflictos de identificador. Conservar ph_texto y fila_fuente.",
+          "Interpretar Fecha de Análisis como día/mes/año. Normalizar acentos y espacios de departamento y municipio para un enlace exacto controlado con DIVIPOLA.",
+          "Ejecutar calidad y comparar controles.json con controles_referencia.json. Revisar las 11 filas sin pH numérico y los territorios no encontrados.",
+          "Verificar raw = duplicados exactos + aptos para pH + revisión de pH. Reportar la cobertura territorial como dimensión independiente."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python talleres.py calidad"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "Para este corte: 92.738 originales = 0 duplicados exactos + 92.727 aptos para pH + 11 en revisión. 2.138 registros requieren revisar correspondencia territorial. Entregar reporte, reglas y dos ejemplos comentados."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "“Apto para pH” no significa “suelo de buena calidad” ni registro válido para toda pregunta. No descartar toda una fila porque falte otra propiedad. No corregir municipios por similitud sin revisar."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Proponer una tabla de equivalencias manual con evidencia para tres territorios pendientes, sin modificar la copia original."
+      }
+    ]
+  },
+  {
+    "title": "E06 Rendimiento agrícola e integración SQL",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 4. Trabajo activo orientativo: 90 minutos, integrado con demostración y discusión según la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Calcular indicadores con denominadores correctos y conectar datos de suelo con producción sin multiplicar filas."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D05 EVA UPRA 2019 a 2025: eva.csv, 27.490 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D02 DIVIPOLA: divipola.csv, 0.071 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D01 AGROSAVIA: agrosavia.csv, 20.380 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar eva divipola agrosavia"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ejecutar consultas después de calidad. Abrir suelo_sabio.duckdb con Python y enumerar tablas.",
+          "Agrupar EVA por municipio, cultivo, estado físico y año. Mantener solo área cosechada positiva y producción no negativa para el cociente.",
+          "Calcular sum(producción)/sum(área cosechada). Comparar con avg(rendimiento_publicado) en un grupo con varias filas y explicar la diferencia.",
+          "Agregar AGROSAVIA por municipio y año antes de unirlo a los grupos agrícolas. Medir las filas con pH y las filas sin correspondencia.",
+          "Seleccionar un cultivo y año, presentar resultados con cantidad de muestras de suelo y advertir que la asociación municipal no prueba causalidad."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python talleres.py consultas\n# Dentro de Python\nimport duckdb\ncon = duckdb.connect(\"salidas/suelo_sabio.duckdb\")\nprint(con.sql(\"SELECT count(*) FROM rendimiento\"))"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "159.616 filas EVA cumplen el dominio del cociente. Se obtienen 107.620 grupos municipio–cultivo–estado–año; 55.498 tienen pH agregado en el cruce. El LEFT JOIN debe conservar los 107.620 grupos."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "No unir cada muestra con cada fila EVA: produciría una relación muchos-a-muchos. No sumar rendimientos de cultivos diferentes. Las estadísticas de muestreo de suelos no representan automáticamente todo el municipio."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Calcular cobertura por cultivo y año, y discutir por qué la falta de muestras puede sesgar una comparación."
+      }
+    ]
+  },
+  {
+    "title": "E07 Spark y equivalencia de resultados",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesiones 5 y 6. Trabajo guiado E07: 90 minutos el 16 de octubre y 135 minutos el 17, integrados con demostración y revisión del plan."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Comprender ejecución distribuida y demostrar que cambiar de motor no debe alterar el significado del cálculo."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D05 EVA UPRA 2019 a 2025: eva.csv, 27.490 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D02 DIVIPOLA: divipola.csv, 0.071 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar eva divipola"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Instalar Java 17 o 21 y verificar java -version. Instalar requirements_spark.txt en el entorno del curso.",
+          "Ejecutar spark_taller.py lotes con local[2]. Identificar lectura, agregación y shuffle en explain(formatted).",
+          "Comparar todos los grupos contra DuckDB con tolerancia de 0,000001 en el rendimiento.",
+          "Examinar la ventana row_number que obtiene tres municipios por cultivo, estado y año, con desempate por código municipal.",
+          "Probar un join con dimensión pequeña y justificar cuándo broadcast es apropiado; registrar configuración y plan sin afirmar escalabilidad de clúster."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "java -version\npython -m pip install -r requirements_spark.txt\npython spark_taller.py lotes"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "control_spark.json debe indicar cero diferencias respecto a DuckDB para el corte docente. Entregar un plan explicado y una consulta de ventana."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "Spark puede tardar más que DuckDB en tablas pequeñas debido al arranque y coordinación. No cambiar a local[*] en equipos de 8 GB. Los archivos part-* forman un dataset y deben leerse como conjunto."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Cambiar spark.sql.shuffle.partitions de 4 a 2 y comparar el plan y el número de archivos, conservando resultados."
+      }
+    ]
+  },
+  {
+    "title": "E08 Shapes y capacidad de uso",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 6, sábado 17 de octubre. Trabajo guiado: 120 minutos dentro del bloque territorial, con archivos preparados."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Integrar geometrías oficiales y calcular áreas de intersección sin confundir las muestras temáticas con cobertura completa."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D03 MGN departamentos 2025: dane_departamentos.zip, 12.524 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D04 MGN municipios 2025: dane_municipios.zip, 71.576 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D07 Capacidad de uso IGAC: igac_capacidad.json, 0.096 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "D08 Propiedades químicas IGAC: igac_quimica.json, 0.030 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar dane_departamentos dane_municipios igac_capacidad igac_quimica"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Descargar o verificar los ZIP DANE; comprobar sus componentes y abrir el .prj. La copia suministrada utiliza WGS84.",
+          "En QGIS cargar departamentos y municipios. Unir una tabla municipal agregada por mpio_cdpmp y codigo_municipio, ambos como texto.",
+          "Cargar los GeoJSON IGAC. Revisar sus cinco polígonos, atributos de clase y extensión antes de generar un mapa.",
+          "Ejecutar geografia. El script repara geometrías para la operación, intersecta y calcula áreas en EPSG:9377; conserva los originales y exporta resultados en WGS84.",
+          "Abrir intersecciones_muestra.geojson, etiquetar “muestra de cinco polígonos por tema” y comparar área calculada con el área original almacenada."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python talleres.py geografia"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "1.122 geometrías municipales leídas y 15 intersecciones de área positiva en la copia suministrada. Entregar mapa, tabla y explicación del denominador territorial."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "El script solo usa las muestras IGAC. No calcular porcentajes de capacidad del municipio completo con ellas. El área del atributo original no cambia automáticamente al recortar. No calcular hectáreas en grados."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "En QGIS exportar la intersección a GeoPackage y comparar conservación de nombres largos frente a Shapefile."
+      }
+    ]
+  },
+  {
+    "title": "E09 Propiedades del suelo y profundidad",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 6, sábado 17 de octubre. Trabajo guiado: 75 minutos, más 30 minutos de revisión del soporte espacial, con archivos preparados."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Distinguir clases cartográficas, mediciones por horizonte y predicciones ráster, evitando comparaciones sin soporte espacial."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D09 SoilGrids pH: soilgrids.tif, 0.002 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "D10 WoSIS Colombia: wosis.json, 0.007 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "D08 Propiedades químicas IGAC: igac_quimica.json, 0.030 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "D06 Correlación de suelos IGAC: igac_correlacion.json, 0.012 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar soilgrids wosis igac_quimica igac_correlacion"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ejecutar clima para obtener el inventario de ráster y perfiles. Consultar método, profundidad y licencia de WoSIS.",
+          "Contar diez registros y tres perfiles distintos; construir una tabla por profile_id y profundidad.",
+          "En QGIS abrir soilgrids.tif y comprobar 44 × 42 celdas. Aplicar el factor pH = valor/10.",
+          "Detectar 188 celdas cero sin NoData declarado. El script las excluye provisionalmente de la media interpretativa y las reporta como pendientes; no sustituye ni edita el original.",
+          "Comparar los intervalos del mapa químico IGAC y la taxonomía de correlación. Explicar por qué no se calcula un error de predicción con perfiles fuera del recorte o sin igual profundidad."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python talleres.py clima"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "Reporte de unidades, método y profundidad; 1.660 celdas con pH positivo dentro del dominio tras separar los 188 ceros. Entregar un mapa con alcance y una lista de condiciones para validar predicciones."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "SoilGrids es una predicción y AGROSAVIA/WoSIS contienen mediciones con métodos y muestreo propios. No presentar clases o píxeles como análisis de una finca. No hay un índice integral de salud del suelo validado en este ejercicio."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Diseñar, sin inventar mediciones, un protocolo para evaluar SoilGrids con puntos coincidentes y profundidad compatible."
+      }
+    ]
+  },
+  {
+    "title": "E10 Rendimiento del procesamiento",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 7. Trabajo activo orientativo: 135 minutos, integrado con demostración y discusión según la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Medir tiempo y tamaño de archivos preservando una consulta equivalente."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D05 EVA UPRA 2019 a 2025: eva.csv, 27.490 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar eva"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ejecutar benchmark después de consultas. Usar la tabla normalizada exportada a CSV y Parquet, de modo que ambas tengan las mismas filas y columnas.",
+          "Registrar máquina, RAM, motor, versión, hilos y archivos. El script utiliza dos hilos, una ejecución de calentamiento y cinco repeticiones.",
+          "Comparar conteo y suma entre formatos antes de interpretar tiempos. La suma global solo es un control computacional; no es un indicador agronómico agregado recomendado.",
+          "Calcular mediana de tiempos y razón de tamaños. Discutir caché de sistema operativo e inferencia de esquema CSV.",
+          "Ejecutar una consulta alternativa con proyección de pocas columnas y explicar qué podría aprovechar Parquet."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python talleres.py benchmark"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "benchmark.csv debe contener dos filas con igual población: 159.616 registros aptos para rendimiento. Las medianas de tiempo se miden en cada equipo y no tienen un valor esperado obligatorio."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "No multiplicar ni replicar observaciones para declarar mayor cobertura. No prometer que Parquet o Spark siempre será más rápido. Este experimento mide una consulta y configuración concretas."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Medir lectura con esquema CSV explícito y comparar con inferencia, documentando el cambio de condición experimental."
+      },
+      {
+        "type": "p",
+        "text": "P04 aplica el mismo protocolo a PQRS con cinco alternativas: pandas, Polars, DuckDB-Parquet, DuckDB-particionado y DuckDB-CSV. Todas responden la misma agregación sobre las mismas 16 columnas derivadas y el mismo universo de filas. Los tiempos incluyen arranque del proceso, lectura, consulta y exportación del pequeño resultado. No se presentan como tiempos exclusivos del kernel de agregación."
+      }
+    ]
+  },
+  {
+    "title": "E11 Clima y reproducción de eventos",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 8. Trabajo activo orientativo: 270 minutos, integrado con demostración y discusión según la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Integrar tiempos y resoluciones agroclimáticas y estudiar qué ocurre cuando observaciones reales llegan tarde."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D11 NASA POWER: nasa.json, 0.002 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "D12 CHIRPS v3: chirps.tif, 4.213 MB, muestra."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar nasa chirps"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Revisar la serie NASA de enero de 2025: 31 días, T2M y PRECTOTCORR. Usar temperatura media y precipitación acumulada, sin convertir -999 a cero.",
+          "Leer CHIRPS mensual, enmascarar negativos -9999 y recortar la caja demostrativa. Comparar promedio espacial mensual con la suma temporal NASA, explicando sus soportes diferentes.",
+          "Ejecutar spark_taller.py eventos. Los días llegan por lotes; el día 5 se retiene y llega después del día 31. Todos los valores proceden del archivo público.",
+          "Examinar control_eventos.json: eventTime, watermark y numRowsDroppedByWatermark. La fecha del registro se usa como tiempo de evento en una convención didáctica de medianoche, no como hora real de publicación.",
+          "Revisar los directorios entrada, resultado y checkpoint. Explicar por qué reiniciar desde el mismo checkpoint y crear uno nuevo son operaciones diferentes. Entregar una línea temporal."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python talleres.py clima\npython spark_taller.py eventos"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "La serie contiene 31 valores por variable. Suma NASA: 67,69 mm en enero de 2025 para el punto. Guardar evidencia de al menos un registro tardío descartado por watermark en la reproducción suministrada."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "La reproducción no es un flujo en vivo. La salida append contiene ventanas finalizadas; las últimas pueden quedar pendientes hasta que avance el tiempo de evento. No inyectar fechas o lluvias inventadas para cerrarlas. CHIRPS y NASA no deben coincidir necesariamente."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Proponer cómo procesar correcciones tardías del proveedor conservando historial y explicar una estrategia de reejecución por partición."
+      }
+    ]
+  },
+  {
+    "title": "E12 Línea base temporal y gobernanza",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 9, viernes 30 de octubre. Trabajo guiado de E12: 105 minutos. El bloque de gobernanza dispone de 30 minutos adicionales dentro de la misma clase de 3 horas."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Evaluar predicción sin fuga de información y documentar las responsabilidades del producto."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D05 EVA UPRA 2019 a 2025: eva.csv, 27.490 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D01 AGROSAVIA: agrosavia.csv, 20.380 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "D02 DIVIPOLA: divipola.csv, 0.071 MB, completo."
+      },
+      {
+        "type": "p",
+        "text": "Con el kit completo ejecutar --verificar. Para obtener una nueva copia utilizar la ruta B del capítulo de descarga y los IDs indicados abajo. Los shapes DANE se descargan por navegador. Todas las URLs están en el catálogo y en fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar eva agrosavia divipola"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Leer rendimiento.parquet y restringir la comparación a 2022–2025 para evitar mezclar el cambio metodológico anterior de EVA.",
+          "Construir una predicción de persistencia: rendimiento del año anterior del mismo municipio, cultivo y estado físico. Exigir años consecutivos.",
+          "Usar 2024 para revisión del procedimiento y 2025 como evaluación final reservada. No ajustar reglas tras observar el error final.",
+          "Ejecutar modelo y reportar MAE, cobertura, errores por cultivo y casos sin año previo. No usar área o producción del año objetivo como predictores de su propio cociente.",
+          "Completar ficha de gobernanza: fuente, licencia, corte, transformaciones, responsables, frecuencia, acceso, control de cambios y límites de uso."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python talleres.py modelo"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "15.267 pares consecutivos para 2024 y 15.503 para 2025. Reportar MAE por año y desagregado por cultivo. La persistencia es una línea base, no un modelo agronómico validado para recomendar prácticas."
+      },
+      {
+        "type": "h",
+        "text": "Advertencia de interpretación"
+      },
+      {
+        "type": "p",
+        "text": "El MAE global mezcla cultivos de escalas diferentes. No usar la mediana de pH del año objetivo si no estaba disponible en la fecha de predicción. No presentar rendimiento como función exclusiva del suelo."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Añadir una segunda línea base con mediana histórica por cultivo calculada únicamente con años anteriores y comparar cobertura en el mismo conjunto de prueba."
+      },
+      {
+        "type": "p",
+        "text": "La métrica IPA de los notebooks históricos se utiliza solo para revisar diseño de índices compuestos. Los cortes actuales no contienen medidas completas de severidad clínica, costo y urgencia que permitan calcular el índice original con fundamento. La actividad exige identificar esos campos ausentes, definir normalizaciones y discutir sensibilidad; no se publican puntuaciones clínicas ni se inventan atributos."
+      }
+    ]
+  },
+  {
+    "title": "E13 Producto integrador reproducible",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "[Índice del curso](../README.md) · [Evaluación](../docs/mapa-ejercicios.md) · [Calendario](../docs/calendario.md)"
+      },
+      {
+        "type": "p",
+        "text": "Elegir **PQRS** o **agroambiental** y construir un producto reproducible. Las competencias comunes se acreditan con las prácticas del curso; no se exige desarrollar dos proyectos ni unir reportes de salud con muestras de suelo."
+      },
+      {
+        "type": "h",
+        "text": "Hitos y trabajo en clase"
+      },
+      {
+        "type": "p",
+        "text": "- Clase 10, 31 de octubre: reconstrucción y auditoría cruzada; producto candidato."
+      },
+      {
+        "type": "p",
+        "text": "- Clase 11, 6 de noviembre: resolver hallazgos, validar y ensayar la defensa."
+      },
+      {
+        "type": "p",
+        "text": "- Clase 12, 7 de noviembre: entrega final y sustentación de 15 minutos por equipo, con preguntas y transición."
+      },
+      {
+        "type": "p",
+        "text": "Estos tres encuentros reúnen 1.050 minutos dentro de las 64 horas en línea. La ampliación fuera de clase es opcional."
+      },
+      {
+        "type": "h",
+        "text": "Fuentes y preparación por ruta"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Ruta",
+          "Entradas",
+          "Producto específico"
+        ],
+        "rows": [
+          [
+            "PQRS",
+            "Muestras de tres cortes; completos opcionales para volumen; DIVIPOLA si se usa dimensión territorial",
+            "Series de reportes, contrato, conteos por período/territorio y cobertura de enlace"
+          ],
+          [
+            "Agroambiental",
+            "AGROSAVIA, EVA y DIVIPOLA; DANE/IGAC para mapa; demás fuentes según pregunta",
+            "Tabla agrícola con denominador correcto, mapa y cobertura espacial"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Consultar [datasets](../docs/datasets.md), [descarga y entorno](../docs/entorno.md), [manifiesto PQRS](../kit/pqrs_fuentes.json) y [manifiesto agroambiental](../kit/fuentes.json). Descargar solo las fuentes necesarias. Los archivos completos y las salidas no se incorporan al repositorio."
+      },
+      {
+        "type": "h",
+        "text": "Ejecución inicial"
+      },
+      {
+        "type": "p",
+        "text": "Desde `kit/`, después de preparar las entradas y el entorno:"
+      },
+      {
+        "type": "code",
+        "text": "# Ruta PQRS con muestras\npython pqrs_talleres.py formatos\npython pqrs_talleres.py calidad\npython pqrs_talleres.py benchmark --repeticiones 3\n# Ruta agroambiental\npython talleres.py calidad\npython talleres.py consultas"
+      },
+      {
+        "type": "p",
+        "text": "Ejecutar la ruta elegida, no todas las líneas como obligación. Adjuntar por separado las evidencias comunes E07 (Spark), E08–E09 (soporte espacial), I01/E11 (eventos NASA) y E12 (evaluación temporal EVA), identificando su dominio y sus limitaciones."
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones y aceptación"
+      },
+      {
+        "type": "p",
+        "text": "1. Definir pregunta, unidad de observación, población cubierta y límites. Para PQRS, reportes no equivalen a personas únicas ni prevalencia."
+      },
+      {
+        "type": "p",
+        "text": "2. Registrar procedencia, tamaños, hashes, versiones y comandos. Conservar originales y verificar cardinalidad tras cada transformación."
+      },
+      {
+        "type": "p",
+        "text": "3. Construir el producto específico de la ruta. El mapa agroambiental no es una exigencia de mapa clínico para PQRS: en salud se puede entregar una tabla territorial con conteos, vigencia y cobertura."
+      },
+      {
+        "type": "p",
+        "text": "4. Incorporar una consulta verificada, controles de calidad y un experimento de rendimiento. Declarar muestra o completo en cada resultado."
+      },
+      {
+        "type": "p",
+        "text": "5. Presentar las evidencias metodológicas comunes sin atribuirlas al dominio equivocado. Diferenciar una reproducción de eventos de una prueba de recuperación efectivamente ejecutada."
+      },
+      {
+        "type": "p",
+        "text": "6. Otro equipo reconstruye controles; registrar hallazgo, corrección y resultado de la nueva ejecución."
+      },
+      {
+        "type": "p",
+        "text": "7. Entregar código/notebooks, informe de 8–12 páginas, ficha de gobernanza y defensa. Explicar un resultado que no se puede inferir de los datos."
+      },
+      {
+        "type": "h",
+        "text": "Evaluación"
+      },
+      {
+        "type": "p",
+        "text": "Proyecto e informe: **35 %**. Sustentación individual: **15 %**. Las prácticas previas completan el 50 % restante según el [mapa de evaluación](../docs/mapa-ejercicios.md). No hay un peso adicional por cada notebook."
+      },
+      {
+        "type": "p",
+        "text": "Dentro de cada entrega: corrección y unidades 30 %, reproducibilidad y trazabilidad 25 %, justificación 25 % y comunicación de límites 20 %. No se penaliza optar por las muestras cuando el equipo no admite los completos; sí se exige declarar el alcance y no extrapolarlo."
+      }
+    ]
+  },
+  {
+    "title": "P01 Perfil PQRS y lectura por bloques",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 2. Trabajo orientativo: 75 min dentro de los bloques de la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Adquirir un perfil verificable del segundo dominio y observar cómo cambia la memoria al variar el tamaño de bloque."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D13–D15: tres cortes de Supersalud. Muestras reales incluidas de 1.000 filas por corte, 2,235 MB en conjunto. Completos: 532,696 MB, 576,711 MB y 706,836 MB; total 1,816 GB. Consultar separador, URL, licencia y SHA-256 en pqrs_fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_descarga.py --listar\n# Completo opcional antes de P04:\npython pqrs_descarga.py --descargar 2023_II 2024_I 2024_II"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Revisar pqrs_fuentes.json: distinguir período del nombre del corte, campo periodo y separador.",
+          "Ejecutar perfil con las tres muestras; contar filas, revisar las 38 columnas y vacíos literales.",
+          "Modificar --bloque a 100, 500 y 1.000 en muestras. Comparar memoria del DataFrame y tamaño CSV sin extrapolar linealmente la RSS.",
+          "Contrastar mes, ubicación del peticionario, ubicación del afectado e identidad candidata.",
+          "Describir qué controles se ejecutarían sobre los archivos completos; reservar la prueba de volumen para P04."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_talleres.py perfil\npython pqrs_talleres.py perfil --bloque 500"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "Tres muestras de 1.000 filas, manifiesto, perfil y presupuesto de recursos. Entregar diccionario de cinco campos y dos límites de cobertura."
+      },
+      {
+        "type": "h",
+        "text": "Advertencias de uso e interpretación"
+      },
+      {
+        "type": "p",
+        "text": "Las primeras filas no son una muestra aleatoria. Faltante territorial no permite afirmar anonimato. Edad mayor de 90 no prueba error. No usar id_afec como clave de reclamo."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Cambiar una condición de la consulta, anticipar su efecto y verificar la equivalencia entre implementaciones. Documentar qué campo o metadata adicional permitiría una conclusión más sólida."
+      }
+    ]
+  },
+  {
+    "title": "P02 Parquet, contrato y reejecución",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 3. Trabajo orientativo: 90 min dentro de los bloques de la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Construir una proyección trazable y comparar archivo simple y particiones, verificando filas y reejecución."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D13–D15: tres cortes de Supersalud. Muestras reales incluidas de 1.000 filas por corte, 2,235 MB en conjunto. Completos: 532,696 MB, 576,711 MB y 706,836 MB; total 1,816 GB. Consultar separador, URL, licencia y SHA-256 en pqrs_fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_descarga.py --listar\n# Completo opcional antes de P04:\npython pqrs_descarga.py --descargar 2023_II 2024_I 2024_II"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ejecutar formatos con las muestras antes de abrir Parquet. Verificar el corte mediante hashes.",
+          "Inspeccionar las 16 columnas de la proyección: el original de 38 columnas permanece intacto. La proyección conserva fila_fuente y corte_archivo.",
+          "Comparar el archivo Parquet y la carpeta particionada por anio/mes_num. Revisar que periodo contiene el año.",
+          "Ejecutar dos veces con la misma configuración y comparar filas y firma_contenido en control_formatos_pqrs.json.",
+          "En memoria retirar una columna de una muestra y llamar normalizar; comprobar ValueError. Restaurar el esquema y explicar cuándo puede publicarse."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_talleres.py formatos\npython pqrs_talleres.py formatos --config pqrs_config.json"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "3.000 filas en Parquet simple y particionado; 16 columnas en la proyección; 8 archivos particionados del corte de muestras. Dos ejecuciones deben conservar firma y filas. Entregar contrato, configuración y traza del fallo."
+      },
+      {
+        "type": "h",
+        "text": "Advertencias de uso e interpretación"
+      },
+      {
+        "type": "p",
+        "text": "Un cambio de hash exige revisar el corte. La firma computacional verifica equivalencia del producto; no reemplaza un contrato semántico. El particionamiento puede generar archivos pequeños y ser contraproducente."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Cambiar una condición de la consulta, anticipar su efecto y verificar la equivalencia entre implementaciones. Documentar qué campo o metadata adicional permitiría una conclusión más sólida."
+      }
+    ]
+  },
+  {
+    "title": "P03 Calidad de reportes y consulta diferida",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 4. Trabajo orientativo: 60 min dentro de los bloques de la agenda."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Distinguir reglas de calidad, unidad de reporte y condiciones de una consulta local, sin exclusiones basadas en supuestos clínicos."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D13–D15: tres cortes de Supersalud. Muestras reales incluidas de 1.000 filas por corte, 2,235 MB en conjunto. Completos: 532,696 MB, 576,711 MB y 706,836 MB; total 1,816 GB. Consultar separador, URL, licencia y SHA-256 en pqrs_fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_descarga.py --listar\n# Completo opcional antes de P04:\npython pqrs_descarga.py --descargar 2023_II 2024_I 2024_II"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Ejecutar calidad después de formatos y revisar control_calidad_pqrs.json.",
+          "Analizar claves candidatas, período y edad en revisión; describir por qué la proyección no alcanza para identificar duplicados exactos de los 38 campos.",
+          "Revisar ubicaciones del afectado y peticionario por separado. Conservar los registros sin DIVIPOLA y formular hipótesis comprobables.",
+          "Observar un plan Polars con scan_parquet y filter. Comparar conteos con una consulta SQL sobre la misma entrada.",
+          "Definir una política de publicar, revisar o detener con evidencia. Medir impacto antes de excluir filas."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_talleres.py calidad"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "Muestras: 3.000 filas, 3.000 claves candidatas, 41 edades mayores de 90 y 3 registros con ubicación de peticionario vacía; cero exclusiones automáticas. Entregar tabla de controles y justificación."
+      },
+      {
+        "type": "h",
+        "text": "Advertencias de uso e interpretación"
+      },
+      {
+        "type": "p",
+        "text": "Edad alta y distribución de género no prueban mala captura. Los umbrales de los notebooks históricos son ejemplos a revisar. Los conteos de PQRS no miden prevalencia ni riesgo clínico."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Cambiar una condición de la consulta, anticipar su efecto y verificar la equivalencia entre implementaciones. Documentar qué campo o metadata adicional permitiría una conclusión más sólida."
+      }
+    ]
+  },
+  {
+    "title": "P04 Escala real y comparación de motores",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Preparado por el PhD Esteban Hernández, CyberColombia."
+      },
+      {
+        "type": "p",
+        "text": "Sesión 7, viernes 23 de octubre. Trabajo experimental: 135 minutos compartidos con E10. Preparación de fuentes validada durante las clases previas."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Evaluar estrategia local sobre 2.444.766 reportes, conservando la equivalencia y documentando el costo extremo a extremo."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D13–D15: tres cortes de Supersalud. Muestras reales incluidas de 1.000 filas por corte, 2,235 MB en conjunto. Completos: 532,696 MB, 576,711 MB y 706,836 MB; total 1,816 GB. Consultar separador, URL, licencia y SHA-256 en pqrs_fuentes.json."
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_descarga.py --listar\n# Completo opcional antes de P04:\npython pqrs_descarga.py --descargar 2023_II 2024_I 2024_II"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "p",
+        "text": "1. Ejecutar primero benchmark con muestras para confirmar consulta y entorno. Las dependencias están en requirements_pqrs.txt."
+      },
+      {
+        "type": "p",
+        "text": "2. Obtener los tres CSV de la copia docente o descargarlos uno por vez. Verificar hashes y esquema; reservar espacio para temporales."
+      },
+      {
+        "type": "p",
+        "text": "3. Ejecutar formatos --completo en la carpeta correcta; mantener chunksize 25.000 o reducirlo según memoria."
+      },
+      {
+        "type": "p",
+        "text": "4. Comparar los cinco motores con calentamiento y tres repeticiones. Los procesos son independientes y usan dos hilos; la caché del sistema puede persistir."
+      },
+      {
+        "type": "p",
+        "text": "5. Publicar mediana de tiempo, RSS máxima muestreada, intervalo de sondeo, versiones y conteos. Explicar por qué 3.000 filas pueden estar dominadas por el costo de arranque."
+      },
+      {
+        "type": "h",
+        "text": "Ejecución"
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_talleres.py benchmark\npython pqrs_talleres.py formatos --completo --datos data/pqrs_completos --salidas salidas/pqrs_completos\npython pqrs_talleres.py benchmark --completo --repeticiones 3 --salidas salidas/pqrs_completos"
+      },
+      {
+        "type": "h",
+        "text": "Entrega y criterios"
+      },
+      {
+        "type": "p",
+        "text": "En completos, los cinco motores deben conciliar 2.444.766 reportes. En muestras, conciliar 3.000. Entregar benchmark_pqrs.csv, resumen, controles y decisión de estrategia. P04 integra los bloques experimentales de E10, sin sumar otra sesión."
+      },
+      {
+        "type": "h",
+        "text": "Advertencias de uso e interpretación"
+      },
+      {
+        "type": "p",
+        "text": "RSS se sondea cada 10 ms y puede omitir picos más cortos; cero no se interpreta como memoria nula si el sistema deniega lectura. El resultado agregado también ocupa RAM. No afirmar que Polars streaming garantiza que cualquier operación cabe fuera de memoria."
+      },
+      {
+        "type": "h",
+        "text": "Ampliación dentro del bloque"
+      },
+      {
+        "type": "p",
+        "text": "Cambiar una condición de la consulta, anticipar su efecto y verificar la equivalencia entre implementaciones. Documentar qué campo o metadata adicional permitiría una conclusión más sólida."
+      },
+      {
+        "type": "h",
+        "text": "Ajuste de la práctica"
+      },
+      {
+        "type": "p",
+        "text": "E10 y P04 comparten 135 minutos de práctica; se entrega un único informe. No repetir obligatoriamente un benchmark completo con EVA y otro con PQRS. La medición de muestras es válida para revisar equivalencia, sin conclusiones sobre el volumen nacional."
+      },
+      {
+        "type": "p",
+        "text": "[Prerrequisitos y evaluación](../docs/mapa-ejercicios.md)."
+      }
+    ]
+  },
+  {
+    "title": "I01 Introducción finita a eventos con NASA",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Sesión 8, 45 min, dentro del bloque de conceptos de eventos e I01. Retomar con Spark en E11."
+      },
+      {
+        "type": "h",
+        "text": "Propósito"
+      },
+      {
+        "type": "p",
+        "text": "Distinguir evento, entrega, reintento y atraso a partir de valores abiertos reales. La práctica termina por sí sola y no requiere Spark."
+      },
+      {
+        "type": "h",
+        "text": "Datos y descarga"
+      },
+      {
+        "type": "p",
+        "text": "D11 NASA POWER: nasa.json del kit, 1.555 bytes, serie diaria de enero de 2025. El recorte y sus parámetros están en fuentes.json. La fecha se usa como tiempo de evento mediante una convención didáctica, sin afirmar hora real de publicación."
+      },
+      {
+        "type": "code",
+        "text": "python 00_datos.py --descargar nasa\npython pqrs_talleres.py eventos"
+      },
+      {
+        "type": "h",
+        "text": "Instrucciones"
+      },
+      {
+        "type": "steps",
+        "items": [
+          "Examinar las primeras doce fechas reales; el día 5 llega al final y el día 6 se reentrega. No inventar lluvia.",
+          "Abrir traza_eventos_nasa.csv y explicar watermark_antes, event_id y estado. La regla simplificada admite retraso de tres días.",
+          "Comparar la suma de aceptados con la suma del conjunto de fechas únicas; explicar cómo las reglas de llegada y reintento cambian el producto.",
+          "Proponer una política de corrección para el día tardío y contrastarla después con la implementación de Spark de E11."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Entrega y controles"
+      },
+      {
+        "type": "p",
+        "text": "13 entregas, 12 registros reales distintos, 11 aceptados, 1 reintento descartado y 1 llegada tardía. Suma aceptada del corte: 41,44 mm. La entrega es una traza explicada, no un sistema en tiempo real."
+      },
+      {
+        "type": "h",
+        "text": "Alcance"
+      },
+      {
+        "type": "p",
+        "text": "La regla Python sirve para razonar sobre una traza y no reproduce toda la semántica de Structured Streaming. El archivo PQRS no tiene tiempos de evento suficientemente precisos para este ejemplo; mantener separadas la reproducción NASA y las series mensuales de reportes."
+      }
+    ]
+  },
+  {
+    "title": "Controles y guía del docente",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "Los controles siguientes corresponden únicamente al corte fechado suministrado. Si cambia una fuente, volver a ejecutar los scripts y publicar otra versión del manifiesto. El número de registros no se impone como condición universal de calidad; sirve para comprobar que todos trabajan con la misma entrada."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Control",
+          "Referencia"
+        ],
+        "rows": [
+          [
+            "AGROSAVIA entrada",
+            "92.738"
+          ],
+          [
+            "Duplicados exactos",
+            "0"
+          ],
+          [
+            "Aptos para analizar pH",
+            "92.727"
+          ],
+          [
+            "Revisión por pH no numérico",
+            "11"
+          ],
+          [
+            "Territorio sin enlace exacto",
+            "2.138"
+          ],
+          [
+            "EVA entrada",
+            "166.732"
+          ],
+          [
+            "EVA apto para cociente",
+            "159.616"
+          ],
+          [
+            "Grupos agrícolas",
+            "107.620"
+          ],
+          [
+            "Grupos agrícolas con pH",
+            "55.498"
+          ],
+          [
+            "Intersecciones de muestras IGAC",
+            "15"
+          ]
+        ],
+        "widths": [
+          0.73,
+          0.27
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Respuestas orientadoras"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Duplicado no equivale a repetición legítima: dos análisis de una misma localidad pueden corresponder a fechas o parcelas diferentes. Solo se eliminan copias definidas y documentadas.",
+          "Una fila con ND en una propiedad puede servir para otra pregunta. El estado de calidad depende del producto, por ejemplo análisis de pH o rendimiento.",
+          "Una unión muchos-a-uno conserva filas; una unión entre muestras individuales y registros agrícolas puede inflar conteos. Agregar a la unidad común antes de unir.",
+          "La media simple de rendimientos asigna el mismo peso a áreas distintas. El cociente de sumas utiliza la superficie cosechada como ponderador dentro de grupos compatibles.",
+          "Un mapa de cinco polígonos describe esos polígonos. El espacio no cubierto no equivale a suelo sin problemas, ni a ausencia del atributo.",
+          "Las mediciones WoSIS por horizonte y los píxeles SoilGrids solo se comparan después de alinear profundidad, posición, método y soporte. El kit permite demostrar por qué esa validación requiere más datos.",
+          "NASA y CHIRPS combinan fuentes y resoluciones diferentes. Comparar unidades y períodos es necesario, pero no garantiza igualdad.",
+          "La última ventana de un flujo puede seguir abierta aunque no entren más archivos. Fin de archivos y fin de tiempo de evento son conceptos distintos."
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Contingencias durante la clase"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Situación",
+          "Acción"
+        ],
+        "rows": [
+          [
+            "Portal DANE lento o 403",
+            "Usar ZIP verificado del kit; mantener la descarga manual como procedimiento documentado."
+          ],
+          [
+            "Hash de descarga cambió",
+            "Conservar .nueva, comparar con el corte y no mezclar cohortes."
+          ],
+          [
+            "Pocos recursos de RAM",
+            "Dos hilos, un departamento y muestras; cerrar QGIS al ejecutar Spark si hace falta."
+          ],
+          [
+            "Ceros en SoilGrids sin NoData",
+            "Reportar y separar provisionalmente; no inventar corrección."
+          ],
+          [
+            "Código no encontrado",
+            "Registrar anti-join y revisar vigencia/nombre con evidencia."
+          ],
+          [
+            "Java ausente",
+            "Instalar Java 17/21 según la guía de la plataforma; comprobar antes de E07."
+          ],
+          [
+            "Streaming no muestra ventana final",
+            "Inspeccionar watermark y modo append; no fabricar observaciones."
+          ]
+        ],
+        "widths": [
+          0.38,
+          0.62
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Fuentes técnicas y metodológicas"
+      },
+      {
+        "type": "p",
+        "text": "DuckDB, lectura CSV y tipos"
+      },
+      {
+        "type": "url",
+        "text": "https://duckdb.org/docs/stable/data/csv/overview"
+      },
+      {
+        "type": "p",
+        "text": "Apache Spark 4.0.1, instalación"
+      },
+      {
+        "type": "url",
+        "text": "https://spark.apache.org/docs/4.0.1/api/python/getting_started/install.html"
+      },
+      {
+        "type": "p",
+        "text": "Apache Spark 4.0.1, Structured Streaming"
+      },
+      {
+        "type": "url",
+        "text": "https://spark.apache.org/docs/4.0.1/streaming/apis-on-dataframes-and-datasets.html"
+      },
+      {
+        "type": "p",
+        "text": "QGIS, intersección vectorial"
+      },
+      {
+        "type": "url",
+        "text": "https://docs.qgis.org/latest/en/docs/user_manual/processing_algs/qgis/vectoroverlay.html"
+      },
+      {
+        "type": "p",
+        "text": "ISRIC, propiedades y factores de SoilGrids"
+      },
+      {
+        "type": "url",
+        "text": "https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_01.html"
+      },
+      {
+        "type": "p",
+        "text": "ISRIC, WoSIS y licencias"
+      },
+      {
+        "type": "url",
+        "text": "https://docs.isric.org/globaldata/wosis/faq-wosis.html"
+      },
+      {
+        "type": "p",
+        "text": "NASA POWER, API diaria"
+      },
+      {
+        "type": "url",
+        "text": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/"
+      },
+      {
+        "type": "p",
+        "text": "CHIRPS v3"
+      },
+      {
+        "type": "url",
+        "text": "https://chc.ucsb.edu/data/chirps3"
+      },
+      {
+        "type": "p",
+        "text": "UPRA, metodología EVA"
+      },
+      {
+        "type": "url",
+        "text": "https://upra.gov.co/es-co/eva"
+      },
+      {
+        "type": "p",
+        "text": "Citar entidad, nombre exacto del conjunto, versión/corte, fecha de descarga y URL. DIVIPOLA y EVA declaran CC BY-SA 4.0 en los metadatos descargados; revisar los términos de cada capa adicional y la licencia por registro de WoSIS. La copia local preserva trazabilidad y disponibilidad para la cohorte."
+      },
+      {
+        "type": "h",
+        "text": "Controles PQRS y preparación docente"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Comprobación",
+          "Referencia"
+        ],
+        "rows": [
+          [
+            "CSV completos",
+            "716.697 + 781.601 + 946.468 = 2.444.766"
+          ],
+          [
+            "Columnas originales",
+            "38 por archivo"
+          ],
+          [
+            "Muestras",
+            "3.000 filas en total"
+          ],
+          [
+            "Proyección del taller",
+            "16 columnas; originales intactos"
+          ],
+          [
+            "Muestras: mayores de 90",
+            "41, conservadas"
+          ],
+          [
+            "Muestras: ubicación peticionario vacía",
+            "3, conservadas"
+          ],
+          [
+            "Muestras: códigos de afectado sin DIVIPOLA",
+            "186, requieren revisión"
+          ],
+          [
+            "I01 NASA",
+            "13 entregas; 1 duplicado y 1 tardío"
+          ]
+        ],
+        "widths": [
+          0.65,
+          0.35
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Los valores anteriores corresponden a entradas concretas y no son umbrales de calidad. Los notebooks 1 y 2 históricos contenían los mismos ejercicios; la ruta nueva elimina esa repetición. Los notebooks actuales distribuyen perfil, formatos, calidad y eventos con dependencias explícitas. Comprobar las dependencias y el kernel antes de la clase."
+      },
+      {
+        "type": "h",
+        "text": "Fuentes técnicas añadidas"
+      },
+      {
+        "type": "url",
+        "text": "https://docs.pola.rs/user-guide/concepts/streaming/"
+      },
+      {
+        "type": "url",
+        "text": "https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html"
+      },
+      {
+        "type": "p",
+        "text": "Las presentes guías usan Polars 1.35.2 y DuckDB 1.4.1, probados en CPU. Las alternativas gestionadas, Zarr, Dask y GPU son material conceptual de ampliación. Sus requerimientos se investigan cuando una necesidad medida los justifica."
+      },
+      {
+        "type": "h",
+        "text": "Correcciones editoriales y curriculares"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Identidad institucional única del curso, autoría y fechas consistentes.",
+          "Incorporación de tres cortes PQRS, muestras y sus advertencias de tamaño.",
+          "Tiempos de talleres reconciliados con los doce encuentros y los recesos.",
+          "Parquet de P02 disponible antes de consultar; calidad de suelos se introduce después de sus reglas.",
+          "Métricas compuestas históricas se estudian en gobernanza y no como puntuaciones calculadas con campos inexistentes.",
+          "Ejemplos acotados con observaciones abiertas y comparación equivalente de motores."
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Alineación de ejercicios y evaluación",
+    "blocks": [
+      {
+        "type": "p",
+        "text": "[Índice](../README.md) · [Programa](programa.md) · [Calendario](calendario.md)"
+      },
+      {
+        "type": "p",
+        "text": "Las doce clases suman 64 horas efectivas. Las actividades comparten los bloques existentes: no se exige repetir todas las prácticas en ambos dominios ni ejecutar los notebooks históricos completos. Cada entrega reúne la evidencia producida en clase; una ampliación sustituye una actividad equivalente."
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Clases",
+          "Ruta y prerrequisitos",
+          "Evidencia única",
+          "Peso"
+        ],
+        "rows": [
+          [
+            "1–2",
+            "T01 y E01–E03; P01 con las tres muestras PQRS",
+            "Pregunta, presupuesto de recursos, manifiesto, perfil y claves territoriales",
+            "10 %"
+          ],
+          [
+            "3–4",
+            "E04–E06 y P02–P03; ejecutar formatos antes de calidad PQRS",
+            "Contrato, conciliación, proyección Parquet, prueba de reejecución y consulta",
+            "10 %"
+          ],
+          [
+            "5–6",
+            "E07 después de calidad/consultas agroambientales; E08–E09 con geometrías y rásteres",
+            "Equivalencia Spark/DuckDB, cardinalidad y mapa con cobertura explícita",
+            "10 %"
+          ],
+          [
+            "7–8",
+            "E10/P04 con formatos ya preparado; I01/E11 con NASA y fuentes de clima",
+            "Un informe experimental y una traza de eventos",
+            "20 %"
+          ],
+          [
+            "9–11",
+            "E12 como práctica común de evaluación temporal; E13 en el dominio elegido",
+            "Producto candidato el 31/10, corrección y ensayo el 06/11, informe final",
+            "35 %"
+          ],
+          [
+            "12",
+            "E13 con evidencias reconstruibles",
+            "Sustentación final el 07/11 y explicación individual",
+            "15 %"
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Orden mínimo de ejecución"
+      },
+      {
+        "type": "p",
+        "text": "Desde `kit/`, con el entorno activo:"
+      },
+      {
+        "type": "code",
+        "text": "python pqrs_talleres.py perfil\npython pqrs_talleres.py formatos\npython pqrs_talleres.py calidad\npython pqrs_talleres.py benchmark --repeticiones 3\npython pqrs_talleres.py eventos"
+      },
+      {
+        "type": "p",
+        "text": "Perfil, formatos, calidad y benchmark usan las muestras incluidas por defecto. Eventos requiere `data/raw/nasa.json`. P03 usa DIVIPOLA para el control territorial cuando está disponible: descargarla antes de solicitar ese control. Los notebooks actuales preparan sus pasos previos; sus celdas se distribuyen entre las clases correspondientes, no se ejecutan todas en cada encuentro."
+      },
+      {
+        "type": "p",
+        "text": "Para la ruta agroambiental: `talleres.py calidad` → `talleres.py consultas` → `spark_taller.py lotes` o `talleres.py modelo`. Geografía necesita DANE e IGAC; `talleres.py clima` lee NASA, CHIRPS, SoilGrids y WoSIS. E11 lee NASA para Spark."
+      },
+      {
+        "type": "h",
+        "text": "Uso de Supersalud histórico y actual"
+      },
+      {
+        "type": "table",
+        "headers": [
+          "Material original",
+          "Actividad vigente",
+          "Ajuste didáctico"
+        ],
+        "rows": [
+          [
+            "Sesiones históricas 1 y 2, duplicadas",
+            "P01 y P03",
+            "Medir perfil y faltantes sin inferir anonimato o errores por edad alta"
+          ],
+          [
+            "Sesión histórica 3",
+            "P02",
+            "Validar contrato y reejecución; registrar incidencias localmente, sin correo"
+          ],
+          [
+            "Sesión histórica 4, comparación de motores",
+            "E10/P04",
+            "CPU, consulta equivalente, calentamiento, tres repeticiones y memoria observada"
+          ],
+          [
+            "Sesión histórica 4, índices",
+            "E12: discusión de gobernanza",
+            "Revisar variables ausentes y supuestos; no fabricar puntuaciones clínicas"
+          ],
+          [
+            "Sesión histórica 4, bucles de streaming",
+            "I01 y E11",
+            "Traza finita con observaciones NASA; distinguir reintentos, atraso y semántica de Spark"
+          ]
+        ]
+      },
+      {
+        "type": "h",
+        "text": "Límites del alcance"
+      },
+      {
+        "type": "p",
+        "text": "P04 ofrece una ruta con 3.000 filas y otra con 2.444.766. El corte completo requiere unos 1,816 GB de descarga más salidas y temporales. La ruta con muestras permite demostrar equivalencia en equipos limitados; no demuestra rendimiento a escala completa. En ambos casos se declara el alcance."
+      },
+      {
+        "type": "p",
+        "text": "I01 no implementa recuperación ni toda la semántica de Spark. E11 crea un checkpoint nuevo por ejecución: el entregable básico es una traza y un análisis de recuperación, no afirmar que se probó reinicio desde el mismo estado. Un experimento de recuperación real puede sustituir una ampliación si se implementa y documenta."
+      },
+      {
+        "type": "p",
+        "text": "E12 evalúa persistencia sobre EVA para todos los equipos. Ese resultado metodológico se identifica aparte del proyecto PQRS; no se mezcla con tasas de salud. Los proyectos PQRS pueden mostrar distribución de reportes por territorio, sin calcular tasas poblacionales si faltan denominadores compatibles y validados."
+      }
+    ]
+  }
+]
