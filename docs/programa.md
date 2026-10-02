@@ -79,3 +79,7 @@ La introducción usa las cinco V, costos de movimiento, escalamiento y Amdahl. D
 - E01–E13 y P01–P04 comparten los bloques del programa. P01–P03 complementan los talleres de las sesiones 2–4; P04 forma parte de la sesión 7. No se añaden horas.
 
 Las prácticas P01–P04 e I01 se evalúan dentro de las entregas existentes, sin pesos adicionales. Consultar el [mapa de ejercicios](mapa-ejercicios.md) y el [proyecto por dominio](../proyecto/README.md).
+
+## Entorno de referencia
+
+Todas las instalaciones de Python, entornos virtuales, bibliotecas y herramientas del curso parten de [WSL 2 con Ubuntu-26.04](instalacion-wsl.md). Los scripts y notebooks se ejecutan en el entorno de Ubuntu descrito allí.

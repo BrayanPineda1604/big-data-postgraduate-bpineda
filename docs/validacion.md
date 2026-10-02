@@ -23,3 +23,7 @@ El benchmark verificó igualdad entre los cinco motores con tres repeticiones me
 E12 se volvió a ejecutar: 15.267 pares para 2024 y 15.503 para 2025. La salida `evaluacion_por_cultivo.csv` contiene 317 grupos año–cultivo–estado físico; sus conteos y MAE ponderado concilian con el resumen global. Se verificaron cobertura entre 0 y 1, grupos sin año previo y conservación de denominadores.
 
 Se comprobaron los enlaces locales y el calendario estructurado de doce clases y 3.840 minutos. Spark, Windows y QGIS no se volvieron a validar en esta integración. Los notebooks históricos permanecen sin ejecutar ni alterar.
+
+## Nueva base WSL
+
+Las instrucciones vigentes se unificaron en WSL 2 con Ubuntu-26.04, Python 3.12 gestionado por uv y JDK 21. La guía se contrastó con documentación oficial y se revisaron rutas y comandos. No se instaló ni se probó Ubuntu-26.04 en un equipo Windows durante este cambio.

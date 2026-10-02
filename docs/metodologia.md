@@ -42,3 +42,7 @@ Cada taller pide hipótesis, criterio de aceptación, evidencia y una crítica. 
 | 7–8 | Rendimiento y traza de eventos | E10–E11, P04, I01 |
 | 9–10 | Evaluación temporal y auditoría | E12–E13 |
 | 11–12 | Correcciones y defensa final | E13 |
+
+## Entorno de referencia
+
+Todas las instalaciones de Python, entornos virtuales, bibliotecas y herramientas del curso parten de [WSL 2 con Ubuntu-26.04](instalacion-wsl.md). Los scripts y notebooks se ejecutan en el entorno de Ubuntu descrito allí.

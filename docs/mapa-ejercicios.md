@@ -46,3 +46,7 @@ P04 ofrece una ruta con 3.000 filas y otra con 2.444.766. El corte completo requ
 I01 no implementa recuperación ni toda la semántica de Spark. E11 crea un checkpoint nuevo por ejecución: el entregable básico es una traza y un análisis de recuperación, no afirmar que se probó reinicio desde el mismo estado. Un experimento de recuperación real puede sustituir una ampliación si se implementa y documenta.
 
 E12 evalúa persistencia sobre EVA para todos los equipos. Ese resultado metodológico se identifica aparte del proyecto PQRS; no se mezcla con tasas de salud. Los proyectos PQRS pueden mostrar distribución de reportes por territorio, sin calcular tasas poblacionales si faltan denominadores compatibles y validados.
+
+## Entorno de referencia
+
+Todas las instalaciones de Python, entornos virtuales, bibliotecas y herramientas del curso parten de [WSL 2 con Ubuntu-26.04](instalacion-wsl.md). Los scripts y notebooks se ejecutan en el entorno de Ubuntu descrito allí.
