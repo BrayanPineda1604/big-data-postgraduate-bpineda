@@ -16,6 +16,10 @@ Esta edición utiliza datos abiertos de suelos, territorio, producción agrícol
 - [Verificación de esta integración](docs/validacion.md).
 - [Material histórico de pedidos](historico/pedidos/README.md), conservado como referencia de la edición anterior.
 
+## Anexo de otro dominio: Supersalud
+
+[Notebooks docentes de Supersalud](supersalud/README.md): tres archivos históricos integrados desde `dev`, con una propuesta de uso en perfilado, calidad, Parquet y pipelines. El anexo documenta duplicaciones y ajustes pendientes antes de ejecutarlos.
+
 ## Plan clase a clase
 
 Cada guía incluye temas por segmento y enlaces a talleres con propósito, descarga, instrucciones, resultados esperados y límites de interpretación.

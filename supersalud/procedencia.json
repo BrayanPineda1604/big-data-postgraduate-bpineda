@@ -1,0 +1,27 @@
+{
+  "rama_origen": "origin/dev",
+  "commit_origen": "24c7a15eebdc46a0f8e1a4fc4004ece278817c1a",
+  "archivos": [
+    {
+      "archivo": "ProfesorSesion1SuperSalud_BigData.ipynb",
+      "ruta_original": "ProfesorSesion1SuperSalud_BigData.ipynb",
+      "sha256": "a315c1cdf058899415acb0307146569eaec0729139b489ef8f401a3a44fbbf4f",
+      "celdas": 89,
+      "ejecutado_en_integracion": false
+    },
+    {
+      "archivo": "ProfesorSesion2SuperSalud_BigData.ipynb",
+      "ruta_original": "ProfesorSesion2SuperSalud_BigData.ipynb",
+      "sha256": "dad5bce11c115d343fd196b4b25b9097951f77dc83e360dab22dc769d01eba87",
+      "celdas": 89,
+      "ejecutado_en_integracion": false
+    },
+    {
+      "archivo": "ProfesorSesion3Supersalud_BigData.ipynb",
+      "ruta_original": "ProfesorSesion3Supersalud_BigData.ipynb",
+      "sha256": "4fc9deaaee6cfe0186d63d52f3966b6d2e196832354a03e00fb8ee61eb9fa108",
+      "celdas": 41,
+      "ejecutado_en_integracion": false
+    }
+  ]
+}
