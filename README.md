@@ -18,7 +18,16 @@ Esta edición utiliza datos abiertos de suelos, territorio, producción agrícol
 
 ## Anexo de otro dominio: Supersalud
 
-[Notebooks docentes de Supersalud](supersalud/README.md): tres archivos históricos integrados desde `dev`, con una propuesta de uso en perfilado, calidad, Parquet y pipelines. El anexo documenta duplicaciones y ajustes pendientes antes de ejecutarlos.
+[Notebooks docentes de Supersalud](supersalud/README.md): cuatro notebooks históricos organizados en `supersalud/` dentro de esta rama `dev`.
+
+| Notebook | Propósito de los ejercicios |
+|---|---|
+| [Sesión 1](supersalud/ProfesorSesion1SuperSalud_BigData.ipynb) | Explorar reclamos, revisar tipos y faltantes, medir memoria y convertir a Parquet. |
+| [Sesión 2](supersalud/ProfesorSesion2SuperSalud_BigData.ipynb) | Conserva los mismos ejercicios de la sesión 1 como material histórico; no añade una práctica distinta. |
+| [Sesión 3](supersalud/ProfesorSesion3Supersalud_BigData.ipynb) | Construir un pipeline configurable con Polars, revisar esquemas, particionar Parquet y plantear reglas de calidad. |
+| [Sesión 4](supersalud/ProfesorSesion4Supersalud_BigData.ipynb) | Explorar datos demográficos e indicadores, comparar pandas–Polars y simular ventanas de streaming y eventos tardíos. |
+
+El [README del anexo](supersalud/README.md) relaciona los ejercicios con las clases y explica sus requisitos y ajustes pendientes. Se conservan el código y las salidas históricas; no se han ejecutado como parte de esta reorganización.
 
 ## Plan clase a clase
 
