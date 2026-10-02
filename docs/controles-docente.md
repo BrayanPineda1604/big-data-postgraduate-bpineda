@@ -1,5 +1,7 @@
 # Controles y guía del docente
 
+Preparado por el PhD Esteban Hernández, CyberColombia.
+
 Los controles siguientes corresponden únicamente al corte fechado suministrado. Si cambia una fuente, volver a ejecutar los scripts y publicar otra versión del manifiesto. El número de registros no se impone como condición universal de calidad; sirve para comprobar que todos trabajan con la misma entrada.
 
 | Control | Referencia |
@@ -42,38 +44,70 @@ Los controles siguientes corresponden únicamente al corte fechado suministrado.
 
 DuckDB, lectura CSV y tipos
 
-[Consultar fuente](<https://duckdb.org/docs/stable/data/csv/overview>)
+[Fuente](<https://duckdb.org/docs/stable/data/csv/overview>)
 
 Apache Spark 4.0.1, instalación
 
-[Consultar fuente](<https://spark.apache.org/docs/4.0.1/api/python/getting_started/install.html>)
+[Fuente](<https://spark.apache.org/docs/4.0.1/api/python/getting_started/install.html>)
 
 Apache Spark 4.0.1, Structured Streaming
 
-[Consultar fuente](<https://spark.apache.org/docs/4.0.1/streaming/apis-on-dataframes-and-datasets.html>)
+[Fuente](<https://spark.apache.org/docs/4.0.1/streaming/apis-on-dataframes-and-datasets.html>)
 
 QGIS, intersección vectorial
 
-[Consultar fuente](<https://docs.qgis.org/latest/en/docs/user_manual/processing_algs/qgis/vectoroverlay.html>)
+[Fuente](<https://docs.qgis.org/latest/en/docs/user_manual/processing_algs/qgis/vectoroverlay.html>)
 
 ISRIC, propiedades y factores de SoilGrids
 
-[Consultar fuente](<https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_01.html>)
+[Fuente](<https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_01.html>)
 
 ISRIC, WoSIS y licencias
 
-[Consultar fuente](<https://docs.isric.org/globaldata/wosis/faq-wosis.html>)
+[Fuente](<https://docs.isric.org/globaldata/wosis/faq-wosis.html>)
 
 NASA POWER, API diaria
 
-[Consultar fuente](<https://power.larc.nasa.gov/docs/services/api/temporal/daily/>)
+[Fuente](<https://power.larc.nasa.gov/docs/services/api/temporal/daily/>)
 
 CHIRPS v3
 
-[Consultar fuente](<https://chc.ucsb.edu/data/chirps3>)
+[Fuente](<https://chc.ucsb.edu/data/chirps3>)
 
 UPRA, metodología EVA
 
-[Consultar fuente](<https://upra.gov.co/es-co/eva>)
+[Fuente](<https://upra.gov.co/es-co/eva>)
 
 Citar entidad, nombre exacto del conjunto, versión/corte, fecha de descarga y URL. DIVIPOLA y EVA declaran CC BY-SA 4.0 en los metadatos descargados; revisar los términos de cada capa adicional y la licencia por registro de WoSIS. La copia local preserva trazabilidad y disponibilidad para la cohorte.
+
+## Controles PQRS y preparación docente
+
+| Comprobación | Referencia |
+| --- | --- |
+| CSV completos | 716.697 + 781.601 + 946.468 = 2.444.766 |
+| Columnas originales | 38 por archivo |
+| Muestras | 3.000 filas en total |
+| Proyección del taller | 16 columnas; originales intactos |
+| Muestras: mayores de 90 | 41, conservadas |
+| Muestras: ubicación peticionario vacía | 3, conservadas |
+| Muestras: códigos de afectado sin DIVIPOLA | 186, requieren revisión |
+| I01 NASA | 13 entregas; 1 duplicado y 1 tardío |
+
+Los valores anteriores corresponden a entradas concretas y no son umbrales de calidad. Los notebooks 1 y 2 históricos contenían los mismos ejercicios; la ruta nueva elimina esa repetición. Los notebooks actuales distribuyen perfil, formatos, calidad y eventos con dependencias explícitas. Comprobar las dependencias y el kernel antes de la clase.
+
+## Fuentes técnicas añadidas
+
+[Fuente](<https://docs.pola.rs/user-guide/concepts/streaming/>)
+
+[Fuente](<https://docs.pola.rs/api/python/stable/reference/api/polars.scan_parquet.html>)
+
+Las presentes guías usan Polars 1.35.2 y DuckDB 1.4.1, probados en CPU. Las alternativas gestionadas, Zarr, Dask y GPU son material conceptual de ampliación. Sus requerimientos se investigan cuando una necesidad medida los justifica.
+
+## Correcciones editoriales y curriculares
+
+- Identidad institucional única del curso, autoría y fechas consistentes.
+- Incorporación de tres cortes PQRS, muestras y sus advertencias de tamaño.
+- Tiempos de talleres reconciliados con los doce encuentros y los recesos.
+- Parquet de P02 disponible antes de consultar; calidad de suelos se introduce después de sus reglas.
+- Métricas compuestas históricas se estudian en gobernanza y no como puntuaciones calculadas con campos inexistentes.
+- Ejemplos acotados con observaciones abiertas y comparación equivalente de motores.

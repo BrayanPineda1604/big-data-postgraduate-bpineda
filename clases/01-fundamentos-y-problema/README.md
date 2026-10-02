@@ -1,26 +1,18 @@
-# Clase 01 — Fundamentos y problema
+# Clase 01: Fundamentos y escala
 
-[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
+Preparado por el PhD Esteban Hernández, CyberColombia.
 
-Fin de semana 1 · Viernes · 3 h 45 min efectivas.
+Viernes 02/10/2026. 3 h 45 min de clase efectiva.
 
-## Bloques temáticos
-
-| Segmento | Temas y actividades |
+| Segmento | Temas y ejercicios |
 |---|---|
-| Antes del receso | Diagnóstico y restricciones de Big Data; Amdahl, tamaño y costo de mover datos. |
-| Después del receso | E01: procedencia y pregunta SUELO SABIO; Ficha de problema y revisión entre pares. |
+| Antes del receso | Organización, diagnóstico y unidades de los dos dominios; Cinco V y T01: cálculo de 2 GB, 20 GB y 2 TB; Restricciones, escalamiento y Amdahl |
+| Después del receso | E01: casos, procedencia, ciclo de vida y ficha; Discusión y cierre |
 
-## Talleres y evidencias
+Producto: Ficha de problema y presupuesto de recursos.
 
-### [E01 Pregunta y procedencia](../../talleres/E01.md)
+Consultar el [calendario contractual](../../docs/calendario.md). Todas las horas se imparten en línea; el trabajo autónomo es opcional.
 
-Convertir SUELO SABIO en una pregunta de datos y distinguir observación, estimación y predicción. La decisión propuesta es priorizar territorios para revisión técnica, sin prescribir fertilización.
+Talleres: [E01](../../talleres/E01.md).
 
-**Entrega:** Entregar una página con pregunta, unidad de análisis, fuentes, criterio de éxito y dos límites. Debe distinguir datos propios del proyecto de fuentes abiertas externas.
-
-## Preparación y trabajo autónomo
-
-Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
-
-La carga autónoma del módulo se consolida al finalizar el sábado; no se añade otra actividad obligatoria.
+[Mapa de ejercicios, prerrequisitos y evaluación](../../docs/mapa-ejercicios.md).
