@@ -1,35 +1,16 @@
-# Entorno y procedimiento de descarga
+# Datos y ejecución sobre WSL Ubuntu-26.04
 
-Preparado por el PhD Esteban Hernández, CyberColombia.
+[Instalación completa desde Windows](instalacion-wsl.md) · [Índice](../README.md)
 
-## Preparación del portátil
+Todas las instrucciones de esta página se ejecutan en **Ubuntu-26.04 sobre WSL 2**, después de preparar el entorno indicado en la guía. Antes de iniciar:
 
-Python 3.12, terminal y editor de texto son suficientes para iniciar. Se recomienda 16 GB de RAM; con 8 GB se trabaja con dos hilos, un departamento y muestras geográficas. Reservar 5 GB para kit y salidas y, como presupuesto preventivo, 10–15 GB para todo el entorno con Python, Spark, Java y QGIS. No se requiere GPU ni nube. La instalación de bibliotecas puede consumir cientos de MB y Spark y QGIS pueden añadir varios GB instalados; estos son rangos de planificación, no mediciones del archivo de datos.
-
-QGIS es opcional para ejecutar los scripts y necesario para la práctica visual de mapas. Descargarlo desde qgis.org y registrar la versión instalada. Spark 4.0.1 se introduce en la sesión 5 y requiere JDK completo Java 17 o 21; para una cohorte estable se recomienda fijar JDK completo Java 17 o 21 y no actualizar en mitad del curso.
-
-## Instalación en macOS y Linux
-
-```
-cd /ruta/al/kit
-python3 -m venv .venv
+```bash
+cd /opt/bigdata/big-data-postgraduate
 source .venv/bin/activate
-python -m pip install -r requirements.txt
-python 00_datos.py --listar
-python 00_datos.py --verificar
+cd kit
 ```
 
-## Instalación en Windows con CMD
-
-```
-cd C:\curso\kit
-py -3.12 -m venv .venv
-.venv\Scripts\activate.bat
-python -m pip install -r requirements.txt
-python 00_datos.py --verificar
-```
-
-Los comandos Windows anteriores corresponden a CMD. Si se usa PowerShell, abrir CMD para seguir esta guía sin cambiar políticas del sistema. Un error de “módulo no encontrado” se resuelve comprobando que python y pip pertenecen al entorno activado. No instalar todas las dependencias en el Python del sistema.
+El clon no incluye los originales agroambientales ni los completos PQRS; `--verificar` requiere obtener antes todas las fuentes correspondientes.
 
 ## Tres rutas para obtener los datos
 
@@ -44,7 +25,7 @@ python 00_datos.py --descargar soilgrids wosis nasa chirps
 python 00_datos.py --respaldo "/ruta/kit_original/data/raw" --verificar
 ```
 
-Las URLs exactas están en fuentes.json y en el catálogo de este libro. El descargador limita cada respuesta a tres veces el tamaño de referencia o 2 MB, lo que sea mayor. Rechaza páginas HTML, no sobrescribe archivos existentes y conserva una descarga que cambió como .nueva. Un SHA-256 distinto puede deberse a nuevos datos o a cambios de serialización: el docente revisa esquema, valores y conteos antes de aprobar otro corte. No se considera que un HTTP 200 por sí solo sea una descarga válida.
+Las URLs exactas están en fuentes.json y en el [catálogo de fuentes](datasets.md). El descargador limita cada respuesta a tres veces el tamaño de referencia o 2 MB, lo que sea mayor. Rechaza páginas HTML, no sobrescribe archivos existentes y conserva una descarga que cambió como .nueva. Un SHA-256 distinto puede deberse a nuevos datos o a cambios de serialización: el docente revisa esquema, valores y conteos antes de aprobar otro corte. No se considera que un HTTP 200 por sí solo sea una descarga válida.
 
 ## Descarga manual de los shapes DANE
 
@@ -74,8 +55,9 @@ Leer salidas/verificacion.json: archivo presente, huella coincidente, conteo esp
 
 ## Preparación del dominio PQRS
 
+Las dependencias se instalan según [la guía WSL](instalacion-wsl.md). Desde `kit/`, en Ubuntu y con `.venv` activo:
+
 ```
-python -m pip install -r requirements_pqrs.txt
 python pqrs_descarga.py --listar
 python pqrs_talleres.py perfil
 python pqrs_talleres.py formatos
@@ -95,10 +77,10 @@ Espacio: 5 GB para la ruta de muestras y datos agroambientales; reservar 8 GB pa
 
 ## Notebooks actuales
 
-```
-python -m pip install -r requirements_notebooks.txt
-python -m ipykernel install --prefix .venv --name bigdata
-# Abrir Notebooks/ desde Jupyter o un editor compatible
+Seguir [la instalación WSL y registro del kernel](instalacion-wsl.md). Desde Ubuntu, con el entorno de la raíz activo y situado en `kit/`:
+
+```bash
+python -m jupyter lab --no-browser --ip=127.0.0.1
 ```
 
-Seleccionar el kernel del mismo entorno Python. Los cuatro notebooks nuevos usan rutas relativas, muestras abiertas y ejercicios acotados. Los notebooks históricos de Supersalud se conservan por procedencia y no se ejecutan de corrido como guía vigente. Las rutas /content, desactivación TLS, GPU y funciones de correo no forman parte de la práctica actual.
+Abrir `Notebooks/` y seleccionar el kernel BigData de WSL. Las dependencias y herramientas se instalan en Ubuntu, no en Windows. Los anexos históricos conservan comandos originales de Colab únicamente como referencia.

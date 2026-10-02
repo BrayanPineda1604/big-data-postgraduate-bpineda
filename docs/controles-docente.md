@@ -37,7 +37,7 @@ Los controles siguientes corresponden únicamente al corte fechado suministrado.
 | Pocos recursos de RAM | Dos hilos, un departamento y muestras; cerrar QGIS al ejecutar Spark si hace falta. |
 | Ceros en SoilGrids sin NoData | Reportar y separar provisionalmente; no inventar corrección. |
 | Código no encontrado | Registrar anti-join y revisar vigencia/nombre con evidencia. |
-| Java ausente | Instalar Java 17/21 según la guía de la plataforma; comprobar antes de E07. |
+| Java ausente | Instalar JDK 21 dentro de Ubuntu-26.04 según la guía WSL; comprobar antes de E07. |
 | Streaming no muestra ventana final | Inspeccionar watermark y modo append; no fabricar observaciones. |
 
 ## Fuentes técnicas y metodológicas

@@ -2,26 +2,22 @@ CURSO DE POSTGRADO: BIGDATA, ESPECIALIZACIÓN EN BASES DE DATOS
 Preparado por el PhD Esteban Hernández, CyberColombia
 Programa del 2 de octubre al 7 de noviembre de 2026. 64 horas efectivas de clase en línea. Recesos y almuerzos excluidos.
 
-1. Abrir una terminal en esta carpeta (kit).
-2. Crear un entorno Python 3.12:
-   macOS/Linux: python3 -m venv .venv
-                source .venv/bin/activate
-   Windows CMD: py -3.12 -m venv .venv
-                .venv\Scripts\activate.bat
-3. Instalar: python -m pip install -r requirements.txt
-4. Verificar copia: python 00_datos.py --verificar
-5. Ejecutar en este orden:
-   python talleres.py perfil
-   python talleres.py calidad
-   python talleres.py consultas
-   python talleres.py geografia
-   python talleres.py clima
-   python talleres.py benchmark
-   python talleres.py modelo
-6. Para las sesiones 5 y 8 usar Java 17 o 21 y comprobar java -version.
-   Instalar Spark: python -m pip install -r requirements_spark.txt
-   python spark_taller.py lotes
-   python spark_taller.py eventos
+ENTORNO ÚNICO: WSL 2 + Ubuntu-26.04
+Seguir ../docs/instalacion-wsl.md desde PowerShell para instalar WSL y Ubuntu.
+La guía entra a /, prepara /opt/bigdata, clona dev y crea .venv en la raíz del repo.
+Python 3.12, JDK 21, Jupyter y bibliotecas se instalan dentro de Ubuntu.
+
+En cada sesión, dentro de Ubuntu:
+  cd /opt/bigdata/big-data-postgraduate
+  source .venv/bin/activate
+  source "$HOME/.config/bigdata/entorno.sh"
+  cd kit
+  python pqrs_talleres.py perfil
+
+Las instalaciones de paquetes y herramientas se realizan según la guía WSL.
+Después de descargar las fuentes, ejecutar la ruta del taller correspondiente.
+Orden agroambiental: perfil, calidad, consultas; luego geografia, clima,
+benchmark o modelo según la sesión. Spark por lotes requiere calidad y consultas.
 
 ARCHIVOS
 fuentes.json contiene URL, tamaño y SHA-256 del corte original. data/raw debe contener 12 archivos originales (descargados o copiados del respaldo; no incluidos en Git), 136,4 MB en conjunto (ZIP de DANE sin extraer). salidas se crea al ejecutar y puede reconstruirse; conservar aparte las entregas personales. Los scripts escriben nuevamente sus salidas homónimas; no editar esas salidas como único original.
@@ -33,7 +29,7 @@ python 00_datos.py --descargar agrosavia divipola eva
 El descargador conserva archivos existentes. Para practicar descarga desde cero, copiar los scripts y fuentes.json a otra carpeta sin data/raw y ejecutar allí.
 Si el SHA-256 cambia, el archivo nuevo queda con extensión .nueva y NO sustituye el corte docente. El docente debe revisar esquema y recalcular controles antes de incorporarlo. WFS/WCS pueden cambiar el orden o la codificación sin cambiar valores: investigar la diferencia.
 Para copiar el respaldo a un kit vacío: python 00_datos.py --respaldo "/ruta/al/kit_original/data/raw" --verificar
-En Windows la ruta puede ser "C:\curso\kit_original\data\raw".
+Para una copia almacenada en Windows, usar su ruta Ubuntu: /mnt/c/Users/TU_USUARIO/curso/kit_original/data/raw.
 DANE requiere navegador: usar el catálogo vigente, descargar ZIP y guardarlo con los nombres dane_departamentos.zip y dane_municipios.zip. No separar SHP/SHX/DBF/PRJ al extraer.
 
 TAMAÑOS Y EQUIPO
@@ -46,7 +42,7 @@ El manual explica objetivos, tiempos, pasos, criterios, unidades y advertencias 
 
 PQRS Y NOTEBOOKS
 Tres muestras reales de 1.000 filas por corte están en data/pqrs_muestras; total 2,235 MB. Los tres completos se descargan con pqrs_descarga.py y suman 1,816 GB. Se conserva una única copia de los completos fuera del paquete; no se duplican en el ZIP.
-Instalar: python -m pip install -r requirements_pqrs.txt
+Instalar dependencias en el entorno WSL siguiendo ../docs/instalacion-wsl.md.
 python pqrs_talleres.py perfil
 python pqrs_talleres.py formatos
 python pqrs_talleres.py calidad

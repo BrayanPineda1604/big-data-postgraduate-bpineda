@@ -18,3 +18,7 @@ Consultar el [calendario contractual](../../docs/calendario.md). Todas las horas
 Talleres: [E02](../../talleres/E02.md), [E03](../../talleres/E03.md), [P01](../../talleres/P01.md).
 
 [Mapa de ejercicios, prerrequisitos y evaluación](../../docs/mapa-ejercicios.md).
+
+## Preparación del entorno
+
+Seguir [Windows → WSL 2 → Ubuntu-26.04](../../docs/instalacion-wsl.md). El bloque de instalación cubre distribución, clonación, entorno Python 3.12 y kernel Jupyter; usar las muestras para la primera verificación.
