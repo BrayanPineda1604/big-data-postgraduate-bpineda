@@ -1,56 +1,26 @@
-# Clase 01 — Fundamentos y formulación del problema
+# Clase 01 — Fundamentos y problema
 
-[Índice del curso](../../README.md) · [Entorno](../../docs/entorno.md) · [Proyecto y evaluación](../../proyecto/README.md)
+[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
 
-**Fin de semana 1 · Viernes · 3 h 45 min efectivos · RA1.**
+Fin de semana 1 · Viernes · 3 h 45 min efectivas.
 
-## Objetivo
-
-Distinguir restricciones de datos y formular una pregunta verificable.
-
-## Preparación
-
-No requiere instalación previa del estudiante. La verificación del entorno se realiza en la clase 2.
-
-## Bloques de la clase
+## Bloques temáticos
 
 | Segmento | Temas y actividades |
 |---|---|
-| Antes del receso | Diagnóstico de Python, SQL y lectura de datos; fundamentos de Big Data; volumen, velocidad, latencia y límites del procesamiento local. Ejercicios 01.1 y 01.2. |
-| Después del receso | Comparación de alternativas de procesamiento; pregunta analítica, unidad de análisis, variables y criterios de éxito; socialización de la ficha del problema. Ejercicios 01.2 y 01.3. |
+| Antes del receso | Diagnóstico y restricciones de Big Data; Amdahl, tamaño y costo de mover datos. |
+| Después del receso | E01: procedencia y pregunta SUELO SABIO; Ficha de problema y revisión entre pares. |
 
-## Ejercicios propuestos
+## Talleres y evidencias
 
-### 01.1 — Diagnóstico sin nota
+### [E01 Pregunta y procedencia](../../talleres/E01.md)
 
-Resolver un filtro, una agrupación SQL y una lectura de tabla; registrar necesidades de nivelación.
+Convertir SUELO SABIO en una pregunta de datos y distinguir observación, estimación y predicción. La decisión propuesta es priorizar territorios para revisión técnica, sin prescribir fertilización.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** Entregar una página con pregunta, unidad de análisis, fuentes, criterio de éxito y dos límites. Debe distinguir datos propios del proyecto de fuentes abiertas externas.
 
-### 01.2 — ¿Se necesita Big Data?
+## Preparación y trabajo autónomo
 
-Comparar un caso que cabe en memoria con otro que exige distribución. Justificar volumen, velocidad, latencia, costo y restricciones.
+Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
-
-### 01.3 — Ficha del problema
-
-Definir para el caso de pedidos la unidad de análisis, pregunta, variables, decisión a apoyar y criterios de éxito.
-
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
-
-## Material y ejecución
-
-[Programa académico](../../01_Programa_academico_Big_Data_64_horas.docx) · [Guía docente](../../02_Guia_academica_Big_Data_material_docente.docx). La guía docente contiene orientaciones y respuestas.
-
-Actividad de diseño y discusión; no requiere un script nuevo.
-
-## Entrega y revisión
-
-Ficha inicial del problema y diagnóstico.
-
-Sin nota; retroalimentación para la entrega E1. Se revisa corrección, evidencia, reproducibilidad y razonamiento; ejecutar sin explicar no completa la actividad.
-
-## Trabajo autónomo
-
-Sin trabajo autónomo adicional; completar la ficha durante la sesión.
+La carga autónoma del módulo se consolida al finalizar el sábado; no se añade otra actividad obligatoria.

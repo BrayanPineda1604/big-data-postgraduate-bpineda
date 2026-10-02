@@ -1,0 +1,17 @@
+{
+  "raw_suelos": 92738,
+  "duplicados_exactos": 0,
+  "clasificados": 92738,
+  "aptos_ph": 92727,
+  "revision_ph": 11,
+  "motivos": {
+    "apto": 92727,
+    "sin_ph_numerico": 11
+  },
+  "territorio_no_encontrado": 2138,
+  "fecha_no_interpretable": 0,
+  "divipola": 1122,
+  "eva": 166732,
+  "eva_apto_rendimiento": 159616,
+  "eva_sin_codigo_en_divipola": 0
+}

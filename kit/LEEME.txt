@@ -1,0 +1,45 @@
+BIG DATA CON DATOS ABIERTOS — SUELO SABIO
+Preparado por el PhD Esteban Hernández, CyberColombia
+Edición del 2 de octubre de 2026. Este kit sustituye los ejercicios sintéticos de pedidos.
+
+1. Abrir una terminal en esta carpeta (kit).
+2. Crear un entorno Python 3.12:
+   macOS/Linux: python3 -m venv .venv
+                source .venv/bin/activate
+   Windows CMD: py -3.12 -m venv .venv
+                .venv\Scripts\activate.bat
+3. Instalar: python -m pip install -r requirements.txt
+4. Verificar copia: python 00_datos.py --verificar
+5. Ejecutar en este orden:
+   python talleres.py perfil
+   python talleres.py calidad
+   python talleres.py consultas
+   python talleres.py geografia
+   python talleres.py clima
+   python talleres.py benchmark
+   python talleres.py modelo
+6. En sesiones 5 y 8 instalar Java 17 o posterior y comprobar java -version.
+   Instalar Spark: python -m pip install -r requirements_spark.txt
+   python spark_taller.py lotes
+   python spark_taller.py eventos
+
+ARCHIVOS
+fuentes.json contiene URL, tamaño y SHA-256 del corte original. data/raw debe contener 12 archivos originales (descargados o copiados del respaldo; no incluidos en Git), 136,4 MB en conjunto (ZIP de DANE sin extraer). salidas se crea al ejecutar y puede reconstruirse; conservar aparte las entregas personales. Los scripts escriben nuevamente sus salidas homónimas; no editar esas salidas como único original.
+El archivo controles_referencia.json contiene resultados del corte docente, no garantías sobre futuras actualizaciones.
+
+DESCARGA
+python 00_datos.py --listar
+python 00_datos.py --descargar agrosavia divipola eva
+El descargador conserva archivos existentes. Para practicar descarga desde cero, copiar los scripts y fuentes.json a otra carpeta sin data/raw y ejecutar allí.
+Si el SHA-256 cambia, el archivo nuevo queda con extensión .nueva y NO sustituye el corte docente. El docente debe revisar esquema y recalcular controles antes de incorporarlo. WFS/WCS pueden cambiar el orden o la codificación sin cambiar valores: investigar la diferencia.
+Para copiar el respaldo a un kit vacío: python 00_datos.py --respaldo "/ruta/al/kit_original/data/raw" --verificar
+En Windows la ruta puede ser "C:\curso\kit_original\data\raw".
+DANE requiere navegador: usar el catálogo vigente, descargar ZIP y guardarlo con los nombres dane_departamentos.zip y dane_municipios.zip. No separar SHP/SHX/DBF/PRJ al extraer.
+
+TAMAÑOS Y EQUIPO
+8 GB de RAM: cerrar aplicaciones y trabajar con un departamento o las muestras incluidas; Spark local[2]. Recomendado: 16 GB RAM y 5 GB libres para este kit y salidas, más espacio para Python, Java, QGIS y Spark. Presupuesto de instalación y entorno completo: 10–15 GB libres. Son estimaciones preventivas, no tamaños medidos de instalación.
+La descompresión de shapes y los cruces geométricos pueden ocupar mucho más que los ZIP. No descargar el MGN nacional con todos los niveles (el catálogo anuncia aproximadamente 1,5 GB), ni todos los rásteres globales de SoilGrids/CHIRPS.
+
+ALCANCE
+Las muestras IGAC son 5 polígonos por tema y 10 registros de correlación. WoSIS contiene 10 capas de 3 perfiles de Colombia. No son inventarios completos. NASA contiene 31 días de un punto demostrativo, CHIRPS un mes de Latinoamérica y SoilGrids un recorte pequeño. No hay datos inventados; la práctica de eventos cambia el orden de llegada de registros reales.
+El manual explica objetivos, tiempos, pasos, criterios, unidades y advertencias de cada ejercicio. Las propiedades del suelo no se convierten automáticamente en recomendaciones de fertilización. Los códigos municipales, los años, la profundidad y la escala condicionan cualquier integración.

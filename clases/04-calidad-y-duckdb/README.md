@@ -1,64 +1,34 @@
-# Clase 04 — ETL, calidad y SQL con DuckDB
+# Clase 04 — Calidad y rendimiento agrícola
 
-[Índice del curso](../../README.md) · [Entorno](../../docs/entorno.md) · [Proyecto y evaluación](../../proyecto/README.md)
+[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
 
-**Fin de semana 2 · Sábado · 7 h 30 min efectivos · RA2.**
+Fin de semana 2 · Sábado · 7 h 30 min efectivas.
 
-## Objetivo
-
-Construir un flujo de limpieza y conciliar sus resultados.
-
-## Preparación
-
-Revisar las evidencias de la clase anterior y conservar las salidas de los laboratorios. Consultar las dependencias de ejecución en la guía de entorno.
-
-## Bloques de la clase
+## Bloques temáticos
 
 | Segmento | Temas y actividades |
 |---|---|
-| Mañana · antes del receso | ETL, tipado, deduplicación exacta y prioridad de las reglas de calidad; predicción de rechazos. Ejercicio 04.1. |
-| Mañana · después del receso y antes del almuerzo | Limpieza con DuckDB, cuarentena y conciliación de originales, válidos, rechazados y duplicados con esperado.json. Ejercicio 04.2. |
-| Tarde · después del almuerzo y antes del receso | Consultas por ciudad y categoría; importes, exportación e inspección de CSV y Parquet. Ejercicio 04.3. |
-| Tarde · después del receso | Interpretación de resultados, trazabilidad de reglas y decisión de almacenamiento; revisión del reporte de calidad para E2. Cierre de ejercicios 04.2 y 04.3. |
+| Mañana · antes del receso | Tipos, ausencias, duplicados y rendimiento t/ha. |
+| Mañana · después del receso | E05: calidad AGROSAVIA y conciliación. |
+| Tarde · después del almuerzo y antes del receso | E06: EVA, SQL y unión territorial. |
+| Tarde · después del receso | Cobertura del cruce y revisión entre pares; Entrega del pipeline y tarea autónoma. |
 
-## Ejercicios propuestos
+## Talleres y evidencias
 
-### 04.1 — Predicción de calidad
+### [E05 Calidad de análisis de suelo](../../talleres/E05.md)
 
-Revisar las reglas del script y anticipar qué sucede si una fila incumple varias. Explicar la prioridad del CASE y la deduplicación exacta.
+Construir un flujo auditable que conserve los datos que requieren revisión y calcule poblaciones analíticas explícitas.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** Para este corte: 92.738 originales = 0 duplicados exactos + 92.727 aptos para pH + 11 en revisión. 2.138 registros requieren revisar correspondencia territorial. Entregar reporte, reglas y dos ejemplos comentados.
 
-### 04.2 — Limpieza y conciliación
+### [E06 Rendimiento agrícola e integración SQL](../../talleres/E06.md)
 
-Ejecutar DuckDB; verificar que originales = válidos + rechazados + duplicados. Contrastar conteos e importes con esperado.json.
+Calcular indicadores con denominadores correctos y conectar datos de suelo con producción sin multiplicar filas.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
+**Entrega:** 159.616 filas EVA cumplen el dominio del cociente. Se obtienen 107.620 grupos municipio–cultivo–estado–año; 55.498 tienen pH agregado en el cruce. El LEFT JOIN debe conservar los 107.620 grupos.
 
-### 04.3 — SQL y almacenamiento
+## Preparación y trabajo autónomo
 
-Consultar pedidos e importe por ciudad; inspeccionar limpio.parquet y rechazados.csv. Añadir una consulta por categoría en un archivo propio sin alterar la referencia.
+Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
 
-**Evidencia:** registrar procedimiento, resultado y una conclusión razonada en la entrega de esta clase.
-
-## Material y ejecución
-
-[Programa académico](../../01_Programa_academico_Big_Data_64_horas.docx) · [Guía docente](../../02_Guia_academica_Big_Data_material_docente.docx). La guía docente contiene orientaciones y respuestas.
-
-- [02_calidad_duckdb.py](../../material_practico/02_calidad_duckdb.py)
-
-Desde `material_practico/`, con el entorno del curso activo y los prerrequisitos disponibles:
-
-```sh
-python 02_calidad_duckdb.py
-```
-
-## Entrega y revisión
-
-E2: código o consultas, contrato, reporte de conciliación y decisión de arquitectura.
-
-E2: 10 % del curso. Se revisa corrección, evidencia, reproducibilidad y razonamiento; ejecutar sin explicar no completa la actividad.
-
-## Trabajo autónomo
-
-1 h 45 min después de esta clase: documentar reglas, resolver una consulta y redactar la decisión de arquitectura.
+Fin de semana 2: 1 h 45 min para revisar territorios sin correspondencia y documentar el contrato de calidad.
