@@ -1,81 +1,40 @@
-# Big Data de posgrado — SUELO SABIO
+# Curso de Postgrado: BigData, Especialización en Bases de datos
 
-Curso de 64 horas: diez clases en cinco fines de semana, con **56 h 15 min sincrónicas y 7 h 45 min autónomas**. Preparado por el PhD Esteban Hernández, CyberColombia.
+Preparado por el PhD Esteban Hernández, CyberColombia.
 
-Esta edición utiliza datos abiertos de suelos, territorio, producción agrícola y clima. Sustituye el caso de pedidos sintéticos. Repositorio público: [eshernan/big-data-postgraduate](https://github.com/eshernan/big-data-postgraduate).
+**64 horas efectivas de clase en línea**, del **2 de octubre al 7 de noviembre de 2026**. Doce encuentros en seis fines de semana. Los recesos y almuerzos se excluyen; el trabajo autónomo no integra el cómputo.
 
-## Índice del contenido vigente
+[Programa](docs/programa.md) · [Calendario contractual](docs/calendario.md) · [Guía por sesiones](docs/agenda.md) · [Metodología](docs/metodologia.md) · [Datasets](docs/datasets.md) · [Entorno y descargas](docs/entorno.md) · [Controles docentes](docs/controles-docente.md)
 
-- [Programa académico y resultados de aprendizaje](docs/programa.md).
-- [Catálogo de 12 fuentes: alcance, tamaño, propósito y advertencias](docs/datasets.md).
-- [Entorno, descarga y uso del respaldo docente](docs/entorno.md).
-- [Manifiesto de URLs, bytes y SHA-256](kit/fuentes.json).
-- [Kit de ejecución](kit/LEEME.txt): [descargador](kit/00_datos.py), [talleres locales](kit/talleres.py), [Spark](kit/spark_taller.py), [dependencias base](kit/requirements.txt) y [dependencias Spark](kit/requirements_spark.txt).
-- [Proyecto y evaluación](proyecto/README.md).
-- [Controles y orientaciones docentes](docs/controles-docente.md).
-- [Verificación de esta integración](docs/validacion.md).
-- [Material histórico de pedidos](historico/pedidos/README.md), conservado como referencia de la edición anterior.
+El curso emplea dos dominios abiertos: PQRS/PQRD de Supersalud y datos agroambientales de suelo, territorio, rendimiento agrícola y clima. Los dominios conservan sus unidades; no se unen filas de reportes de salud con muestras de suelo.
 
-## Anexo de otro dominio: Supersalud
+## Encuentros
 
-[Notebooks docentes de Supersalud](supersalud/README.md): cuatro notebooks históricos organizados en `supersalud/` dentro de esta rama `dev`.
+| Fecha | Clase | Horario | Horas efectivas |
+|---|---|---|---|
+| Viernes 02/10/2026 | [Fundamentos y escala](clases/01-fundamentos-y-problema/README.md) | 18:00–22:00 | 3 h 45 min |
+| Sábado 03/10/2026 | [Ingesta y perfilado](clases/02-entorno-y-exploracion/README.md) | 08:00–17:00 | 7 h 30 min |
+| Viernes 09/10/2026 | [Arquitecturas, formatos y pipelines](clases/03-arquitecturas-y-formatos/README.md) | 18:00–22:00 | 3 h 45 min |
+| Sábado 10/10/2026 | [Calidad e integración](clases/04-calidad-y-duckdb/README.md) | 08:00–17:00 | 7 h 30 min |
+| Viernes 16/10/2026 | [Procesamiento con Spark](clases/05-ejecucion-spark/README.md) | 18:00–21:15 | 3 h |
+| Sábado 17/10/2026 | [Consultas e integración distribuida](clases/06-consultas-joins-y-ventanas/README.md) | 08:00–17:00 | 7 h 30 min |
+| Viernes 23/10/2026 | [Rendimiento y escalabilidad](clases/07-rendimiento/README.md) | 18:00–21:15 | 3 h |
+| Sábado 24/10/2026 | [Streaming de eventos](clases/08-streaming/README.md) | 08:00–17:00 | 7 h 30 min |
+| Viernes 30/10/2026 | [Analítica y gobernanza](clases/09-analitica-y-gobernanza/README.md) | 18:00–21:15 | 3 h |
+| Sábado 31/10/2026 | [Integración y auditoría del proyecto](clases/10-integracion-y-defensa/README.md) | 08:00–17:00 | 7 h 30 min |
+| Viernes 06/11/2026 | [Clínica de proyectos y ensayo de defensa](clases/11-clinica-de-proyectos/README.md) | 18:00–21:15 | 3 h |
+| Sábado 07/11/2026 | [Sustentación y cierre contractual](clases/12-sustentacion-y-cierre/README.md) | 08:00–16:30 | 7 h |
 
-| Notebook | Propósito de los ejercicios |
-|---|---|
-| [Sesión 1](supersalud/ProfesorSesion1SuperSalud_BigData.ipynb) | Explorar reclamos, revisar tipos y faltantes, medir memoria y convertir a Parquet. |
-| [Sesión 2](supersalud/ProfesorSesion2SuperSalud_BigData.ipynb) | Conserva los mismos ejercicios de la sesión 1 como material histórico; no añade una práctica distinta. |
-| [Sesión 3](supersalud/ProfesorSesion3Supersalud_BigData.ipynb) | Construir un pipeline configurable con Polars, revisar esquemas, particionar Parquet y plantear reglas de calidad. |
-| [Sesión 4](supersalud/ProfesorSesion4Supersalud_BigData.ipynb) | Explorar datos demográficos e indicadores, comparar pandas–Polars y simular ventanas de streaming y eventos tardíos. |
+## Recursos actuales
 
-El [README del anexo](supersalud/README.md) relaciona los ejercicios con las clases y explica sus requisitos y ajustes pendientes. Se conservan el código y las salidas históricas; no se han ejecutado como parte de esta reorganización.
+- [Índice completo de talleres](talleres/README.md), con descargas, tamaños y criterios.
+- [Kit base](kit/LEEME.txt), [manifesto agroambiental](kit/fuentes.json) y [manifiesto PQRS](kit/pqrs_fuentes.json).
+- [Descargador PQRS](kit/pqrs_descarga.py) y [prácticas reproducibles PQRS](kit/pqrs_talleres.py).
+- [Proyecto y evaluación por dominio](proyecto/README.md) y [mapa de ejercicios y prerrequisitos](docs/mapa-ejercicios.md).
+- [Notebooks actuales](kit/Notebooks/README.md) y [notebooks históricos Supersalud](supersalud/README.md), preservados como referencia.
 
-## Plan clase a clase
+Los originales agroambientales suman 136,4 MB; los tres completos PQRS, 1,816 GB. Las tres muestras reales incluidas suman 2,235 MB. Los originales voluminosos y salidas se excluyen de Git. La instalación se comprueba durante la clase 2 y el docente ofrece una copia validada para continuidad de los talleres.
 
-Cada guía incluye temas por segmento y enlaces a talleres con propósito, descarga, instrucciones, resultados esperados y límites de interpretación.
+## Cierre del proyecto
 
-| Clase | Temas y bloques | Ejercicios |
-|---|---|---|
-| 01 | [Fundamentos y problema](clases/01-fundamentos-y-problema/README.md) | [E01](talleres/E01.md) |
-| 02 | [Descarga y perfilado](clases/02-entorno-y-exploracion/README.md) | [E02](talleres/E02.md), [E03](talleres/E03.md) |
-| 03 | [Arquitecturas y formatos](clases/03-arquitecturas-y-formatos/README.md) | [E04](talleres/E04.md) |
-| 04 | [Calidad y rendimiento agrícola](clases/04-calidad-y-duckdb/README.md) | [E05](talleres/E05.md), [E06](talleres/E06.md) |
-| 05 | [Ejecución con Spark](clases/05-ejecucion-spark/README.md) | [E07](talleres/E07.md) |
-| 06 | [Territorio y propiedades del suelo](clases/06-consultas-joins-y-ventanas/README.md) | [E07](talleres/E07.md), [E08](talleres/E08.md), [E09](talleres/E09.md) |
-| 07 | [Rendimiento del procesamiento](clases/07-rendimiento/README.md) | [E10](talleres/E10.md) |
-| 08 | [Clima y eventos](clases/08-streaming/README.md) | [E11](talleres/E11.md) |
-| 09 | [Analítica y gobernanza](clases/09-analitica-y-gobernanza/README.md) | [E12](talleres/E12.md) |
-| 10 | [Integración y defensa](clases/10-integracion-y-defensa/README.md) | [E13](talleres/E13.md) |
-
-## Bloques y carga académica
-
-Viernes: antes y después del receso, **3 h 45 min efectivas**. Sábado: mañana y tarde, antes y después de cada receso, con almuerzo entre jornadas, **7 h 30 min efectivas**. Las guías no fijan horas de inicio o finalización.
-
-| Fin de semana | Clases | Sincrónico | Autónomo | Consolidación |
-|---|---|---|---|---|
-| 1 | 1–2 | 11 h 15 min | 45 min | Pregunta, diccionario y procedencia |
-| 2 | 3–4 | 11 h 15 min | 1 h 45 min | Territorios sin correspondencia y contrato de calidad |
-| 3 | 5–6 | 11 h 15 min | 1 h 45 min | Planes, mapas y cobertura |
-| 4 | 7–8 | 11 h 15 min | 1 h 45 min | Mediciones y eventos tardíos |
-| 5 | 9–10 | 11 h 15 min | 1 h 45 min | Informe y defensa, entre clases 9 y 10 |
-| Total | 10 | 56 h 15 min | 7 h 45 min | 64 horas |
-
-## Datos y ejecución
-
-Los archivos originales **no se incluyen en Git**. El corte docente ocupa aproximadamente **136,4 MB**; las tres tablas principales, unos **48 MB**. Descargar con el kit o copiar el respaldo fechado y verificarlo. DANE requiere descarga manual; una fuente actualizada puede diferir del SHA-256 registrado y queda pendiente de revisión.
-
-```sh
-cd kit
-python 00_datos.py --listar
-python 00_datos.py --descargar agrosavia eva divipola
-python talleres.py perfil
-python talleres.py calidad
-python talleres.py consultas
-```
-
-Instalar primero las dependencias según la guía de entorno. Para geografía y clima se necesitan sus fuentes adicionales. Consultar [E07](talleres/E07.md) y [E11](talleres/E11.md) para Spark y eventos; [E12](talleres/E12.md) evalúa una línea base de persistencia mediante MAE, con separación temporal.
-
-Los archivos de entrada permanecen en `kit/data/raw/` y los resultados en `kit/salidas/`, ambos excluidos de Git. No descargar capas nacionales completas ni series globales cuando el ejercicio solicita una muestra o un recorte.
-
-## Alcance de esta edición
-
-Integración del temario y los scripts disponibles el 2 de octubre de 2026. El libro y las presentaciones de la nueva edición continúan su elaboración por separado; los Word de septiembre se conservan únicamente en el histórico. Los términos de cada fuente se consultan en su catálogo; publicar el repositorio no cambia sus licencias. La instalación en Windows sigue pendiente de validación.
+31 de octubre: candidato y auditoría. 6 de noviembre: clínica, correcciones y ensayo. 7 de noviembre: sustentación, entrega final y cierre contractual.

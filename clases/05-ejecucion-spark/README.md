@@ -1,26 +1,18 @@
-# Clase 05 — Ejecución con Spark
+# Clase 05: Procesamiento con Spark
 
-[Índice](../../README.md) · [Entorno y descarga](../../docs/entorno.md) · [Datos](../../docs/datasets.md)
+Preparado por el PhD Esteban Hernández, CyberColombia.
 
-Fin de semana 3 · Viernes · 3 h 45 min efectivas.
+Viernes 16/10/2026. 3 h de clase efectiva.
 
-## Bloques temáticos
-
-| Segmento | Temas y actividades |
+| Segmento | Temas y ejercicios |
 |---|---|
-| Antes del receso | Driver, ejecutores, particiones y evaluación diferida; E07: agregación y explicación del plan. |
-| Después del receso | E07: equivalencia con DuckDB y ventanas; Interpretación de shuffle y costos. |
+| Antes del receso | Motores y entorno Spark; Driver, particiones, transformaciones y plan; E07: agregación y acción |
+| Después del receso | E07: equivalencia con DuckDB; Plan, controles y cierre |
 
-## Talleres y evidencias
+Producto: Plan explicado y control de equivalencia.
 
-### [E07 Spark y equivalencia de resultados](../../talleres/E07.md)
+Consultar el [calendario contractual](../../docs/calendario.md). Todas las horas se imparten en línea; el trabajo autónomo es opcional.
 
-Comprender ejecución distribuida y demostrar que cambiar de motor no debe alterar el significado del cálculo.
+Talleres: [E07](../../talleres/E07.md).
 
-**Entrega:** control_spark.json debe indicar cero diferencias respecto a DuckDB para el corte docente. Entregar un plan explicado y una consulta de ventana.
-
-## Preparación y trabajo autónomo
-
-Conservar los archivos originales y verificar su SHA-256. Consultar en cada taller los datos necesarios, tamaños, comandos y criterios de revisión. Las descargas no se sustituyen por datos inventados.
-
-La carga autónoma del módulo se consolida al finalizar el sábado; no se añade otra actividad obligatoria.
+[Mapa de ejercicios, prerrequisitos y evaluación](../../docs/mapa-ejercicios.md).

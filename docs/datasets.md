@@ -1,6 +1,8 @@
 # Catálogo de fuentes y tamaños
 
-La copia docente corresponde a las descargas comprobadas el 2 de octubre de 2026. El manifiesto fuentes.json contiene 12 recursos con URL exacta, archivo, tamaño en bytes y SHA-256. MB significa un millón de bytes. Los tamaños de descarga son observados; memoria de trabajo, descompresión e instalación se presupuestan aparte. El alcance “muestra” nunca equivale a un inventario completo.
+Preparado por el PhD Esteban Hernández, CyberColombia.
+
+El corte agroambiental conserva doce archivos originales, 136,4 MB. Supersalud aporta tres CSV completos adicionales, 1.816.243.049 bytes (1,816 GB decimales), y tres muestras reales de 1.000 filas, 2.234.994 bytes en total. Son quince fuentes/archivos originales de trabajo; las muestras se derivan de los tres CSV, sin contarse como otras fuentes. Las versiones, separadores, tamaños y hashes están en fuentes.json y pqrs_fuentes.json.
 
 ## D01 AGROSAVIA
 
@@ -12,7 +14,7 @@ Propósito: E01, E02, E04, E05, E06 y E13. pH no disponible: 11 filas.
 
 Atención: Conservar ND, unidades y método analítico. No hay coordenadas de muestras en este CSV. No asignarles las coordenadas municipales de DIVIPOLA.
 
-[Consultar fuente](<https://www.datos.gov.co/api/views/ch4u-f3i5/rows.csv?accessType=DOWNLOAD>)
+[Fuente](<https://www.datos.gov.co/api/views/ch4u-f3i5/rows.csv?accessType=DOWNLOAD>)
 
 ## D02 DIVIPOLA
 
@@ -24,7 +26,7 @@ Propósito: E03, E05, E06 y E13. Clave municipal de cinco caracteres.
 
 Atención: Incluye 1.103 municipios, 18 áreas no municipalizadas y una isla. Un punto territorial no es un polígono ni la posición de una muestra de suelo.
 
-[Consultar fuente](<https://www.datos.gov.co/api/views/gdxc-w37w/rows.csv?accessType=DOWNLOAD>)
+[Fuente](<https://www.datos.gov.co/api/views/gdxc-w37w/rows.csv?accessType=DOWNLOAD>)
 
 ## D03 MGN departamentos 2025
 
@@ -36,7 +38,7 @@ Propósito: E08 y E13. Contexto cartográfico departamental.
 
 Atención: Descarga por navegador. Mantener componentes juntos y revisar el archivo PRJ. Los límites del MGN se usan con finalidad geoestadística.
 
-[Consultar fuente](<https://geoportal.dane.gov.co/descargas/mgn_2025/MGN2025_DPTO_POLITICO.zip>)
+[Fuente](<https://geoportal.dane.gov.co/descargas/mgn_2025/MGN2025_DPTO_POLITICO.zip>)
 
 ## D04 MGN municipios 2025
 
@@ -48,7 +50,7 @@ Propósito: E03, E08 y E13. Cruce territorial y geometrías.
 
 Atención: mpio_ccdgo tiene solo tres caracteres. Usar mpio_cdpmp; no unir por nombres ni por códigos municipales incompletos. El corte cartográfico es 2025.
 
-[Consultar fuente](<https://geoportal.dane.gov.co/descargas/mgn_2025/MGN2025_MPIO_GRAFICO.zip>)
+[Fuente](<https://geoportal.dane.gov.co/descargas/mgn_2025/MGN2025_MPIO_GRAFICO.zip>)
 
 ## D05 EVA UPRA 2019 a 2025
 
@@ -60,7 +62,7 @@ Propósito: E06, E07, E10, E12 y E13. Rendimiento por cultivo, territorio y per�
 
 Atención: Cultivos transitorios cambian su referencia metodológica desde 2022. Comparar períodos compatibles y estado físico. No sumar ni promediar sin ponderación rendimientos t/ha.
 
-[Consultar fuente](<https://www.datos.gov.co/api/views/uejq-wxrr/rows.csv?accessType=DOWNLOAD>)
+[Fuente](<https://www.datos.gov.co/api/views/uejq-wxrr/rows.csv?accessType=DOWNLOAD>)
 
 ## D06 Correlación de suelos IGAC
 
@@ -72,7 +74,7 @@ Propósito: E01, E04 y E09. Contraste de esquemas, taxonomía y metadatos.
 
 Atención: No se puede dibujar un mapa a partir de estos diez atributos sin obtener geometrías. No confundir unidades cartográficas con muestras puntuales.
 
-[Consultar fuente](<https://mapas.igac.gov.co/server/rest/services/agrologia/correlacionsuelosnacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=10&f=json>)
+[Fuente](<https://mapas.igac.gov.co/server/rest/services/agrologia/correlacionsuelosnacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=false&resultRecordCount=10&f=json>)
 
 ## D07 Capacidad de uso IGAC
 
@@ -84,7 +86,7 @@ Propósito: E08 y E13. Intersección y limitaciones de uso.
 
 Atención: La muestra no representa el país. Capacidad de uso no es rendimiento agrícola medido. Recalcular área después de intersectar.
 
-[Consultar fuente](<https://mapas.igac.gov.co/server/rest/services/agrologia/capacidaddeusodelastierrasterritorionacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=5&f=geojson>)
+[Fuente](<https://mapas.igac.gov.co/server/rest/services/agrologia/capacidaddeusodelastierrasterritorionacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=5&f=geojson>)
 
 ## D08 Propiedades químicas IGAC
 
@@ -96,7 +98,7 @@ Propósito: E08, E09 y E13. Calidad química y comparación de escalas.
 
 Atención: Los intervalos como ≤ 5.5 son categorías, no números puntuales. No sustituir el intervalo por su extremo ni derivar un índice de salud sin justificación.
 
-[Consultar fuente](<https://mapas.igac.gov.co/server/rest/services/agrologia/distribucionycalidaddelaspropiedadesquimicasterritorionacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=5&f=geojson>)
+[Fuente](<https://mapas.igac.gov.co/server/rest/services/agrologia/distribucionycalidaddelaspropiedadesquimicasterritorionacional/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&resultRecordCount=5&f=geojson>)
 
 ## D09 SoilGrids pH
 
@@ -108,7 +110,7 @@ Propósito: E09 y E13. Datos ráster y factores de escala.
 
 Atención: Dividir valores por 10. Se detectaron 188 celdas cero sin NoData declarado: ponerlas en revisión y excluirlas provisionalmente de la media interpretativa. No descargar el mundo completo.
 
-[Consultar fuente](<https://maps.isric.org/mapserv?map=/map/phh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_0-5cm_mean&FORMAT=image/tiff&SUBSETTINGCRS=http://www.opengis.net/def/crs/EPSG/0/4326&SUBSET=long(-73.4,-73.3)&SUBSET=lat(5.5,5.6)>)
+[Fuente](<https://maps.isric.org/mapserv?map=/map/phh2o.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=phh2o_0-5cm_mean&FORMAT=image/tiff&SUBSETTINGCRS=http://www.opengis.net/def/crs/EPSG/0/4326&SUBSET=long(-73.4,-73.3)&SUBSET=lat(5.5,5.6)>)
 
 ## D10 WoSIS Colombia
 
@@ -120,7 +122,7 @@ Propósito: E09 y E13. Profundidad, método y licencia por registro.
 
 Atención: No son diez perfiles independientes. Las coordenadas y profundidades deben coincidir antes de contrastar con SoilGrids. Revisar licencia de cada proveedor.
 
-[Consultar fuente](<https://maps.isric.org/mapserv?map=%2Fmap%2Fwosis_latest.map&SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Awosis_latest_phaq&COUNT=10&OUTPUTFORMAT=geojson&FILTER=%3CFilter+xmlns%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22%3E%3CPropertyIsEqualTo%3E%3CValueReference%3Ecountry_name%3C%2FValueReference%3E%3CLiteral%3EColombia%3C%2FLiteral%3E%3C%2FPropertyIsEqualTo%3E%3C%2FFilter%3E>)
+[Fuente](<https://maps.isric.org/mapserv?map=%2Fmap%2Fwosis_latest.map&SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms%3Awosis_latest_phaq&COUNT=10&OUTPUTFORMAT=geojson&FILTER=%3CFilter+xmlns%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22%3E%3CPropertyIsEqualTo%3E%3CValueReference%3Ecountry_name%3C%2FValueReference%3E%3CLiteral%3EColombia%3C%2FLiteral%3E%3C%2FPropertyIsEqualTo%3E%3C%2FFilter%3E>)
 
 ## D11 NASA POWER
 
@@ -132,7 +134,7 @@ Propósito: E11 y E13. JSON, agregación temporal y reproducción de eventos.
 
 Atención: Punto demostrativo, no observación directa en una finca. Mantener el estándar temporal del archivo. -999 es dato faltante, no lluvia negativa.
 
-[Consultar fuente](<https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,PRECTOTCORR&community=AG&longitude=-73.36&latitude=5.54&start=20250101&end=20250131&format=JSON>)
+[Fuente](<https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,PRECTOTCORR&community=AG&longitude=-73.36&latitude=5.54&start=20250101&end=20250131&format=JSON>)
 
 ## D12 CHIRPS v3
 
@@ -144,10 +146,32 @@ Propósito: E11 y E13. Recorte ráster y comparación de lluvia mensual.
 
 Atención: No sumar lluvia entre píxeles como si fueran días. En este archivo hay valores -9999 y no se declara NoData; enmascarar negativos antes de resumir. No descargar todo el histórico.
 
-[Consultar fuente](<https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/latam/tifs/chirps-v3.0.2025.01.tif>)
+[Fuente](<https://data.chc.ucsb.edu/products/CHIRPS/v3.0/monthly/latam/tifs/chirps-v3.0.2025.01.tif>)
 
 Conjunto completo del kit: 136,4 MB de archivos originales, con los shapefiles todavía comprimidos. Extraer shapes y crear salidas aumenta el espacio. Para prácticas tabulares bastan AGROSAVIA, EVA y DIVIPOLA, aproximadamente 48 MB. El docente distribuye la copia fechada antes de la sesión; cada estudiante verifica las huellas y practica una descarga pequeña.
 
-## Distribución en GitHub
+## D13 PQRS/PQRD Supersalud 2023-II
 
-El repositorio contiene el catálogo y [fuentes.json](../kit/fuentes.json), no los 136,4 MB de archivos originales. Descargarlos con [la guía de entorno](entorno.md) o solicitar la copia fechada al docente. Los tamaños y conteos son del corte del 2 de octubre de 2026; una descarga posterior puede cambiar. Cada fuente conserva sus propios términos de uso.
+Archivo PQRD_2023_II.csv: 716,697 reportes, 38 columnas, 532.70 MB. Separador ';'; codificación utf-8-sig. El campo periodo almacena el año; corte_archivo se añade para conservar el semestre y archivo de origen. Muestra derivada de las primeras 1.000 filas: 0.752 MB. Uso: P01–P04, contratos, calidad y medición. Procedencia: Superintendencia Nacional de Salud, licencia CC BY 4.0 según metadatos conservados.
+
+[Fuente](<https://mapas.supersalud.gov.co/arcgisportal/sharing/rest/content/items/515d4c6366854f549b24c704320f10f4/data>)
+
+Descarga comprobada por lectura HTTP Range de la cabecera y coincidencia de sus 38 columnas el 2 de octubre de 2026. La copia local completa tiene hash registrado y perfil reproducible. Descargar un archivo por vez o usar la copia docente; no materializar los tres CSV originales juntos en RAM.
+
+## D14 PQRS/PQRD Supersalud 2024-I
+
+Archivo PQRD_2024_I.csv: 781,601 reportes, 38 columnas, 576.71 MB. Separador ','; codificación utf-8-sig. El campo periodo almacena el año; corte_archivo se añade para conservar el semestre y archivo de origen. Muestra derivada de las primeras 1.000 filas: 0.737 MB. Uso: P01–P04, contratos, calidad y medición. Procedencia: Superintendencia Nacional de Salud, licencia CC BY 4.0 según metadatos conservados.
+
+[Fuente](<https://mapas.supersalud.gov.co/arcgisportal/sharing/rest/content/items/b52330a16b3940c39d38cb164c9dc014/data>)
+
+Descarga comprobada por lectura HTTP Range de la cabecera y coincidencia de sus 38 columnas el 2 de octubre de 2026. La copia local completa tiene hash registrado y perfil reproducible. Descargar un archivo por vez o usar la copia docente; no materializar los tres CSV originales juntos en RAM.
+
+## D15 PQRS/PQRD Supersalud 2024-II
+
+Archivo PQRD_2024_II.csv: 946,468 reportes, 38 columnas, 706.84 MB. Separador ';'; codificación utf-8-sig. El campo periodo almacena el año; corte_archivo se añade para conservar el semestre y archivo de origen. Muestra derivada de las primeras 1.000 filas: 0.746 MB. Uso: P01–P04, contratos, calidad y medición. Procedencia: Superintendencia Nacional de Salud, licencia CC BY 4.0 según metadatos conservados.
+
+[Fuente](<https://mapas.supersalud.gov.co/arcgisportal/sharing/rest/content/items/b257c9907b754b0cabb55a32e706bdee/data>)
+
+Descarga comprobada por lectura HTTP Range de la cabecera y coincidencia de sus 38 columnas el 2 de octubre de 2026. La copia local completa tiene hash registrado y perfil reproducible. Descargar un archivo por vez o usar la copia docente; no materializar los tres CSV originales juntos en RAM.
+
+OBJECTID se trata como clave candidata local al archivo; su unicidad se mide antes de usarlo. id_afec identifica afectados y no se presupone clave de reclamo. Se distinguen ubicación del peticionario, afectado y entidad. La dimensión territorial puede contextualizar cada dominio por separado; no hay unión fila a fila entre reportes de salud y muestras de suelo. Los códigos sin cruce se conservan para revisar vigencia, extensión y normalización con evidencia.

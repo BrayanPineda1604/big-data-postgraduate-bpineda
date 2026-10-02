@@ -1,24 +1,54 @@
-# Proyecto SUELO SABIO y evaluación
+# E13 Proyecto integrador por dominio
 
-[Índice](../README.md) · [Programa vigente](../docs/programa.md) · [E13: integración](../talleres/E13.md)
+[Índice del curso](../README.md) · [Evaluación](../docs/mapa-ejercicios.md) · [Calendario](../docs/calendario.md)
 
+Elegir **PQRS** o **agroambiental** y construir un producto reproducible. Las competencias comunes se acreditan con las prácticas del curso; no se exige desarrollar dos proyectos ni unir reportes de salud con muestras de suelo.
+
+## Hitos y trabajo en clase
+
+- Clase 10, 31 de octubre: reconstrucción y auditoría cruzada; producto candidato.
+- Clase 11, 6 de noviembre: resolver hallazgos, validar y ensayar la defensa.
+- Clase 12, 7 de noviembre: entrega final y sustentación de 15 minutos por equipo, con preguntas y transición.
+
+Estos tres encuentros reúnen 1.050 minutos dentro de las 64 horas en línea. La ampliación fuera de clase es opcional.
+
+## Fuentes y preparación por ruta
+
+| Ruta | Entradas | Producto específico |
+|---|---|---|
+| PQRS | Muestras de tres cortes; completos opcionales para volumen; DIVIPOLA si se usa dimensión territorial | Series de reportes, contrato, conteos por período/territorio y cobertura de enlace |
+| Agroambiental | AGROSAVIA, EVA y DIVIPOLA; DANE/IGAC para mapa; demás fuentes según pregunta | Tabla agrícola con denominador correcto, mapa y cobertura espacial |
+
+Consultar [datasets](../docs/datasets.md), [descarga y entorno](../docs/entorno.md), [manifiesto PQRS](../kit/pqrs_fuentes.json) y [manifiesto agroambiental](../kit/fuentes.json). Descargar solo las fuentes necesarias. Los archivos completos y las salidas no se incorporan al repositorio.
+
+## Ejecución inicial
+
+Desde `kit/`, después de preparar las entradas y el entorno:
+
+```sh
+# Ruta PQRS con muestras
+python pqrs_talleres.py formatos
+python pqrs_talleres.py calidad
+python pqrs_talleres.py benchmark --repeticiones 3
+# Ruta agroambiental
+python talleres.py calidad
+python talleres.py consultas
+```
+
+Ejecutar la ruta elegida, no todas las líneas como obligación. Adjuntar por separado las evidencias comunes E07 (Spark), E08–E09 (soporte espacial), I01/E11 (eventos NASA) y E12 (evaluación temporal EVA), identificando su dominio y sus limitaciones.
+
+## Instrucciones y aceptación
+
+1. Definir pregunta, unidad de observación, población cubierta y límites. Para PQRS, reportes no equivalen a personas únicas ni prevalencia.
+2. Registrar procedencia, tamaños, hashes, versiones y comandos. Conservar originales y verificar cardinalidad tras cada transformación.
+3. Construir el producto específico de la ruta. El mapa agroambiental no es una exigencia de mapa clínico para PQRS: en salud se puede entregar una tabla territorial con conteos, vigencia y cobertura.
+4. Incorporar una consulta verificada, controles de calidad y un experimento de rendimiento. Declarar muestra o completo en cada resultado.
+5. Presentar las evidencias metodológicas comunes sin atribuirlas al dominio equivocado. Diferenciar una reproducción de eventos de una prueba de recuperación efectivamente ejecutada.
+6. Otro equipo reconstruye controles; registrar hallazgo, corrección y resultado de la nueva ejecución.
+7. Entregar código/notebooks, informe de 8–12 páginas, ficha de gobernanza y defensa. Explicar un resultado que no se puede inferir de los datos.
 
 ## Evaluación
 
-| Evidencia | Peso |
-| --- | --- |
-| E01–E03: procedencia, descarga y perfilado | 10 % |
-| E04–E06: calidad, formatos y SQL | 10 % |
-| E07–E09: Spark e integración geográfica | 10 % |
-| E10–E11: experimento y eventos | 20 % |
-| E12–E13: proyecto e informe técnico | 35 % |
-| Sustentación individual | 15 % |
+Proyecto e informe: **35 %**. Sustentación individual: **15 %**. Las prácticas previas completan el 50 % restante según el [mapa de evaluación](../docs/mapa-ejercicios.md). No hay un peso adicional por cada notebook.
 
-
-
-## Producto integrador
-
-Cada equipo presenta un pipeline ejecutable, un catálogo de fuentes, tablas Parquet, una consulta equivalente entre motores, un mapa con cobertura explícita, un experimento de rendimiento, evidencia de eventos y una evaluación temporal. El informe de 8 a 12 páginas debe separar resultados observados, estimaciones, limitaciones y propuesta de escalamiento. La defensa dura 8 minutos más 4 de preguntas; hasta ocho equipos caben en el bloque final previsto. Con más equipos se utilizan salas simultáneas y evaluadores adicionales dentro del mismo horario.
-
-
-La rúbrica valora corrección y unidades (30 %), reproducibilidad y trazabilidad (25 %), justificación técnica (25 %) y comunicación de limitaciones (20 %) dentro de cada entrega. Estos porcentajes no reemplazan los pesos del curso. Las fechas dependen del calendario institucional.
+Dentro de cada entrega: corrección y unidades 30 %, reproducibilidad y trazabilidad 25 %, justificación 25 % y comunicación de límites 20 %. No se penaliza optar por las muestras cuando el equipo no admite los completos; sí se exige declarar el alcance y no extrapolarlo.

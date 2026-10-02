@@ -29,3 +29,7 @@ supersalud/salidas/
 supersalud/parquet_output/
 supersalud/Reclamos*
 supersalud/config.json
+
+# Descargas completas PQRS y entregas de estudiantes
+kit/data/pqrs_completos/
+kit/entregas/

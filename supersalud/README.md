@@ -1,8 +1,10 @@
+> Ruta de ejecución vigente: [notebooks adaptados](../kit/Notebooks/README.md), [P01](../talleres/P01.md)–[P04](../talleres/P04.md) y [calendario contractual](../docs/calendario.md). Los cuatro archivos de esta carpeta se conservan como material histórico y no deben ejecutarse como guía actual.
+
 # Anexo Supersalud — notebooks docentes
 
 [Índice del curso](../README.md)
 
-Material histórico incorporado desde la rama `dev`, commit `6aed21d`, conservando los cuatro notebooks y su historial; únicamente se actualizan sus enlaces iniciales a Colab. Complementa SUELO SABIO con un caso de reclamos de salud; no sustituye los talleres E01–E13 ni añade horas obligatorias al curso.
+Material histórico incorporado desde la rama `dev`, commit `6aed21d`, conservando los cuatro notebooks y su historial; únicamente se actualizan sus enlaces iniciales a Colab. Complementa SUELO SABIO con un caso de reclamos de salud; se aprovecha mediante P01–P04 e I01 dentro de las doce clases y no añade horas obligatorias.
 
 ## Índice y relación con el curso
 
@@ -31,13 +33,13 @@ El docente puede sustituir actividades equivalentes dentro de los bloques ya pre
 
 Los notebooks conservan su código y sus salidas; los enlaces de Colab se ajustan al directorio `supersalud/` de `dev`. **No se han ejecutado en esta integración y no están listos para ejecutar todas las celdas de corrido en el entorno actual.**
 
-- Trabajar sobre una copia en un entorno separado del kit SUELO SABIO. Las importaciones incluyen pandas, NumPy, Matplotlib, seaborn, requests, PyArrow y, en la sesión 3, Polars. La rama no proporciona un entorno de versiones fijadas ni datasets adjuntos.
+- Trabajar sobre una copia en un entorno separado del kit SUELO SABIO. Las importaciones incluyen pandas, NumPy, Matplotlib, seaborn, requests, PyArrow y, en la sesión 3, Polars. Los originales no aportaban un entorno fijado; la ruta vigente sí incluye dependencias y tres muestras reales en `kit/`.
 - Las sesiones 1 y 2 combinan rutas `/content/`, Google Drive, `raw/` y nombres distintos del CSV. Unificar rutas, codificación y separador antes de usarlas localmente. Algunas celdas escriben sobre archivos de entrada: conservar una copia original independiente.
 - Los enlaces iniciales «Open in Colab» apuntan a `dev/supersalud/`. También se pueden abrir los archivos con Jupyter desde esta carpeta.
 - Hay descargas con `verify=False` y `curl -k`. Al adaptar la práctica, restaurar la verificación TLS y resolver errores de certificados; no usar esas excepciones como configuración habitual.
 - La sesión 3 usa métodos de Polars que requieren comprobar compatibilidad, define dos veces la función de escritura, deja comentada la concatenación y lee una carpeta Parquet preexistente. Su verificación de esquema compara nombres, pero no demuestra igualdad de tipos ni devuelve los DataFrames normalizados.
 - Las reglas llaman a `send_email`, cuya implementación no figura en el notebook. No ejecutar esas celdas sin adaptación; usar un registro local de alertas. No se enviaron mensajes ni se configuró correo durante esta revisión.
-- Comprobar los tamaños y términos de los datasets antes de descargarlos. La rama contiene únicamente notebooks; no se han comprobado disponibilidad, tamaño ni esquema actual de las URLs originales. Los datos descargados, configuraciones locales y salidas se excluyen de Git.
+- Comprobar los tamaños y términos de los datasets antes de descargarlos. Este anexo conserva únicamente los notebooks históricos; la ruta vigente documenta sus cortes comprobados en `kit/pqrs_fuentes.json`. Los datos descargados, configuraciones locales y salidas se excluyen de Git.
 
 ## Particularidades de la sesión 4
 
@@ -49,3 +51,7 @@ Los notebooks conservan su código y sus salidas; los enlaces de Colab se ajusta
 ## Procedencia y comprobación
 
 Esta actualización de `dev` integra la organización realizada en `main` e incorpora la sesión 4 del commit `6aed21d`. Los cuatro notebooks quedan en `supersalud/`, sin copias en la raíz. Se comprobaron su estructura JSON, sus enlaces y la conservación de todas las celdas de código y salidas respecto a los originales. Las huellas originales y actualizadas se registran en [procedencia.json](procedencia.json). No se ejecutaron los notebooks ni se descargaron datasets durante esta reorganización.
+
+## Ruta vigente para ejecutar
+
+Usar [los notebooks actuales](../kit/Notebooks/README.md) y el [mapa de ejercicios](../docs/mapa-ejercicios.md). Los originales de este anexo permanecen sin nuevas modificaciones.
