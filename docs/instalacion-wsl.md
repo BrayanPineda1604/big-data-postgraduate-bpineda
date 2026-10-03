@@ -40,32 +40,33 @@ La columna `VERSION` debe mostrar `2`. Si muestra `1`, salir de Ubuntu y ejecuta
 
 [Referencia: instalación y comandos WSL de Microsoft](https://learn.microsoft.com/en-us/windows/wsl/basic-commands) · [Instalación de Ubuntu en WSL](https://documentation.ubuntu.com/wsl/latest/howto/install-ubuntu-wsl2/).
 
-## 2. Entrar a la raíz de Ubuntu y clonar
+## 2. Entrar a la carpeta base y clonar
 
-**Todos los comandos siguientes son Bash, dentro de Ubuntu.** Confirmar la distribución y pasar al directorio raíz `/`:
+**Todos los comandos siguientes son Bash, dentro de Ubuntu.** Confirmar la distribución y preparar la carpeta base del curso:
 
 ```bash
 cat /etc/os-release
 whoami
-cd /
+mkdir -p /mnt/c/Users/TUPTC/bigdata
+cd /mnt/c/Users/TUPTC/bigdata
 pwd
 ```
 
-`VERSION_ID` debe indicar `26.04`; `pwd` debe mostrar `/`. Estar en `/` no significa ser el usuario `root`: conservar el usuario creado en el paso anterior.
+`VERSION_ID` debe indicar `26.04`; `pwd` debe mostrar `/mnt/c/Users/TUPTC/bigdata`. Conservar el usuario normal de Ubuntu creado en el paso anterior.
 
-Instalar Git y las herramientas dentro de Ubuntu y pasar a la carpeta del usuario Windows `TUPTC`, visible en WSL como `/mnt/c/Users/TUPTC/`. Comprobar que esa carpeta existe y es accesible antes de clonar:
+Instalar Git y las herramientas dentro de Ubuntu y pasar a la carpeta base `/mnt/c/Users/TUPTC/bigdata`. Comprobar que esa carpeta existe y es accesible antes de clonar:
 
 ```bash
 sudo apt update
 sudo apt install -y git curl ca-certificates unzip build-essential openjdk-21-jdk
-cd /mnt/c/Users/TUPTC/
+cd /mnt/c/Users/TUPTC/bigdata
 git clone --branch main https://github.com/eshernan/big-data-postgraduate.git
 cd big-data-postgraduate
 git branch --show-current
 git status --short
 ```
 
-La ruta de trabajo será `/mnt/c/Users/TUPTC/big-data-postgraduate`. La guía clona siempre la rama principal **`main`**; `git branch --show-current` debe devolver `main`. No usar `sudo git clone`. El repositorio y su `.venv` se guardan en esa carpeta de Windows, pero Python, Java y todos los comandos se ejecutan desde Ubuntu en WSL.
+El clonado crea la subcarpeta `big-data-postgraduate` dentro de `bigdata`. Si ya existe el repositorio, omitir el clonado y entrar con `cd big-data-postgraduate`. La ruta del repositorio será `/mnt/c/Users/TUPTC/bigdata/big-data-postgraduate`. La guía clona siempre la rama principal **`main`**; `git branch --show-current` debe devolver `main`. No usar `sudo git clone`. El repositorio y su `.venv` se guardan en esa carpeta de Windows, pero Python, Java y todos los comandos se ejecutan desde Ubuntu en WSL.
 
 ## 3. Python 3.12 y entorno virtual dentro de Ubuntu
 
@@ -77,14 +78,15 @@ sh /tmp/instalar-uv-bigdata.sh
 source "$HOME/.local/bin/env"
 uv --version
 uv python install 3.12
-cd /mnt/c/Users/TUPTC/big-data-postgraduate
+cd /mnt/c/Users/TUPTC/bigdata
+cd big-data-postgraduate
 uv venv --python 3.12 --seed .venv
 source .venv/bin/activate
 python --version
 python -c 'import sys; print(sys.executable)'
 ```
 
-Debe aparecer Python `3.12.x` y un ejecutable dentro de `/mnt/c/Users/TUPTC/big-data-postgraduate/.venv/`. Se crea **un solo entorno**, en la raíz del repositorio. No crear otro `.venv` dentro de `kit/`. Si ya existe el entorno, activar el existente en lugar de recrearlo.
+Debe aparecer Python `3.12.x` y un ejecutable dentro de `/mnt/c/Users/TUPTC/bigdata/big-data-postgraduate/.venv/`. Se crea **un solo entorno**, en la raíz del repositorio. No crear otro `.venv` dentro de `kit/`. Si ya existe el entorno, activar el existente en lugar de recrearlo.
 
 [Ubuntu 26.04: versión de Python](https://documentation.ubuntu.com/release-notes/26.04/summary-for-lts-users/) · [Instalador oficial de uv](https://docs.astral.sh/uv/getting-started/installation/) · [Instalación de versiones de Python con uv](https://docs.astral.sh/uv/guides/install-python/).
 
@@ -148,7 +150,8 @@ Ejecutar los talleres E07/E11 después de preparar sus entradas; la prueba anter
 En Ubuntu, con el entorno activo:
 
 ```bash
-cd /mnt/c/Users/TUPTC/big-data-postgraduate/kit
+cd /mnt/c/Users/TUPTC/bigdata
+cd big-data-postgraduate/kit
 python pqrs_talleres.py perfil
 python -m jupyter lab --no-browser --ip=127.0.0.1
 ```
@@ -183,7 +186,8 @@ wsl --distribution Ubuntu-26.04
 En Ubuntu:
 
 ```bash
-cd /mnt/c/Users/TUPTC/big-data-postgraduate
+cd /mnt/c/Users/TUPTC/bigdata
+cd big-data-postgraduate
 source .venv/bin/activate
 source "$HOME/.config/bigdata/entorno.sh"
 git status --short
@@ -205,3 +209,15 @@ Para abrir los archivos en el Explorador de Windows desde Ubuntu: `explorer.exe 
 - Si Ubuntu-26.04 no inicia por virtualización, revisar los requisitos WSL de Microsoft y habilitar virtualización del equipo según el fabricante.
 
 La guía se contrastó con documentación oficial; **la instalación completa en un equipo Windows con Ubuntu-26.04 está pendiente de prueba**. Las validaciones previas de los ejercicios en macOS no certifican este entorno nuevo.
+
+## Estructura de referencia
+
+```text
+/mnt/c/Users/TUPTC/bigdata/          # carpeta base
+└── big-data-postgraduate/          # clon de main
+    ├── .venv/                     # entorno de Ubuntu
+    └── kit/
+        ├── Notebooks/
+        ├── data/
+        └── salidas/
+```

@@ -1,7 +1,7 @@
 """Spark local: consultas equivalentes o reproducción de observaciones NASA abiertas."""
 from pathlib import Path
 import argparse,json,os,tempfile
-ROOT=Path(__file__).resolve().parent; OUT=ROOT/'salidas'
+ROOT=Path(__file__).resolve().parent; OUT=ROOT/'salidas'; OUT.mkdir(parents=True,exist_ok=True)
 def session():
     from pyspark.sql import SparkSession
     return SparkSession.builder.master('local[2]').appName('SueloSabio').config('spark.sql.shuffle.partitions','4').config('spark.sql.session.timeZone','UTC').getOrCreate()

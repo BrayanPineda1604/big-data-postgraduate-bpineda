@@ -1554,7 +1554,7 @@
       },
       {
         "type": "code",
-        "text": "cd /mnt/c/Users/TUPTC/\ngit clone --branch main https://github.com/eshernan/big-data-postgraduate.git\ncd big-data-postgraduate\n# Continuar según docs/instalacion-wsl.md"
+        "text": "cd /mnt/c/Users/TUPTC/bigdata\ngit clone --branch main https://github.com/eshernan/big-data-postgraduate.git\ncd big-data-postgraduate\n# Continuar según docs/instalacion-wsl.md"
       }
     ]
   },
@@ -1693,7 +1693,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -1788,7 +1788,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -1879,7 +1879,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -1970,7 +1970,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2061,7 +2061,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2148,7 +2148,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2239,7 +2239,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2326,7 +2326,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2421,7 +2421,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2516,7 +2516,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2603,7 +2603,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2690,7 +2690,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2785,7 +2785,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2910,7 +2910,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -2989,7 +2989,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -3068,7 +3068,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -3147,7 +3147,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
@@ -3252,7 +3252,7 @@
     "blocks": [
       {
         "type": "p",
-        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/bigdata/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
       },
       {
         "type": "p",
