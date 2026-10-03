@@ -53,20 +53,19 @@ pwd
 
 `VERSION_ID` debe indicar `26.04`; `pwd` debe mostrar `/`. Estar en `/` no significa ser el usuario `root`: conservar el usuario creado en el paso anterior.
 
-Instalar Git y las herramientas del sistema, y crear una carpeta de trabajo bajo `/opt`. Solo la creación de esa carpeta requiere privilegios; el repositorio pertenecerá al usuario del curso:
+Instalar Git y las herramientas dentro de Ubuntu y pasar a la carpeta del usuario Windows `TUPTC`, visible en WSL como `/mnt/c/Users/TUPTC/`. Comprobar que esa carpeta existe y es accesible antes de clonar:
 
 ```bash
 sudo apt update
 sudo apt install -y git curl ca-certificates unzip build-essential openjdk-21-jdk
-sudo install -d -o "$USER" -g "$(id -gn)" /opt/bigdata
-cd /opt/bigdata
-git clone --branch dev https://github.com/eshernan/big-data-postgraduate.git
+cd /mnt/c/Users/TUPTC/
+git clone --branch main https://github.com/eshernan/big-data-postgraduate.git
 cd big-data-postgraduate
 git branch --show-current
 git status --short
 ```
 
-La ruta de trabajo será `/opt/bigdata/big-data-postgraduate`. La guía utiliza `dev`, donde se mantienen los ejercicios actualizados. No usar `sudo git clone`. Mantener repositorio y entorno virtual en el sistema de archivos de Ubuntu; `/mnt/c/` se usa únicamente para copiar descargas de Windows cuando sea necesario.
+La ruta de trabajo será `/mnt/c/Users/TUPTC/big-data-postgraduate`. La guía clona siempre la rama principal **`main`**; `git branch --show-current` debe devolver `main`. No usar `sudo git clone`. El repositorio y su `.venv` se guardan en esa carpeta de Windows, pero Python, Java y todos los comandos se ejecutan desde Ubuntu en WSL.
 
 ## 3. Python 3.12 y entorno virtual dentro de Ubuntu
 
@@ -78,14 +77,14 @@ sh /tmp/instalar-uv-bigdata.sh
 source "$HOME/.local/bin/env"
 uv --version
 uv python install 3.12
-cd /opt/bigdata/big-data-postgraduate
+cd /mnt/c/Users/TUPTC/big-data-postgraduate
 uv venv --python 3.12 --seed .venv
 source .venv/bin/activate
 python --version
 python -c 'import sys; print(sys.executable)'
 ```
 
-Debe aparecer Python `3.12.x` y un ejecutable dentro de `/opt/bigdata/big-data-postgraduate/.venv/`. Se crea **un solo entorno**, en la raíz del repositorio. No crear otro `.venv` dentro de `kit/`. Si ya existe el entorno, activar el existente en lugar de recrearlo.
+Debe aparecer Python `3.12.x` y un ejecutable dentro de `/mnt/c/Users/TUPTC/big-data-postgraduate/.venv/`. Se crea **un solo entorno**, en la raíz del repositorio. No crear otro `.venv` dentro de `kit/`. Si ya existe el entorno, activar el existente en lugar de recrearlo.
 
 [Ubuntu 26.04: versión de Python](https://documentation.ubuntu.com/release-notes/26.04/summary-for-lts-users/) · [Instalador oficial de uv](https://docs.astral.sh/uv/getting-started/installation/) · [Instalación de versiones de Python con uv](https://docs.astral.sh/uv/guides/install-python/).
 
@@ -149,7 +148,7 @@ Ejecutar los talleres E07/E11 después de preparar sus entradas; la prueba anter
 En Ubuntu, con el entorno activo:
 
 ```bash
-cd /opt/bigdata/big-data-postgraduate/kit
+cd /mnt/c/Users/TUPTC/big-data-postgraduate/kit
 python pqrs_talleres.py perfil
 python -m jupyter lab --no-browser --ip=127.0.0.1
 ```
@@ -184,17 +183,18 @@ wsl --distribution Ubuntu-26.04
 En Ubuntu:
 
 ```bash
-cd /opt/bigdata/big-data-postgraduate
+cd /mnt/c/Users/TUPTC/big-data-postgraduate
 source .venv/bin/activate
 source "$HOME/.config/bigdata/entorno.sh"
 git status --short
 # Si no hay cambios locales pendientes:
-git pull --ff-only origin dev
+git switch main
+git pull --ff-only origin main
 cd kit
 python -m jupyter lab --no-browser --ip=127.0.0.1
 ```
 
-Para abrir los archivos en el Explorador de Windows desde Ubuntu: `explorer.exe .`. Para copiar un ZIP descargado en Windows, usar la ruta `/mnt/c/Users/TU_USUARIO/Downloads/archivo.zip` y colocarlo en `kit/data/raw/`; sustituir el nombre de usuario y archivo por los reales.
+Para abrir los archivos en el Explorador de Windows desde Ubuntu: `explorer.exe .`. Para copiar un ZIP descargado en Windows, usar la ruta `/mnt/c/Users/TUPTC/Downloads/archivo.zip` y colocarlo en `kit/data/raw/`; sustituir el nombre del archivo por el descargado.
 
 ## Recursos y problemas frecuentes
 

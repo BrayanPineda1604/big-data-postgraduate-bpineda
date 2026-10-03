@@ -5,7 +5,7 @@
 Todas las instrucciones de esta página se ejecutan en **Ubuntu-26.04 sobre WSL 2**, después de preparar el entorno indicado en la guía. Antes de iniciar:
 
 ```bash
-cd /opt/bigdata/big-data-postgraduate
+cd /mnt/c/Users/TUPTC/big-data-postgraduate
 source .venv/bin/activate
 cd kit
 ```

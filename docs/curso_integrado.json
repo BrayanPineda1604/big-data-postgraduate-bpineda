@@ -1551,6 +1551,10 @@
       {
         "type": "p",
         "text": "La instalación vigente se documenta en docs/instalacion-wsl.md. Usar Windows con WSL 2 y Ubuntu-26.04, Python 3.12 en el entorno .venv de la raíz, JDK 21 y todas las bibliotecas dentro de Ubuntu. Seguir docs/entorno.md para obtener los datos y ejecutar los ejercicios."
+      },
+      {
+        "type": "code",
+        "text": "cd /mnt/c/Users/TUPTC/\ngit clone --branch main https://github.com/eshernan/big-data-postgraduate.git\ncd big-data-postgraduate\n# Continuar según docs/instalacion-wsl.md"
       }
     ]
   },
@@ -1689,6 +1693,10 @@
     "blocks": [
       {
         "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
+      {
+        "type": "p",
         "text": "Sesión 1. Trabajo activo orientativo: 75 minutos, integrado con demostración y discusión según la agenda."
       },
       {
@@ -1780,6 +1788,10 @@
     "blocks": [
       {
         "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
+      {
+        "type": "p",
         "text": "Sesión 2. Trabajo activo orientativo: 90 minutos, integrado con demostración y discusión según la agenda."
       },
       {
@@ -1865,6 +1877,10 @@
   {
     "title": "E03 Identidad territorial y vigencias",
     "blocks": [
+      {
+        "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
       {
         "type": "p",
         "text": "Sesión 2. Trabajo activo orientativo: 90 minutos, integrado con demostración y discusión según la agenda."
@@ -1954,6 +1970,10 @@
     "blocks": [
       {
         "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
+      {
+        "type": "p",
         "text": "Sesión 3. Trabajo activo orientativo: 30 minutos, integrado con demostración y discusión según la agenda."
       },
       {
@@ -2041,6 +2061,10 @@
     "blocks": [
       {
         "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
+      {
+        "type": "p",
         "text": "Sesión 4. Trabajo activo orientativo: 90 minutos, integrado con demostración y discusión según la agenda."
       },
       {
@@ -2122,6 +2146,10 @@
   {
     "title": "E06 Rendimiento agrícola e integración SQL",
     "blocks": [
+      {
+        "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
       {
         "type": "p",
         "text": "Sesión 4. Trabajo activo orientativo: 90 minutos, integrado con demostración y discusión según la agenda."
@@ -2211,6 +2239,10 @@
     "blocks": [
       {
         "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
+      {
+        "type": "p",
         "text": "Sesiones 5 y 6. Trabajo guiado E07: 90 minutos el 16 de octubre y 135 minutos el 17, integrados con demostración y revisión del plan."
       },
       {
@@ -2292,6 +2324,10 @@
   {
     "title": "E08 Shapes y capacidad de uso",
     "blocks": [
+      {
+        "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
       {
         "type": "p",
         "text": "Sesión 6, sábado 17 de octubre. Trabajo guiado: 120 minutos dentro del bloque territorial, con archivos preparados."
@@ -2385,6 +2421,10 @@
     "blocks": [
       {
         "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
+      {
+        "type": "p",
         "text": "Sesión 6, sábado 17 de octubre. Trabajo guiado: 75 minutos, más 30 minutos de revisión del soporte espacial, con archivos preparados."
       },
       {
@@ -2476,6 +2516,10 @@
     "blocks": [
       {
         "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
+      {
+        "type": "p",
         "text": "Sesión 7. Trabajo activo orientativo: 135 minutos, integrado con demostración y discusión según la agenda."
       },
       {
@@ -2559,6 +2603,10 @@
     "blocks": [
       {
         "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
+      {
+        "type": "p",
         "text": "Sesión 8. Trabajo activo orientativo: 270 minutos, integrado con demostración y discusión según la agenda."
       },
       {
@@ -2640,6 +2688,10 @@
   {
     "title": "E12 Línea base temporal y gobernanza",
     "blocks": [
+      {
+        "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
       {
         "type": "p",
         "text": "Sesión 9, viernes 30 de octubre. Trabajo guiado de E12: 105 minutos. El bloque de gobernanza dispone de 30 minutos adicionales dentro de la misma clase de 3 horas."
@@ -2731,6 +2783,10 @@
   {
     "title": "E13 Producto integrador reproducible",
     "blocks": [
+      {
+        "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
       {
         "type": "p",
         "text": "[Índice del curso](../README.md) · [Evaluación](../docs/mapa-ejercicios.md) · [Calendario](../docs/calendario.md)"
@@ -2854,6 +2910,10 @@
     "blocks": [
       {
         "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
+      {
+        "type": "p",
         "text": "Sesión 2. Trabajo orientativo: 75 min dentro de los bloques de la agenda."
       },
       {
@@ -2927,6 +2987,10 @@
   {
     "title": "P02 Parquet, contrato y reejecución",
     "blocks": [
+      {
+        "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
       {
         "type": "p",
         "text": "Sesión 3. Trabajo orientativo: 90 min dentro de los bloques de la agenda."
@@ -3004,6 +3068,10 @@
     "blocks": [
       {
         "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
+      {
+        "type": "p",
         "text": "Sesión 4. Trabajo orientativo: 60 min dentro de los bloques de la agenda."
       },
       {
@@ -3077,6 +3145,10 @@
   {
     "title": "P04 Escala real y comparación de motores",
     "blocks": [
+      {
+        "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
       {
         "type": "p",
         "text": "Preparado por el PhD Esteban Hernández, CyberColombia."
@@ -3178,6 +3250,10 @@
   {
     "title": "I01 Introducción finita a eventos con NASA",
     "blocks": [
+      {
+        "type": "p",
+        "text": "Ruta WSL del curso: /mnt/c/Users/TUPTC/big-data-postgraduate, clonado desde main. Activar .venv en la raíz y ejecutar desde kit/."
+      },
       {
         "type": "p",
         "text": "Sesión 8, 45 min, dentro del bloque de conceptos de eventos e I01. Retomar con Spark en E11."
