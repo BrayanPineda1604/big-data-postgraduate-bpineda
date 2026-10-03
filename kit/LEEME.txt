@@ -4,11 +4,12 @@ Programa del 2 de octubre al 7 de noviembre de 2026. 64 horas efectivas de clase
 
 ENTORNO ÚNICO: WSL 2 + Ubuntu-26.04
 Seguir ../docs/instalacion-wsl.md desde PowerShell para instalar WSL y Ubuntu.
-La guía entra a /, prepara /opt/bigdata, clona dev y crea .venv en la raíz del repo.
+La guía comienza en /mnt/c/Users/TUPTC/bigdata, clona main dentro de big-data-postgraduate y crea .venv en la raíz del repositorio.
 Python 3.12, JDK 21, Jupyter y bibliotecas se instalan dentro de Ubuntu.
 
 En cada sesión, dentro de Ubuntu:
-  cd /opt/bigdata/big-data-postgraduate
+  cd /mnt/c/Users/TUPTC/bigdata
+  cd big-data-postgraduate
   source .venv/bin/activate
   source "$HOME/.config/bigdata/entorno.sh"
   cd kit
@@ -29,7 +30,7 @@ python 00_datos.py --descargar agrosavia divipola eva
 El descargador conserva archivos existentes. Para practicar descarga desde cero, copiar los scripts y fuentes.json a otra carpeta sin data/raw y ejecutar allí.
 Si el SHA-256 cambia, el archivo nuevo queda con extensión .nueva y NO sustituye el corte docente. El docente debe revisar esquema y recalcular controles antes de incorporarlo. WFS/WCS pueden cambiar el orden o la codificación sin cambiar valores: investigar la diferencia.
 Para copiar el respaldo a un kit vacío: python 00_datos.py --respaldo "/ruta/al/kit_original/data/raw" --verificar
-Para una copia almacenada en Windows, usar su ruta Ubuntu: /mnt/c/Users/TU_USUARIO/curso/kit_original/data/raw.
+Para una copia almacenada en Windows, usar su ruta Ubuntu: /mnt/c/Users/TUPTC/bigdata/respaldo/data/raw.
 DANE requiere navegador: usar el catálogo vigente, descargar ZIP y guardarlo con los nombres dane_departamentos.zip y dane_municipios.zip. No separar SHP/SHX/DBF/PRJ al extraer.
 
 TAMAÑOS Y EQUIPO

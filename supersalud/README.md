@@ -31,11 +31,11 @@ El docente puede sustituir actividades equivalentes dentro de los bloques ya pre
 
 ## Preparación y límites de ejecución
 
-Los notebooks conservan su código y sus salidas; los enlaces de Colab se ajustan al directorio `supersalud/` de `dev`. **No se han ejecutado en esta integración y no están listos para ejecutar todas las celdas de corrido en el entorno actual.**
+Los notebooks conservan su código y sus salidas; los enlaces de Colab se ajustan al directorio `supersalud/` de `main`. **No se han ejecutado en esta integración y no están listos para ejecutar todas las celdas de corrido en el entorno actual.**
 
 - Trabajar sobre una copia en un entorno separado del kit SUELO SABIO. Las importaciones incluyen pandas, NumPy, Matplotlib, seaborn, requests, PyArrow y, en la sesión 3, Polars. Los originales no aportaban un entorno fijado; la ruta vigente sí incluye dependencias y tres muestras reales en `kit/`.
 - Las sesiones 1 y 2 combinan rutas `/content/`, Google Drive, `raw/` y nombres distintos del CSV. Unificar rutas, codificación y separador antes de usarlas localmente. Algunas celdas escriben sobre archivos de entrada: conservar una copia original independiente.
-- Los enlaces iniciales «Open in Colab» apuntan a `dev/supersalud/`. También se pueden abrir los archivos con Jupyter desde esta carpeta.
+- Los enlaces iniciales «Open in Colab» apuntan a `main/supersalud/`. También se pueden abrir los archivos con Jupyter desde esta carpeta.
 - Hay descargas con `verify=False` y `curl -k`. Al adaptar la práctica, restaurar la verificación TLS y resolver errores de certificados; no usar esas excepciones como configuración habitual.
 - La sesión 3 usa métodos de Polars que requieren comprobar compatibilidad, define dos veces la función de escritura, deja comentada la concatenación y lee una carpeta Parquet preexistente. Su verificación de esquema compara nombres, pero no demuestra igualdad de tipos ni devuelve los DataFrames normalizados.
 - Las reglas llaman a `send_email`, cuya implementación no figura en el notebook. No ejecutar esas celdas sin adaptación; usar un registro local de alertas. No se enviaron mensajes ni se configuró correo durante esta revisión.
@@ -59,3 +59,5 @@ Usar [los notebooks actuales](../kit/Notebooks/README.md) y el [mapa de ejercici
 ## Instalación vigente
 
 Los comandos de instalación guardados en los originales son históricos. Para utilizarlos en el curso, adaptar las prácticas al entorno [WSL 2 con Ubuntu-26.04](../docs/instalacion-wsl.md). No seguir rutas de instalación nativas de Windows, macOS o Colab como alternativa a la guía vigente.
+
+Para la ejecución vigente, clonar `main` en `/mnt/c/Users/TUPTC/bigdata/big-data-postgraduate` y usar los notebooks actuales de `kit/Notebooks/`. Las rutas internas de los notebooks históricos son referencias del ejercicio original, no instrucciones vigentes de instalación.

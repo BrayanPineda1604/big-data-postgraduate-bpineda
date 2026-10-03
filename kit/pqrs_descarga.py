@@ -3,6 +3,8 @@ from pathlib import Path
 import argparse,json,hashlib,urllib.request
 ROOT=Path(__file__).resolve().parent
 p=argparse.ArgumentParser(description=__doc__);p.add_argument('--listar',action='store_true');p.add_argument('--descargar',nargs='+');p.add_argument('--verificar',action='store_true');p.add_argument('--datos',type=Path,default=ROOT/'data/pqrs_completos');a=p.parse_args()
+a.datos=a.datos.expanduser()
+if not a.datos.is_absolute():a.datos=ROOT/a.datos
 f=json.loads((ROOT/'pqrs_fuentes.json').read_text());a.datos.mkdir(parents=True,exist_ok=True)
 def sha(path):
  h=hashlib.sha256()
