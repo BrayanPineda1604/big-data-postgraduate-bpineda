@@ -20,3 +20,7 @@ Los notebooks históricos se conservan en `supersalud/`, con su procedencia y li
 El notebook 04 se usa en dos momentos: detenerse tras el benchmark en clase 7 y ejecutar la sección de eventos en clase 8. Los eventos requieren `data/raw/nasa.json`, que se descarga desde el manifiesto agroambiental. Los notebooks no incorporan descargas de 1,816 GB como paso automático.
 
 Seleccionar el kernel **BigData · WSL Ubuntu 26.04 · Python 3.12**. Todas las dependencias se instalan en Ubuntu mediante el procedimiento de esa guía.
+
+## Ruta y rama del curso
+
+El clon se realiza siempre desde `main` en `/mnt/c/Users/TUPTC/bigdata/big-data-postgraduate`. El entorno está en `.venv` de la raíz; los ejercicios se ejecutan desde `kit/`, dentro de Ubuntu-26.04 sobre WSL. Para actualizar, situarse en `main` y ejecutar `git pull --ff-only origin main` después de revisar los cambios locales.

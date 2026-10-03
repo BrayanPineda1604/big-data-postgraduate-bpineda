@@ -10,7 +10,7 @@ El curso emplea dos dominios abiertos: PQRS/PQRD de Supersalud y datos agroambie
 
 ## Preparar el equipo
 
-Seguir la [guía Windows → WSL 2 → Ubuntu-26.04](docs/instalacion-wsl.md): listar distribuciones, instalar Ubuntu-26.04, entrar a `/`, clonar el repositorio y preparar Python 3.12, Java, Jupyter y las bibliotecas dentro de Ubuntu. Esta es la base de todas las instrucciones vigentes de instalación.
+Seguir la [guía Windows → WSL 2 → Ubuntu-26.04](docs/instalacion-wsl.md): listar distribuciones, instalar Ubuntu-26.04, entrar a `/mnt/c/Users/TUPTC/bigdata`, clonar el repositorio y preparar Python 3.12, Java, Jupyter y las bibliotecas dentro de Ubuntu. Esta es la base de todas las instrucciones vigentes de instalación.
 
 ## Encuentros
 
@@ -42,3 +42,9 @@ Los originales agroambientales suman 136,4 MB; los tres completos PQRS, 1,816 GB
 ## Cierre del proyecto
 
 31 de octubre: candidato y auditoría. 6 de noviembre: clínica, correcciones y ensayo. 7 de noviembre: sustentación, entrega final y cierre contractual.
+
+## Ruta y rama del curso
+
+El clon se realiza siempre desde `main` en `/mnt/c/Users/TUPTC/bigdata/big-data-postgraduate`. El entorno está en `.venv` de la raíz; los ejercicios se ejecutan desde `kit/`, dentro de Ubuntu-26.04 sobre WSL. Para actualizar, situarse en `main` y ejecutar `git pull --ff-only origin main` después de revisar los cambios locales.
+
+La [revisión de rutas](docs/revision-rutas.md) detalla las ubicaciones de trabajo y el alcance de la validación.

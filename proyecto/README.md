@@ -1,5 +1,18 @@
 # E13 Proyecto integrador por dominio
 
+## Directorio de trabajo
+
+Ejecutar desde la terminal de **Ubuntu-26.04 en WSL**, con el repositorio clonado de `main`:
+
+```bash
+cd /mnt/c/Users/TUPTC/bigdata
+cd big-data-postgraduate
+source .venv/bin/activate
+cd kit
+```
+
+Las rutas relativas `data/`, `salidas/` y los archivos de requisitos se interpretan desde `kit/`. Preparar las herramientas según [la guía WSL](../docs/instalacion-wsl.md).
+
 [Índice del curso](../README.md) · [Evaluación](../docs/mapa-ejercicios.md) · [Calendario](../docs/calendario.md)
 
 Elegir **PQRS** o **agroambiental** y construir un producto reproducible. Las competencias comunes se acreditan con las prácticas del curso; no se exige desarrollar dos proyectos ni unir reportes de salud con muestras de suelo.
