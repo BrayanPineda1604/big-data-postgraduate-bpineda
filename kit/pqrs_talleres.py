@@ -8,9 +8,12 @@ import duckdb
 ROOT=Path(__file__).resolve().parent
 MANIFEST=ROOT/'pqrs_fuentes.json'
 def guardar(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,ensure_ascii=False,indent=2,default=str),encoding='utf-8')
+def ruta_kit(value):
+    path=Path(value).expanduser()
+    return path if path.is_absolute() else ROOT/path
 def fuentes():return json.loads(MANIFEST.read_text(encoding='utf-8'))
 def seleccion(a):
-    folder=Path(a.datos) if a.datos else ROOT/'data/pqrs_muestras'
+    folder=ruta_kit(a.datos) if a.datos else ROOT/'data/pqrs_muestras'
     result=[]
     for f in fuentes():
         p=folder/(f['archivo'] if a.completo else 'Muestra_1000_'+f['periodo']+'.csv')
@@ -172,11 +175,11 @@ def main():
     if len(sys.argv)>1 and sys.argv[1]=='_worker':trabajador(sys.argv[2],sys.argv[3]).to_csv(sys.argv[4],index=False);return
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('modo',choices=['perfil','formatos','calidad','benchmark','eventos']);p.add_argument('--config',type=Path);p.add_argument('--datos');p.add_argument('--completo',action='store_true');p.add_argument('--bloque',type=int,default=25000);p.add_argument('--salidas',type=Path);p.add_argument('--repeticiones',type=int,default=3);a=p.parse_args()
     if a.config:
-        cfg=json.loads(a.config.read_text(encoding='utf-8'))
+        cfg=json.loads(ruta_kit(a.config).read_text(encoding='utf-8'))
         if set(cfg)-{'datos','completo','bloque','repeticiones'}:raise ValueError('Claves de configuración no admitidas')
         for key,value in cfg.items():
             if '--'+key not in sys.argv:setattr(a,key,value)
     if not 100<=a.bloque<=100000:raise ValueError('Elegir bloque entre 100 y 100000 filas')
     if not 1<=a.repeticiones<=10:raise ValueError('Elegir entre 1 y 10 repeticiones')
-    a.out=(a.salidas or ROOT/'salidas/pqrs').resolve();a.out.mkdir(parents=True,exist_ok=True);globals()[a.modo](a)
+    a.out=ruta_kit(a.salidas or 'salidas/pqrs').resolve();a.out.mkdir(parents=True,exist_ok=True);globals()[a.modo](a)
 if __name__=='__main__':main()

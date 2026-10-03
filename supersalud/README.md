@@ -60,4 +60,4 @@ Usar [los notebooks actuales](../kit/Notebooks/README.md) y el [mapa de ejercici
 
 Los comandos de instalación guardados en los originales son históricos. Para utilizarlos en el curso, adaptar las prácticas al entorno [WSL 2 con Ubuntu-26.04](../docs/instalacion-wsl.md). No seguir rutas de instalación nativas de Windows, macOS o Colab como alternativa a la guía vigente.
 
-Para la ejecución vigente, clonar `main` en `/mnt/c/Users/TUPTC/big-data-postgraduate` y usar los notebooks actuales de `kit/Notebooks/`. Las rutas internas de los notebooks históricos son referencias del ejercicio original, no instrucciones vigentes de instalación.
+Para la ejecución vigente, clonar `main` en `/mnt/c/Users/TUPTC/bigdata/big-data-postgraduate` y usar los notebooks actuales de `kit/Notebooks/`. Las rutas internas de los notebooks históricos son referencias del ejercicio original, no instrucciones vigentes de instalación.

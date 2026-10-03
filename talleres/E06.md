@@ -5,7 +5,8 @@
 Ejecutar desde la terminal de **Ubuntu-26.04 en WSL**, con el repositorio clonado de `main`:
 
 ```bash
-cd /mnt/c/Users/TUPTC/big-data-postgraduate
+cd /mnt/c/Users/TUPTC/bigdata
+cd big-data-postgraduate
 source .venv/bin/activate
 cd kit
 ```

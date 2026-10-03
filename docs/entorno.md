@@ -5,7 +5,8 @@
 Todas las instrucciones de esta página se ejecutan en **Ubuntu-26.04 sobre WSL 2**, después de preparar el entorno indicado en la guía. Antes de iniciar:
 
 ```bash
-cd /mnt/c/Users/TUPTC/big-data-postgraduate
+cd /mnt/c/Users/TUPTC/bigdata
+cd big-data-postgraduate
 source .venv/bin/activate
 cd kit
 ```
@@ -84,3 +85,7 @@ python -m jupyter lab --no-browser --ip=127.0.0.1
 ```
 
 Abrir `Notebooks/` y seleccionar el kernel BigData de WSL. Las dependencias y herramientas se instalan en Ubuntu, no en Windows. Los anexos históricos conservan comandos originales de Colab únicamente como referencia.
+
+## Rutas de los scripts
+
+Los scripts vigentes resuelven sus fuentes y salidas a partir de su archivo dentro de `kit/`. En PQRS, `--config`, `--datos` y `--salidas` relativos también se interpretan desde `kit/`; las rutas absolutas se respetan. El descargador general interpreta `--respaldo` desde el directorio actual: usar una ruta absoluta para una copia externa. No escribir rutas de otra máquina dentro de los scripts.
