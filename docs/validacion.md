@@ -43,3 +43,11 @@ Los comandos `suelo` y `clima` generan informes separados. `clima_suelo` permite
 Se reescribieron P01 y su solución sin importaciones de scripts del curso, SimpleNamespace, cambios de sys.path ni búsqueda automática del repositorio. Se simplificaron también las celdas de lectura de PD01–PD03; sus actividades de desarrollo siguen abiertas para el estudiante.
 
 Se validó nbformat y se ejecutaron todas las celdas de código de los cinco notebooks en procesos Python locales, sustituyendo únicamente la ruta WSL explícita por la del clon local durante la prueba. P01 conservó 3.000 filas, los tres hashes esperados y nueve mediciones de bloques con filas y vacíos iguales a la lectura completa. Las lecturas de las plantillas PD01–PD03 funcionaron; esto no certifica soluciones que el estudiante aún debe escribir. No se probó una instalación nueva de WSL.
+
+## P02 y P03: operaciones visibles con pandas
+
+Se sustituyeron las llamadas a funciones del kit por lectura, selección, conversión, escritura, partición, relectura y joins explícitos. Las soluciones de referencia contienen el mismo desarrollo. P03 requiere el Parquet de P02 y DIVIPOLA; se detiene con una indicación si falta cualquiera de esas entradas.
+
+Se ejecutaron todas las celdas del notebook P02 dos veces y las de P03 una vez en procesos Python locales, sustituyendo únicamente la ruta WSL por la del clon local. Se conservaron 3.000 filas, 16 columnas y ocho particiones, comparando todas las columnas tras releer los productos. Se comprobaron las firmas de reejecución, el fallo de contrato y el fallo de cardinalidad del join. Los controles de P03 conservaron 41 edades mayores de 90 y tres ubicaciones de peticionario vacías, sin exclusiones. Las consultas pandas, Polars y DuckDB coincidieron en todos los grupos y en los 2.000 reportes de 2024.
+
+Se revisaron enlaces, sintaxis y fuente JSON. Las salidas quedan separadas en kit/salidas/pandas/P02 y P03; los notebooks se distribuyen sin resultados guardados. La firma SHA-256 del CSV ordenado de P02 es propia del notebook y no sustituye la firma del script automatizado. Esta prueba no equivale a una instalación nueva de Windows/WSL.

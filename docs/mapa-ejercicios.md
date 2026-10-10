@@ -33,7 +33,7 @@ python pqrs_talleres.py benchmark --repeticiones 3
 python pqrs_talleres.py eventos
 ```
 
-Perfil, formatos, calidad y benchmark usan las muestras incluidas por defecto. Eventos requiere `data/raw/nasa.json`. P03 usa DIVIPOLA para el control territorial cuando está disponible: descargarla antes de solicitar ese control. Los notebooks actuales preparan sus pasos previos; sus celdas se distribuyen entre las clases correspondientes, no se ejecutan todas en cada encuentro.
+Perfil, formatos, calidad y benchmark usan las muestras incluidas por defecto. Eventos requiere `data/raw/nasa.json`. El notebook P03 requiere DIVIPOLA para desarrollar los joins; descargarla antes de ejecutarlo. P02 y P03 muestran las operaciones pandas y no llaman al script para resolverlas. P03 requiere el Parquet de P02 y DIVIPOLA para sus joins. Las celdas se distribuyen entre las clases correspondientes, no se ejecutan todas en cada encuentro.
 
 Para la ruta agroambiental: `talleres.py calidad` → `talleres.py consultas` → `spark_taller.py lotes` o `talleres.py modelo`. Geografía necesita DANE e IGAC; `talleres.py suelo` lee SoilGrids y WoSIS; `talleres.py clima` lee NASA y CHIRPS. E11 lee NASA para Spark.
 

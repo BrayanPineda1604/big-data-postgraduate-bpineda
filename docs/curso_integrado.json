@@ -3338,11 +3338,11 @@
       {
         "type": "steps",
         "items": [
-          "Ejecutar formatos con las muestras antes de abrir Parquet. Verificar el corte mediante hashes.",
+          "En el notebook P02, leer las muestras con pd.read_csv, verificar hashes y esquema, seleccionar columnas y convertir tipos antes de escribir Parquet.",
           "Inspeccionar las 16 columnas de la proyección: el original de 38 columnas permanece intacto. La proyección conserva fila_fuente y corte_archivo.",
           "Comparar el archivo Parquet y la carpeta particionada por anio/mes_num. Revisar que periodo contiene el año.",
-          "Ejecutar dos veces con la misma configuración y comparar filas y firma_contenido en control_formatos_pqrs.json.",
-          "En memoria retirar una columna de una muestra y llamar normalizar; comprobar ValueError. Restaurar el esquema y explicar cuándo puede publicarse."
+          "Repetir las celdas de escritura y relectura; comparar DataFrames, filas y firma_contenido en control_formatos_pandas.json. La firma SHA-256 del notebook no es la firma del script automatizado.",
+          "En memoria retirar una columna de una muestra y comparar explícitamente columnas esperadas y recibidas; lanzar y comprobar ValueError. Restaurar desde la copia original y explicar cuándo puede publicarse."
         ]
       },
       {
@@ -3376,6 +3376,10 @@
       {
         "type": "p",
         "text": "Cambiar una condición de la consulta, anticipar su efecto y verificar la equivalencia entre implementaciones. Documentar qué campo o metadata adicional permitiría una conclusión más sólida."
+      },
+      {
+        "type": "p",
+        "text": "Desarrollar primero el notebook correspondiente con operaciones pandas explícitas; los comandos del script son referencias de automatización posteriores. Los notebooks generan kit/salidas/pandas/P02 y P03. P03 lee el Parquet de P02 y requiere DIVIPOLA. La firma SHA-256 del notebook P02 compara su CSV ordenado y no equivale a la firma del script."
       }
     ]
   },
@@ -3417,10 +3421,10 @@
       {
         "type": "steps",
         "items": [
-          "Ejecutar calidad después de formatos y revisar control_calidad_pqrs.json.",
+          "Ejecutar P02 antes de P03. Leer su Parquet con pandas y escribir las máscaras de calidad; inspeccionar las filas en revisión y guardar control_calidad.csv.",
           "Analizar claves candidatas, período y edad en revisión; describir por qué la proyección no alcanza para identificar duplicados exactos de los 38 campos.",
-          "Revisar ubicaciones del afectado y peticionario por separado. Conservar los registros sin DIVIPOLA y formular hipótesis comprobables.",
-          "Observar un plan Polars con scan_parquet y filter. Comparar conteos con una consulta SQL sobre la misma entrada.",
+          "Leer DIVIPOLA con pandas y usar merge por separado para afectado y peticionario, con validate=\"many_to_one\" e indicator=True. Inspeccionar los anti-joins, conservar filas sin correspondencia y comprobar la cardinalidad.",
+          "Construir primero el filtro y groupby con pandas. Observar después el plan Polars con scan_parquet y filter; comparar todos los grupos con pandas y DuckDB sobre la misma entrada.",
           "Definir una política de publicar, revisar o detener con evidencia. Medir impacto antes de excluir filas."
         ]
       },
@@ -3455,6 +3459,10 @@
       {
         "type": "p",
         "text": "Cambiar una condición de la consulta, anticipar su efecto y verificar la equivalencia entre implementaciones. Documentar qué campo o metadata adicional permitiría una conclusión más sólida."
+      },
+      {
+        "type": "p",
+        "text": "Desarrollar primero el notebook correspondiente con operaciones pandas explícitas; los comandos del script son referencias de automatización posteriores. Los notebooks generan kit/salidas/pandas/P02 y P03. P03 lee el Parquet de P02 y requiere DIVIPOLA. La firma SHA-256 del notebook P02 compara su CSV ordenado y no equivale a la firma del script."
       }
     ]
   },
