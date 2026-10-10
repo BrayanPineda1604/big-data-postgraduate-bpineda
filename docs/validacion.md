@@ -27,3 +27,13 @@ Se comprobaron los enlaces locales y el calendario estructurado de doce clases y
 ## Nueva base WSL
 
 Las instrucciones vigentes se unificaron en WSL 2 con Ubuntu-26.04, Python 3.12 gestionado por uv y JDK 21. La guía se contrastó con documentación oficial y se revisaron rutas y comandos. No se instaló ni se probó Ubuntu-26.04 en un equipo Windows durante este cambio.
+
+## Migración geoespacial — 10 de octubre de 2026
+
+Las referencias a QGIS de las validaciones anteriores son históricas. La ejecución vigente utiliza GeoPandas 1.1.1, Pyogrio 0.11.1, Matplotlib 3.10.3 y Rasterio 1.4.3 dentro del entorno Python del curso. Se instalaron los requisitos exactos del kit en el entorno local Python 3.12 y `pip check` no encontró incompatibilidades.
+
+Se ejecutaron todas las celdas de E08, E09 y E11 en procesos Python locales, sin interfaz Jupyter; se validó su formato con nbformat. E08 conservó 1.122 municipios y las mismas 15 intersecciones que el script anterior, con claves iguales y áreas conciliadas con tolerancia relativa 1e-8 y absoluta 1e-6 ha. El GeoPackage se volvió a leer y conservó columnas, CRS y conteo. La segunda ejecución no duplicó filas.
+
+Los controles de suelo y clima coinciden con los anteriores: 1.660 píxeles positivos y 188 ceros pendientes; diez horizontes WoSIS de tres perfiles; 31 días NASA, suma de 67,69 mm y cuatro píxeles del recorte CHIRPS. Ningún horizonte WoSIS del corte está dentro del recorte SoilGrids; la correlación IGAC se lee como tabla de atributos, no como capa geométrica. Se inspeccionaron los mapas PNG y se comprobaron enlaces locales, JSON y sintaxis Python.
+
+Los comandos `suelo` y `clima` generan informes separados. `clima_suelo` permite reconstruir el informe combinado. No se ejecutó una instalación nueva de Windows/WSL ni se repitió la prueba de Spark; el notebook E11 cubre el soporte espacial y conserva la práctica Spark en su enunciado.

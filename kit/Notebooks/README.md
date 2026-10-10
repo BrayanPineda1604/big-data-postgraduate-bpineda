@@ -26,3 +26,13 @@ Seleccionar el kernel **BigData · WSL Ubuntu 26.04 · Python 3.12**. Todas las 
 ## Ruta y rama del curso
 
 El clon se realiza siempre desde `main` en `/mnt/c/Users/TUPTC/bigdata/big-data-postgraduate`. El entorno está en `.venv` de la raíz; los ejercicios se ejecutan desde `kit/`, dentro de Ubuntu-26.04 sobre WSL. Para actualizar, situarse en `main` y ejecutar `git pull --ff-only origin main` después de revisar los cambios locales.
+
+## Ejercicios geoespaciales
+
+| Notebook | Archivos requeridos | Productos |
+|---|---|---|
+| [E08 Geometrías e intersección](E08_Geoespacial.ipynb) | DANE departamentos y municipios; IGAC capacidad y química; AGROSAVIA y DIVIPOLA para unión tabular | Mapa, GeoPackage, CSV y controles |
+| [E09 Suelo y profundidad](E09_Geoespacial.ipynb) | SoilGrids, WoSIS, IGAC química y correlación | Mapa, perfiles y control_suelo.json |
+| [E11 Soporte climático](E11_Geoespacial.ipynb) | NASA y CHIRPS | Mapa, serie NASA y control_clima.json |
+
+Los notebooks no descargan datos automáticamente. Preparar las fuentes según cada taller. Los datos originales se conservan; `kit/salidas/` se regenera. GeoPandas gestiona vectores y Rasterio los rásteres; Matplotlib produce los mapas. El notebook E11 cubre el soporte espacial: la reproducción Spark sigue en el enunciado E11.
