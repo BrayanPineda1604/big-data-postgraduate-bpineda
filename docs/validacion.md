@@ -37,3 +37,9 @@ Se ejecutaron todas las celdas de E08, E09 y E11 en procesos Python locales, sin
 Los controles de suelo y clima coinciden con los anteriores: 1.660 píxeles positivos y 188 ceros pendientes; diez horizontes WoSIS de tres perfiles; 31 días NASA, suma de 67,69 mm y cuatro píxeles del recorte CHIRPS. Ningún horizonte WoSIS del corte está dentro del recorte SoilGrids; la correlación IGAC se lee como tabla de atributos, no como capa geométrica. Se inspeccionaron los mapas PNG y se comprobaron enlaces locales, JSON y sintaxis Python.
 
 Los comandos `suelo` y `clima` generan informes separados. `clima_suelo` permite reconstruir el informe combinado. No se ejecutó una instalación nueva de Windows/WSL ni se repitió la prueba de Spark; el notebook E11 cubre el soporte espacial y conserva la práctica Spark en su enunciado.
+
+## Clase 2: pandas explícito
+
+Se reescribieron P01 y su solución sin importaciones de scripts del curso, SimpleNamespace, cambios de sys.path ni búsqueda automática del repositorio. Se simplificaron también las celdas de lectura de PD01–PD03; sus actividades de desarrollo siguen abiertas para el estudiante.
+
+Se validó nbformat y se ejecutaron todas las celdas de código de los cinco notebooks en procesos Python locales, sustituyendo únicamente la ruta WSL explícita por la del clon local durante la prueba. P01 conservó 3.000 filas, los tres hashes esperados y nueve mediciones de bloques con filas y vacíos iguales a la lectura completa. Las lecturas de las plantillas PD01–PD03 funcionaron; esto no certifica soluciones que el estudiante aún debe escribir. No se probó una instalación nueva de WSL.

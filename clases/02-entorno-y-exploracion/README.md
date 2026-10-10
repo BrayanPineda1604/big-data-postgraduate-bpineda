@@ -28,3 +28,7 @@ E = ejercicio general del curso (E01–E13). P = práctica con datos PQRS (P01�
 **Entrega:** Ficha de problema, presupuesto de recursos, manifiesto, perfil y claves territoriales. Cierre 16:45–17:00.
 
 [Calendario](../../docs/calendario.md) · [Entregas sabatinas](../../docs/entregas-sabados.md) · [Talleres y evaluación](../../docs/mapa-ejercicios.md)
+
+## Trabajo directo con pandas
+
+Abrir [P01 paso a paso](../../kit/Notebooks/01_Perfil_PQRS.ipynb): rutas visibles, una lectura por CSV, inspección de columnas, faltantes, conversión y verificación antes de repetir por bloques. No importar scripts del curso para producir el perfil. La [solución P01](../../soluciones/P01_solucion.ipynb) mantiene los mismos pasos; las [plantillas pandas](../../ejercicios/README.md) dejan el desarrollo de cada actividad al estudiante.
