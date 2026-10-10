@@ -36,3 +36,7 @@ El clon se realiza siempre desde `main` en `/mnt/c/Users/TUPTC/bigdata/big-data-
 | [E11 Soporte climático](E11_Geoespacial.ipynb) | NASA y CHIRPS | Mapa, serie NASA y control_clima.json |
 
 Los notebooks no descargan datos automáticamente. Preparar las fuentes según cada taller. Los datos originales se conservan; `kit/salidas/` se regenera. GeoPandas gestiona vectores y Rasterio los rásteres; Matplotlib produce los mapas. El notebook E11 cubre el soporte espacial: la reproducción Spark sigue en el enunciado E11.
+
+## Enfoque de la clase 2
+
+P01 declara una ruta WSL editable y utiliza `pd.read_csv`, inspección, filtros y comprobaciones visibles; no importa scripts del curso. Su solución de referencia conserva este desarrollo. Los bucles de lectura por bloques se introducen después de inspeccionar un bloque. Las funciones de automatización de P02 en adelante se estudian después de esta clase. Las plantillas PD01–PD03 también declaran rutas explícitas y muestran cada lectura sin funciones auxiliares.

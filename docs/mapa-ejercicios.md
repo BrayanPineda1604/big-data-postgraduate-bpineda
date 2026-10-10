@@ -23,7 +23,7 @@ Las fechas y cierres de las seis entregas están en [Entregas sabatinas](entrega
 
 ## Orden mínimo de ejecución
 
-Desde `kit/`, con el entorno activo:
+En la clase 2, ejecutar [P01 paso a paso con pandas](../kit/Notebooks/01_Perfil_PQRS.ipynb): cada lectura y control queda visible. Después de esta clase, estos comandos automatizan las operaciones ya estudiadas; desde `kit/`, con el entorno activo:
 
 ```sh
 python pqrs_talleres.py perfil

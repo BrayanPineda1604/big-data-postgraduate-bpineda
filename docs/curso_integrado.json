@@ -2141,6 +2141,10 @@
       {
         "type": "p",
         "text": "Detectar qué campos exigirían una tabla de métodos analíticos para comparaciones científicas."
+      },
+      {
+        "type": "p",
+        "text": "Durante la clase 2 el perfil se desarrolla con pd.read_csv y operaciones explícitas de pandas; la plantilla PD01 sirve de apoyo. El comando talleres.py perfil y su perfil.csv son referencias automatizadas para después de comprender el procedimiento."
       }
     ]
   },
@@ -3252,8 +3256,8 @@
         "type": "steps",
         "items": [
           "Revisar pqrs_fuentes.json: distinguir período del nombre del corte, campo periodo y separador.",
-          "Ejecutar perfil con las tres muestras; contar filas, revisar las 38 columnas y vacíos literales.",
-          "Modificar --bloque a 100, 500 y 1.000 en muestras. Comparar memoria del DataFrame y tamaño CSV sin extrapolar linealmente la RSS.",
+          "Leer las tres muestras con pd.read_csv; contar filas, revisar las 38 columnas y vacíos literales.",
+          "Modificar chunksize a 100, 500 y 1.000 en muestras. Comparar memoria del DataFrame y tamaño CSV sin extrapolar linealmente la RSS.",
           "Contrastar mes, ubicación del peticionario, ubicación del afectado e identidad candidata.",
           "Describir qué controles se ejecutarían sobre los archivos completos; reservar la prueba de volumen para P04."
         ]
@@ -3264,7 +3268,7 @@
       },
       {
         "type": "code",
-        "text": "python pqrs_talleres.py perfil\npython pqrs_talleres.py perfil --bloque 500"
+        "text": "Abrir kit/Notebooks/01_Perfil_PQRS.ipynb: rutas explícitas y operaciones pandas visibles. El script de automatización se utiliza después de la clase 2."
       },
       {
         "type": "h",
@@ -3289,6 +3293,10 @@
       {
         "type": "p",
         "text": "Cambiar una condición de la consulta, anticipar su efecto y verificar la equivalencia entre implementaciones. Documentar qué campo o metadata adicional permitiría una conclusión más sólida."
+      },
+      {
+        "type": "p",
+        "text": "En clase 2 no se importan funciones de pqrs_talleres ni se usa detección automática de rutas. El estudiante declara los archivos, lee con pandas, inspecciona, compara y verifica cada resultado. La solución P01 conserva este flujo explícito; salidas en kit/salidas/clase2/P01."
       }
     ]
   },
