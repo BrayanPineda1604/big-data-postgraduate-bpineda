@@ -4,7 +4,7 @@ Preparado por el PhD Esteban Hernández, CyberColombia.
 
 P01: 3 de octubre. P02: 9 de octubre. P03: 10 de octubre. P04: 23 de octubre. I01: 24 de octubre. Los notebooks acompañan los talleres y comparten las horas de clase; no añaden entregas obligatorias.
 
-Preparar WSL, Ubuntu-26.04 y el único entorno `.venv` de la raíz según [la guía de instalación](../../docs/instalacion-wsl.md). Abrir desde `kit/` o `kit/Notebooks/`, usar el mismo entorno Python y ejecutar en orden. Cada notebook prepara sus dependencias de datos para permitir ejecución independiente.
+Preparar WSL, Ubuntu-26.04 y el único entorno `.venv` de la raíz según [la guía de instalación](../../docs/instalacion-wsl.md). Abrir desde `kit/` o `kit/Notebooks/`, usar el mismo entorno Python y ejecutar en orden. Los prerrequisitos son explícitos: P03 lee el Parquet producido por P02 y requiere DIVIPOLA; no ejecuta P02 ni descarga fuentes silenciosamente.
 
 Los notebooks históricos se conservan en `supersalud/`, con su procedencia y limitaciones, y no son la guía de ejecución actual.
 
@@ -39,4 +39,8 @@ Los notebooks no descargan datos automáticamente. Preparar las fuentes según c
 
 ## Enfoque de la clase 2
 
-P01 declara una ruta WSL editable y utiliza `pd.read_csv`, inspección, filtros y comprobaciones visibles; no importa scripts del curso. Su solución de referencia conserva este desarrollo. Los bucles de lectura por bloques se introducen después de inspeccionar un bloque. Las funciones de automatización de P02 en adelante se estudian después de esta clase. Las plantillas PD01–PD03 también declaran rutas explícitas y muestran cada lectura sin funciones auxiliares.
+P01 declara una ruta WSL editable y utiliza `pd.read_csv`, inspección, filtros y comprobaciones visibles; no importa scripts del curso. Su solución de referencia conserva este desarrollo. Los bucles de lectura por bloques se introducen después de inspeccionar un bloque. P02 y P03 continúan con operaciones pandas explícitas; las funciones del kit quedan como referencia de automatización después de comprender los pasos. Las plantillas PD01–PD03 también declaran rutas explícitas y muestran cada lectura sin funciones auxiliares.
+
+## P02 → P03: archivos y API visibles
+
+P02 explica `read_csv`, selección y conversión, `concat`, `groupby`, `to_csv`, `to_parquet`, `read_parquet`, contrato defectuoso y comprobación de reejecución. P03 lee `kit/salidas/pandas/P02/pqrs.parquet` y muestra reglas, `merge`, cardinalidad, anti-joins y consultas equivalentes en pandas, Polars y DuckDB. Preparar DIVIPOLA antes de P03; las salidas de este notebook quedan en `kit/salidas/pandas/P03`. Las soluciones de referencia mantienen los mismos pasos.
