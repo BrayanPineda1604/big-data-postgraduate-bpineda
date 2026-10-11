@@ -4,7 +4,7 @@ Esta carpeta es el destino de las soluciones desarrolladas por cada estudiante. 
 
 ## Entregas de los ejercicios de pandas
 
-Los enunciados y las plantillas de PD01–PD05 están en [`ejercicios/`](../ejercicios/README.md), junto con la distribución del primer bloque de cuatro horas y la ampliación de seis horas. Cada plantilla debe copiarse a esta carpeta antes de comenzar el desarrollo en el repositorio del estudiante.
+Los enunciados y las plantillas de PD01–PD05 están en [`ejercicios/`](../ejercicios/README.md), junto con la distribución del primer bloque de cuatro horas y la ampliación de ocho horas. Cada plantilla debe copiarse a esta carpeta antes de comenzar el desarrollo en el repositorio del estudiante.
 
 | Ejercicio | Nombre obligatorio del notebook resuelto en esta carpeta |
 |---|---|
@@ -19,7 +19,7 @@ PD04 y PD05 continúan los temas de limpieza, integración, formatos y particion
 | [PD04 · Limpieza e integración territorial](../ejercicios/PD04_limpieza_integracion_territorial.ipynb) | `PD04_limpieza_integracion_territorial.ipynb` |
 | [PD05 · Particionamiento y comparación pandas–Polars](../ejercicios/PD05_particionamiento_pandas_polars.ipynb) | `PD05_particionamiento_pandas_polars.ipynb` |
 
-Ejecuta PD04 antes de PD05. Sus resultados se guardan en `kit/salidas/soluciones/PD04/` y `PD05/`. Todas las lecturas y transformaciones se desarrollan con las API visibles en las celdas, sin scripts que oculten el procedimiento.
+Ejecuta PD04 antes de PD05. Sus resultados se guardan en `kit/salidas/soluciones/PD04/` y `PD05/`. PD04 añade mapas e intersecciones con GeoPandas y exporta un GeoPackage; PD05 compara los resultados tabulares de ambos motores sobre la misma cartografía. El particionamiento usa grupos, archivos individuales e inventarios CSV. Todas las lecturas y transformaciones se desarrollan con las API visibles en las celdas, sin scripts que oculten el procedimiento.
 
 Cada solución debe incluir el código completado, las comprobaciones y la interpretación de los resultados. Antes de entregar, se reinicia el kernel y se ejecutan todas las celdas en orden.
 

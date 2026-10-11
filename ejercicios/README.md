@@ -5,7 +5,7 @@ Los ejercicios se organizan por fin de semana. En este índice, **sesión 1** co
 | Sesión de ejercicios | Fin de semana | Ejercicios | Dedicación orientativa |
 |---|---|---|---:|
 | [Sesión 1](#sesion-1) | 2 y 3 de octubre de 2026 | PD01–PD03 | 4 horas |
-| [Sesión 2](#sesion-2) | 9 y 10 de octubre de 2026 | PD04–PD05 | 6 horas |
+| [Sesión 2](#sesion-2) | 9 y 10 de octubre de 2026 | PD04–PD05 | 8 horas |
 
 Cada estudiante copia las plantillas de `ejercicios/` a `soluciones/` en su propio repositorio, conserva sus nombres y desarrolla allí el código y las interpretaciones. Las plantillas originales quedan como material de consulta. Los tiempos suponen el entorno instalado y los datos disponibles.
 
@@ -47,32 +47,34 @@ Los notebooks deben mostrar el desarrollo, las comprobaciones y las conclusiones
 
 ## Sesión 2 · Segundo fin de semana: 9 y 10 de octubre
 
-**Propósito:** aplicar contratos y controles de calidad, normalizar e integrar fuentes, trabajar con CSV y Parquet y comparar pandas con Polars.
+**Propósito:** aplicar contratos y controles de calidad, normalizar e integrar fuentes, trabajar con CSV y Parquet, comparar pandas con Polars e integrar sus resultados con geometrías en GeoPandas.
 
 ### Ejercicios
 
 | Enunciado y plantilla | Trabajo del estudiante | Tiempo |
 |---|---|---:|
-| [PD04 · Limpieza e integración territorial](PD04_limpieza_integracion_territorial.ipynb) | Leer coordenadas territoriales, limpiar tipos variados, normalizar nombres y unir AGROSAVIA con DIVIPOLA conservando los casos pendientes. | 180 min |
-| [PD05 · Particionamiento y comparación pandas–Polars](PD05_particionamiento_pandas_polars.ipynb) | Particionar por año y departamento; comparar lectura, escritura, procesamiento y resultados entre motores. | 180 min |
+| [PD04 · Limpieza e integración territorial](PD04_limpieza_integracion_territorial.ipynb) | Limpiar y unir AGROSAVIA con DIVIPOLA; leer polígonos DANE e IGAC con GeoPandas, integrar resúmenes, crear mapas e intersectar geometrías. | 270 min |
+| [PD05 · Particionamiento y comparación pandas–Polars](PD05_particionamiento_pandas_polars.ipynb) | Separar archivos con groupby, comparar lectura, escritura y procesamiento en pandas/Polars y verificar sus resultados en mapas. | 210 min |
 
-**Total: 360 minutos.** Los tiempos de cada notebook incluyen controles, publicación y reejecución. Consulta las guías de [pandas](../docs/manual-pandas.md) y [Polars](../docs/manual-polars.md).
+**Total: 480 minutos (ocho horas de dedicación orientativa).** Los tiempos de cada notebook incluyen controles, publicación y reejecución. Consulta las guías de [pandas](../docs/manual-pandas.md), [Polars](../docs/manual-polars.md) y [GeoPandas](../docs/manual-geopandas.md). La duración incorpora las actividades espaciales añadidas; no representa horas adicionales en el calendario contractual.
 
 ### Entradas y orden de trabajo
 
-1. **PD04:** lee `kit/data/raw/agrosavia.csv` y `kit/data/raw/divipola.csv` directamente con `pd.read_csv`. Trabaja con coordenadas geoespaciales tabulares; las coordenadas municipales no representan la ubicación de las muestras de suelo.
-2. **PD05:** requiere terminar PD04. Lee `kit/salidas/soluciones/PD04/analisis_integrados.parquet` con `pd.read_parquet` y `pl.read_parquet`. Compara CSV, Parquet único y dos diseños de particionamiento, separando lectura, escritura, procesamiento en memoria y consulta completa desde disco.
+1. **PD04:** lee `kit/data/raw/agrosavia.csv` y `kit/data/raw/divipola.csv` directamente con `pd.read_csv`. Lee además `dane_municipios.zip` e `igac_capacidad.json` con `gpd.read_file`. Revisa CRS y geometrías, une el resumen por código a los polígonos DANE y realiza una intersección espacial con la muestra IGAC. Las coordenadas municipales no representan la ubicación de las muestras de suelo.
+2. **PD05:** requiere terminar PD04. Lee `kit/salidas/soluciones/PD04/analisis_integrados.parquet` con `pd.read_parquet` y `pl.read_parquet`. Reutiliza también la capa `municipios` de `resultados_espaciales.gpkg` con `gpd.read_file`. Compara CSV, Parquet único y dos diseños de particionamiento, separando lectura, escritura, procesamiento en memoria y consulta completa desde disco.
 
-Utiliza pandas, PyArrow y Polars CPU del entorno del curso, definidos en `kit/requirements.txt` y `kit/requirements_pqrs.txt`.
+El particionamiento se desarrolla con `groupby`, una escritura `to_parquet` por grupo y un inventario CSV de rutas y claves. La lectura selecciona archivos por ese inventario, muestra cada llamada a `read_parquet` y concatena las partes. Las claves permanecen en los archivos.
+
+Utiliza pandas, GeoPandas, Matplotlib, PyArrow y Polars CPU del entorno del curso, definidos en `kit/requirements.txt` y `kit/requirements_pqrs.txt`.
 
 ### Entrega de la sesión 2
 
 | Notebook resuelto | Resultados regenerables |
 |---|---|
-| `soluciones/PD04_limpieza_integracion_territorial.ipynb` | `kit/salidas/soluciones/PD04/`: Parquet integrado, controles, equivalencias, resumen y registros pendientes. |
-| `soluciones/PD05_particionamiento_pandas_polars.ipynb` | `kit/salidas/soluciones/PD05/`: mediciones, inventario de particiones y controles de equivalencia. |
+| `soluciones/PD04_limpieza_integracion_territorial.ipynb` | `kit/salidas/soluciones/PD04/`: Parquet integrado, controles, equivalencias, resumen, registros pendientes, mapas PNG y GeoPackage de municipios e intersecciones. |
+| `soluciones/PD05_particionamiento_pandas_polars.ipynb` | `kit/salidas/soluciones/PD05/`: mediciones, inventarios de particiones, controles de equivalencia y comparación de mapas PNG. |
 
-Se revisan la conservación de originales y filas, los tipos y nulos explícitos, las correspondencias justificadas, la equivalencia de resultados, las mediciones comparables y las conclusiones. No se exige que un motor gane ni que particionar siempre mejore el tiempo.
+Se revisan la conservación de originales y filas, los tipos y nulos explícitos, las correspondencias justificadas, la equivalencia de resultados, las mediciones comparables, los CRS, las áreas, la calidad geométrica y las conclusiones. No se exige que un motor gane ni que particionar siempre mejore el tiempo.
 
 El estudiante desarrolla el código y las interpretaciones de forma autónoma. Esta organización asocia los ejercicios con el fin de semana correspondiente; no fija nuevas fechas de entrega ni modifica los porcentajes del calendario.
 
@@ -95,7 +97,7 @@ Si tu copia está en otra ubicación, utiliza su ruta real. Cada notebook incluy
 4. Ejecuta las lecturas iniciales. Respeta la dependencia **PD04 → PD05**.
 5. Completa las celdas de desarrollo e interpretación. Antes de entregar, reinicia el kernel y ejecuta todas las celdas en orden.
 
-Los enunciados están en celdas Markdown. Las lecturas muestran rutas y opciones; las conversiones, máscaras, agrupaciones, uniones y exportaciones deben quedar visibles mediante las API de pandas y Polars. No resuelvas las actividades llamando a scripts de talleres ni funciones que oculten las etapas. Los bucles de medición deben mostrar las operaciones medidas.
+Los enunciados están en celdas Markdown. Las lecturas muestran rutas y opciones; las conversiones, máscaras, agrupaciones, uniones y exportaciones deben quedar visibles mediante las API de pandas, Polars y GeoPandas. No resuelvas las actividades llamando a scripts de talleres ni funciones que oculten las etapas. Los bucles de medición deben mostrar las operaciones medidas.
 
 Si falta un CSV original, prepáralo desde la terminal, en la raíz del repositorio y con el entorno activo:
 
@@ -103,7 +105,9 @@ Si falta un CSV original, prepáralo desde la terminal, en la raíz del reposito
 python kit/00_datos.py --descargar divipola eva agrosavia
 ```
 
-Este comando solo prepara las fuentes; el análisis se desarrolla en los notebooks. Los originales permanecen en `kit/data/raw/`. Las carpetas de resultados `kit/salidas/soluciones/PD01/` a `PD05/` están excluidas de Git y deben poder regenerarse.
+Para la sesión 2 prepara también `igac_capacidad.json` con `python kit/00_datos.py --descargar igac_capacidad` y sigue la [descarga manual de cartografía DANE](../docs/entorno.md#descarga-manual-de-los-shapes-dane) para `dane_municipios.zip`. Ambos se guardan en `kit/data/raw/`.
+
+Estos comandos solo preparan las fuentes; el análisis se desarrolla en los notebooks. Los originales permanecen en `kit/data/raw/`. Las carpetas de resultados `kit/salidas/soluciones/PD01/` a `PD05/` están excluidas de Git y deben poder regenerarse.
 
 ## Validación de las plantillas
 
@@ -113,6 +117,13 @@ Para PD01–PD03 se verificaron el formato de notebook, la sintaxis de las celda
 
 ### Sesión 2 · PD04–PD05
 
-Se comprobaron el formato nbformat 4, sintaxis, enlaces locales y 180 minutos de actividades por plantilla. Se ejecutaron las lecturas iniciales con pandas 2.2.3, Polars 1.35.2 y PyArrow 19.0.1 en macOS, adaptando las rutas y usando salidas temporales. Para comprobar la entrada de PD05 se construyó una integración técnica temporal con los CSV reales, sin incorporarla como solución del alumno. La lectura filtrada del Parquet particionado devolvió las mismas 1.704 filas en ambos motores para la selección de prueba. Se explicitó el esquema Hive para evitar inferencia numérica de claves de carpeta.
+La revisión incorpora lecturas espaciales directas, unión de atributos, mapas, proyección métrica e intersección de polígonos. PD05 utiliza archivos individuales e inventarios explícitos para el particionamiento. Los tiempos de las actividades suman 270 y 210 minutos, respectivamente.
 
-Esta verificación cubre las celdas iniciales y la viabilidad de la lectura particionada. Las soluciones, interpretaciones y mediciones completas corresponden al estudiante; no certifica una instalación en Windows/WSL ni resultados de rendimiento.
+Se validaron formato de notebook, sintaxis de celdas y ejemplos, enlaces locales y tiempos. Se ejecutaron las lecturas iniciales y una comprobación técnica temporal de los flujos con pandas 2.2.3, Polars 1.35.2, GeoPandas 1.1.1 y PyArrow 19.0.1 en macOS:
+
+- 1.122 geometrías municipales y cinco polígonos IGAC leídos en EPSG:4326; ninguna geometría ausente, vacía o inválida en estas copias.
+- Nueve intersecciones poligonales de área positiva para la muestra de capacidad de uso. Capas municipales y de intersecciones exportadas y releídas en GeoPackage, conservando geometrías y CRS; mapas generados y comparación visual revisada.
+- 92.738 análisis conservados al escribir y reconstruir 12 archivos por año y 373 por año/departamento. Se repitió la construcción en carpetas nuevas y se comprobó la igualdad del contenido.
+- Para Boyacá en 2020, 152 análisis y 48 grupos municipales: mismos conteos y medias equivalentes en pandas y Polars, con tolerancia absoluta de 0,000001.
+
+La comprobación temporal no se incorpora como solución del alumno y no sustituye sus controles, decisiones, conclusiones ni mediciones completas. Los conteos dependen de las copias y reglas utilizadas. Esta validación no certifica una instalación Windows/WSL ni un ganador de rendimiento.
