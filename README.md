@@ -63,7 +63,7 @@ Material de consulta y práctica para acompañar los ejercicios del curso.
 
 ## Recursos actuales
 
-- [Tres ejercicios de pandas para cuatro horas](ejercicios/README.md), con enunciados y plantillas en `ejercicios/` y entrega de los notebooks resueltos en `soluciones/`.
+- [Ejercicios de pandas y Polars](ejercicios/README.md): PD01–PD03 (cuatro horas) y PD04–PD05 (seis horas), con enunciados y plantillas en `ejercicios/` y entrega de los notebooks resueltos en `soluciones/`.
 - [Soluciones comentadas en Jupyter de P01, P02 y P03](soluciones/README.md).
 - [Índice completo de talleres](talleres/README.md), con descargas, tamaños y criterios.
 - [Kit base](kit/README.md), [manifesto agroambiental](kit/fuentes.json) y [manifiesto PQRS](kit/pqrs_fuentes.json).
