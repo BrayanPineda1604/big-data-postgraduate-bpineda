@@ -67,3 +67,7 @@ El número 04 identifica el notebook PQRS existente, que se usa el 23 y 24 de oc
 4. **E09 Geoespacial:** ráster, pH, perfiles y profundidad.
 
 Preparar JDK 21 y `requirements_spark.txt` en el `.venv` base CPU de la raíz según la guía WSL o Linux/macOS. Spark usa `local[2]`. Cerrar su sesión al terminar cada notebook. 05 y 06 guardan productos en `kit/salidas/E07`; 06 requiere haber completado 05. Los scripts del kit quedan como referencia posterior de automatización. La entrega del sábado integra los controles Spark, plan explicado, consulta de ventana y evidencias E08/E09; no añade una entrega el viernes.
+
+## Guía de consulta geográfica
+
+La [guía práctica de GeoPandas](../../docs/manual-geopandas.md) incluye ejemplos ejecutables de mapas de Colombia, ciudades, territorios especiales, municipios resaltados y consultas de quejas por meses y edades. Se ejecuta en el entorno CPU del curso, con los ZIP DANE; distingue datos ficticios de muestras reales.

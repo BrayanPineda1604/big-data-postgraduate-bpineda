@@ -58,6 +58,7 @@ Material de consulta y práctica para acompañar los ejercicios del curso.
 - [Guía rápida de Polars](docs/manual-polars.md): ejemplos mínimos, equivalencias con pandas y ventajas de las expresiones y la ejecución diferida.
 - [Polars con GPU NVIDIA: instalación y ejecución CPU/GPU](docs/polars-gpu.md): **solo para equipos con GPU NVIDIA compatible en Linux o WSL 2**; requiere controlador y CUDA Toolkit compatibles. Incluye entorno GPU independiente, selección del motor y regreso a CPU. Es opcional; los talleres funcionan en CPU.
 - [Guía rápida de DuckDB](docs/manual-duckdb.md): ejemplos mínimos de SQL, comparaciones con pandas y consultas sobre archivos Parquet.
+- [Guía práctica de GeoPandas y mapas de Colombia](docs/manual-geopandas.md): departamentos, ciudades, municipios y territorios especiales; resaltado de regiones y consultas de quejas por meses y edades representadas en mapas.
 - Preparación del entorno: [Windows/WSL](docs/instalacion-wsl.md) o [Linux/macOS](docs/instalacion-linux-macos.md).
 
 ## Recursos actuales
