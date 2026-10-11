@@ -100,4 +100,6 @@ Los scripts vigentes resuelven sus fuentes y salidas a partir de su archivo dent
 
 ## Ejecución geoespacial
 
+Consultar la [guía práctica de GeoPandas](manual-geopandas.md) para mapas de Colombia, resaltado de municipios y consultas tabulares por meses y edades antes de unirlas a las geometrías.
+
 Usar el entorno base CPU `.venv` del curso con GeoPandas, Pyogrio, Rasterio y Matplotlib. Desde `kit/`, `python talleres.py geografia` ejecuta E08, `python talleres.py suelo` prepara E09 y `python talleres.py clima` prepara E11. Los mapas se generan en Jupyter o como PNG en `salidas/`. `python talleres.py clima_suelo` reúne ambos informes para compatibilidad y requiere las cuatro fuentes SoilGrids, WoSIS, NASA y CHIRPS. Consultar el [índice de notebooks](../kit/Notebooks/README.md).
