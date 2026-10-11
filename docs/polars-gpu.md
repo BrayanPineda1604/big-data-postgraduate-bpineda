@@ -33,11 +33,10 @@ Comprobar en una terminal Linux:
 
 ```bash
 nvidia-smi
-command -v nvcc
 nvcc --version
 ```
 
-`nvidia-smi` debe mostrar la GPU y el controlador; `nvcc` debe indicar el Toolkit seleccionado. Si falta `nvcc`, completar la instalación del Toolkit o su PATH antes de continuar.
+`nvidia-smi` debe mostrar la GPU y el controlador; `nvcc --version`, la versión del CUDA Toolkit seleccionado. Comparar esa versión con la combinación CUDA/RAPIDS elegida. Si `nvcc` no se encuentra, revisar la instalación del Toolkit y su PATH.
 
 ## 3. Preparar NVIDIA en Windows con WSL 2
 
@@ -54,11 +53,16 @@ wsl --list --verbose
 
 ```bash
 nvidia-smi
-# Si el comando no está en PATH, comprobar la ubicación habitual de WSL:
-/usr/lib/wsl/lib/nvidia-smi
-command -v nvcc
 nvcc --version
 ```
+
+Si `nvidia-smi` responde «command not found», probar su ubicación habitual en WSL:
+
+```bash
+/usr/lib/wsl/lib/nvidia-smi
+```
+
+Si tampoco existe esa ruta o no se detecta la GPU, revisar el controlador de Windows y la configuración de WSL antes de continuar. Si `nvcc` no se encuentra, revisar la instalación del Toolkit y su PATH **dentro de WSL**.
 
 **No instalar un controlador NVIDIA Linux dentro de WSL.** Windows proporciona el controlador a WSL. Para la ruta CUDA 12, elegir el paquete Toolkit de la versión seleccionada, con nombre del tipo `cuda-toolkit-12-x`; `x` representa la versión menor real. Evitar los metapaquetes `cuda`, `cuda-12-x` y `cuda-drivers` que intentan instalar el controlador Linux. [Instrucciones oficiales CUDA en WSL](https://docs.nvidia.com/cuda/wsl-user-guide/index.html).
 
