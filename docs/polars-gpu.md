@@ -175,11 +175,13 @@ Seleccionar el kernel CPU del curso. Activar otro entorno en una terminal no cam
 
 Después de verificar la suma GPU de esta guía, abrir
 [04_Rendimiento_y_eventos_update1.ipynb](../kit/Notebooks/04_Rendimiento_y_eventos_update1.ipynb).
-La práctica compara la misma agrupación PQRS en Polars CPU y GPU con muestras
-o completos ya preparados. Revisar [P04](../talleres/P04.md) para rutas,
-preparación y alcance de los tiempos. El notebook permite CPU sin NVIDIA,
-no instala dependencias y exige `raise_on_fail=True` cuando se solicita GPU.
-Registrar la combinación instalada con los comandos de la sección 8.
+Su segunda parte descarga o reutiliza tres CSV completos PQRS verificados,
+convierte y comprueba los tres Parquet dentro del notebook y compara las mismas
+agregaciones con pandas CPU, Polars CPU y Polars GPU. Empezar en L1;
+no requiere los productos de P02. Revisar [P04](../talleres/P04.md) para el flujo
+y las fronteras de medición. No instala dependencias y exige
+`raise_on_fail=True` para GPU. Registrar la combinación instalada con la sección 8.
+El laboratorio se entrega sin ejecutar; no se certifica rendimiento GPU.
 
 | Síntoma | Acción |
 |---|---|
