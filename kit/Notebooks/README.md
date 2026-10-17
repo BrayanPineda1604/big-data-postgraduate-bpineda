@@ -59,6 +59,9 @@ Polars CPU y Polars GPU. Incluye equivalencia, calentamiento, tres repeticiones,
 controles por periodo y fronteras de tiempo explícitas. Empezar en L1, sin P02.
 GPU requiere el entorno NVIDIA verificado. Se entrega sin ejecutar y su
 evidencia forma parte de P04, sin otra entrega.
+Desde `kit/`, el laboratorio usa `python 00_datos.py --descargar pqrs-completos`
+y `python 00_datos.py --verificar pqrs-completos`. El grupo `pqrs` conserva
+su significado: solo tres muestras.
 
 El notebook 04 lee los productos de P02 (`kit/salidas/pandas/P02`); no ejecuta `lab.formatos` ni `lab.benchmark`. Presenta cinco celdas medidas: pandas, Polars, DuckDB sobre Parquet, sobre particiones y sobre CSV. Cada una incluye lectura, agregación y materialización del resultado en pandas; las verificaciones y visualizaciones quedan fuera. Una vuelta de calentamiento y tres vueltas alternadas generan `benchmark_notebook.csv` y su resumen en `kit/salidas/pandas/P04`. Los tiempos del kernel no se mezclan con el benchmark CLI, que además incluye procesos nuevos, exportación y sondeo RSS.
 

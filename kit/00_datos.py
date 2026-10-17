@@ -1,4 +1,4 @@
-"""Descarga o verifica fuentes del curso y muestras PQRS. Solo biblioteca estándar."""
+"""Descarga o verifica fuentes del curso y PQRS (muestras o completos). Solo biblioteca estándar."""
 from pathlib import Path
 import argparse, csv, hashlib, json, shutil, urllib.request, zipfile
 ROOT = Path(__file__).resolve().parent
@@ -7,10 +7,11 @@ P = argparse.ArgumentParser(description=__doc__)
 P.add_argument('--listar', action='store_true')
 P.add_argument('--descargar', nargs='+', metavar='ID')
 P.add_argument('--respaldo', type=Path, help='Carpeta raw de una copia del kit')
-P.add_argument('--verificar', nargs='*', metavar='ID', help='Sin IDs: 12 fuentes agroambientales; pqrs: tres muestras PQRS')
+P.add_argument('--verificar', nargs='*', metavar='ID', help='Sin IDs: 12 fuentes agroambientales; pqrs: tres muestras; pqrs-completos: tres CSV completos')
 args = P.parse_args()
 fuentes = json.loads((ROOT/'fuentes.json').read_text(encoding='utf-8'))['fuentes']
 muestras = []
+completos = []
 for f in json.loads((ROOT/'pqrs_fuentes.json').read_text(encoding='utf-8')):
     nombre = 'Muestra_1000_' + f['periodo'] + '.csv'
     muestras.append({'id': 'pqrs_' + f['periodo'], 'archivo': nombre,
@@ -18,14 +19,27 @@ for f in json.loads((ROOT/'pqrs_fuentes.json').read_text(encoding='utf-8')):
         'bytes': f['bytes_muestra'], 'sha256': f['sha256_muestra'],
         'metodo': 'http', 'alcance': 'muestra', 'carpeta': 'pqrs_muestras',
         'separador': f['separador'], 'columnas': f['columnas'], 'filas': f['filas_muestra']})
-catalogo = fuentes + muestras
+    completos.append({'id': 'pqrs_completo_' + f['periodo'], 'archivo': f['archivo'],
+        'url': f['url'], 'bytes': f['bytes'], 'sha256': f['sha256'],
+        'metodo': 'http', 'alcance': 'completo', 'carpeta': 'pqrs_completos',
+        'separador': f['separador'], 'columnas': f['columnas'], 'filas': f['filas']})
+catalogo = fuentes + muestras + completos
+
+def sha256_archivo(path):
+    """Calcula la huella por bloques, sin cargar CSV completos en RAM."""
+    huella = hashlib.sha256()
+    with path.open('rb') as stream:
+        for bloque in iter(lambda: stream.read(1024 * 1024), b''):
+            huella.update(bloque)
+    return huella.hexdigest()
 
 def seleccionar(ids):
-    conocidos = {f['id'] for f in catalogo} | {'pqrs'}
+    conocidos = {f['id'] for f in catalogo} | {'pqrs', 'pqrs-completos'}
     desconocidos = set(ids) - conocidos
     if desconocidos: P.error(f'IDs desconocidos: {sorted(desconocidos)}')
     elegidos = set(ids)
     if 'pqrs' in elegidos: elegidos.update(f['id'] for f in muestras)
+    if 'pqrs-completos' in elegidos: elegidos.update(f['id'] for f in completos)
     return [f for f in catalogo if f['id'] in elegidos]
 
 def destino(f):
@@ -37,6 +51,8 @@ fallos_descarga = []
 RAW.mkdir(parents=True, exist_ok=True)
 if args.listar:
     print('pqrs: grupo de tres muestras (3.000 filas), destino data/pqrs_muestras; no descarga completos')
+    print(f"pqrs-completos: {len(completos)} CSV completos, {sum(f['filas'] for f in completos):,} reportes, "
+          f"{sum(f['bytes'] for f in completos)/1e9:.3f} GB; destino data/pqrs_completos")
     for f in catalogo:
         print(f"{f['id']:20} {f['bytes']/1e6:8.3f} MB  {f['alcance']:8} {f['metodo']}")
 if args.respaldo:
@@ -44,10 +60,10 @@ if args.respaldo:
         src = args.respaldo/f['archivo']; dst = RAW/f['archivo']
         if src.resolve() == dst.resolve(): continue
         if not src.exists(): raise SystemExit(f'Falta {src}')
-        if hashlib.sha256(src.read_bytes()).hexdigest() != f['sha256']:
+        if sha256_archivo(src) != f['sha256']:
             raise SystemExit(f'El respaldo no coincide con la versión docente: {src}')
         if dst.exists():
-            if hashlib.sha256(dst.read_bytes()).hexdigest() != f['sha256']:
+            if sha256_archivo(dst) != f['sha256']:
                 raise SystemExit(f'No se sobrescribe una versión diferente: {dst}')
         else: shutil.copy2(src, dst)
 if args.descargar:
@@ -55,7 +71,7 @@ if args.descargar:
         dst = destino(f)
         dst.parent.mkdir(parents=True, exist_ok=True)
         if dst.exists():
-            if hashlib.sha256(dst.read_bytes()).hexdigest() != f['sha256']:
+            if sha256_archivo(dst) != f['sha256']:
                 fallos_descarga.append(f['id'])
                 print(f"Versión distinta: {dst}. No se sobrescribe; revisar o conservar aparte antes de descargar.")
             else:
@@ -66,6 +82,7 @@ if args.descargar:
         temp = dst.with_suffix(dst.suffix+'.part')
         limit = max(f['bytes']*3, 2_000_000)
         try:
+            print('Descargando:', f['archivo'], f['url'], flush=True)
             with urllib.request.urlopen(f['url'], timeout=60) as response, temp.open('wb') as w:
                 ct = response.headers.get('Content-Type','').lower(); n=0
                 if 'text/html' in ct: raise ValueError('El servidor entregó HTML en lugar de datos')
@@ -75,7 +92,7 @@ if args.descargar:
                     n += len(chunk)
                     if n > limit: raise ValueError(f'Descarga supera el límite docente de {limit/1e6:.1f} MB')
                     w.write(chunk)
-            if hashlib.sha256(temp.read_bytes()).hexdigest() != f['sha256']:
+            if sha256_archivo(temp) != f['sha256']:
                 changed=dst.with_suffix(dst.suffix+'.nueva'); temp.replace(changed)
                 raise ValueError(f'La fuente cambió; se conserva en {changed.name}. Revisar esquema y controles antes de sustituir el corte docente.')
             temp.replace(dst); print('Descargado:',dst.name)
@@ -90,7 +107,7 @@ if args.verificar is not None:
         if not file.exists(): r['estado']='ausente'
         else:
             r['bytes']=file.stat().st_size
-            r['sha256']=hashlib.sha256(file.read_bytes()).hexdigest()
+            r['sha256']=sha256_archivo(file)
             r['estado']='coincide' if r['sha256']==f['sha256'] else 'version_distinta'
             if file.suffix=='.csv':
                 with file.open(encoding='utf-8-sig',newline='') as stream:
