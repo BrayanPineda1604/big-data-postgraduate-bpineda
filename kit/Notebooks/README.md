@@ -51,12 +51,19 @@ P02 explica `read_csv`, selección y conversión, `concat`, `groupby`, `to_csv`,
 
 ## Desde P04: operaciones y tiempos visibles
 
-Ampliación opcional: [P04 Polars CPU y GPU](04_Rendimiento_y_eventos_update1.ipynb) conserva
-la agrupación PQRS por corte, año, mes y departamento. Usa los productos de P02
-o los completos preparados según P04. Se ejecuta primero en CPU; GPU requiere
-el entorno NVIDIA separado y verificado. Incluye equivalencia, calentamiento,
-tres repeticiones y fronteras de medición explícitas. Sus evidencias se integran
-en P04, sin otra entrega. La ejecución CUDA queda pendiente de validación real.
+[04 update1: laboratorio de completos](04_Rendimiento_y_eventos_update1.ipynb)
+conserva las 31 celdas del notebook original y reemplaza su segunda parte con
+un flujo independiente: verificar/descargar tres CSV completos PQRS,
+leer y convertir todos a Parquet con Polars y analizar los mismos datos con pandas CPU,
+Polars CPU y Polars GPU. Incluye equivalencia, calentamiento, tres repeticiones,
+controles por periodo y fronteras de tiempo explícitas. Los ejercicios son
+municipios con más quejas y sus departamentos por periodo, y municipios con
+más quejas por grupo etario y género. Empezar en L1, sin P02.
+GPU requiere el entorno NVIDIA verificado. Se entrega sin ejecutar y su
+evidencia forma parte de P04, sin otra entrega.
+Desde `kit/`, el laboratorio usa `python 00_datos.py --descargar pqrs-completos`
+y `python 00_datos.py --verificar pqrs-completos`. El grupo `pqrs` conserva
+su significado: solo tres muestras.
 
 El notebook 04 lee los productos de P02 (`kit/salidas/pandas/P02`); no ejecuta `lab.formatos` ni `lab.benchmark`. Presenta cinco celdas medidas: pandas, Polars, DuckDB sobre Parquet, sobre particiones y sobre CSV. Cada una incluye lectura, agregación y materialización del resultado en pandas; las verificaciones y visualizaciones quedan fuera. Una vuelta de calentamiento y tres vueltas alternadas generan `benchmark_notebook.csv` y su resumen en `kit/salidas/pandas/P04`. Los tiempos del kernel no se mezclan con el benchmark CLI, que además incluye procesos nuevos, exportación y sondeo RSS.
 
