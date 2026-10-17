@@ -54,9 +54,11 @@ P02 explica `read_csv`, selección y conversión, `concat`, `groupby`, `to_csv`,
 [04 update1: laboratorio de completos](04_Rendimiento_y_eventos_update1.ipynb)
 conserva las 31 celdas del notebook original y reemplaza su segunda parte con
 un flujo independiente: verificar/descargar tres CSV completos PQRS,
-comprobar/convertir todos a Parquet y analizar los mismos datos con pandas CPU,
+leer y convertir todos a Parquet con Polars y analizar los mismos datos con pandas CPU,
 Polars CPU y Polars GPU. Incluye equivalencia, calentamiento, tres repeticiones,
-controles por periodo y fronteras de tiempo explícitas. Empezar en L1, sin P02.
+controles por periodo y fronteras de tiempo explícitas. Los ejercicios son
+municipios con más quejas y sus departamentos por periodo, y municipios con
+más quejas por grupo etario y género. Empezar en L1, sin P02.
 GPU requiere el entorno NVIDIA verificado. Se entrega sin ejecutar y su
 evidencia forma parte de P04, sin otra entrega.
 Desde `kit/`, el laboratorio usa `python 00_datos.py --descargar pqrs-completos`
