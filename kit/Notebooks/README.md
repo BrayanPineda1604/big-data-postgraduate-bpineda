@@ -23,8 +23,9 @@ Como referencia durante las prácticas, consultar la [guía práctica de pandas]
 | [06 Spark: joins y ventanas](06_Spark_joins_y_ventanas.ipynb) | E07 · clase 6, 17 de octubre | Cardinalidad, broadcast, top 3 y particiones |
 | [04 Rendimiento y eventos](04_Rendimiento_y_eventos.ipynb) | P04 · clase 7; I01 · clase 8 | Equivalencia entre motores y traza finita NASA |
 | [04 Rendimiento Analysis](04_Rendimiento_Analysis.ipynb) | P04 actualizado · clases 7–8 | Seis cortes 2023–2025, equivalencia Polars–DuckDB y benchmark Polars–pandas |
+| [08 Streaming de eventos](08_Streaming_de_Eventos.ipynb) | I01 y E11 · clase 8 | Traza finita, ventanas, watermark, estado, checkpoint, recuperación y auditoría |
 
-El notebook 04 original se conserva sin cambios y se usa en dos momentos: detenerse tras el benchmark en clase 7 y ejecutar la sección de eventos en clase 8. Los eventos requieren `data/raw/nasa.json`, que se descarga desde el manifiesto agroambiental. El nuevo notebook Analysis implementa por separado el panorama completo de P04 y no modifica los notebooks anteriores.
+El notebook 04 original se conserva sin cambios. El nuevo notebook Analysis desarrolla por separado el panorama completo de P04. Para streaming, el notebook 08 reúne I01 y la reproducción E11 en una sola progresión; usa `data/raw/nasa.json`, que se descarga desde el manifiesto agroambiental. Los notebooks anteriores no se modifican.
 
 Seleccionar **BigData · WSL Ubuntu 26.04 · Python 3.12** en Windows/WSL o **BigData · Linux/macOS · Python 3.12** en instalación nativa. Instalar las dependencias mediante la guía correspondiente.
 
