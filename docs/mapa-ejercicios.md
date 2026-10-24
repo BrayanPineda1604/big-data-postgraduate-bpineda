@@ -49,7 +49,7 @@ Para la ruta agroambiental: `talleres.py calidad` → `talleres.py consultas` �
 
 ## Límites del alcance
 
-P04 exige los seis cortes semestrales completos de 2023, 2024 y 2025. La preparación incluye localizar los archivos faltantes en el portal oficial, conservar huellas y procedencia, conciliar primero Polars con DuckDB y construir una entrada Parquet común. El benchmark posterior compara Polars con pandas mediante calentamiento y tres repeticiones; la preparación y la descarga quedan fuera del reloj.
+P04 exige los seis cortes semestrales completos de 2023, 2024 y 2025. La preparación incluye localizar los archivos faltantes en el portal oficial, conservar huellas y procedencia, conciliar primero Polars con DuckDB y construir una entrada Parquet común. El benchmark posterior compara Polars con pandas mediante calentamiento y tres repeticiones; la preparación y la descarga quedan fuera del reloj. La ejecución guiada está en [04 Rendimiento Analysis](../kit/Notebooks/04_Rendimiento_Analysis.ipynb).
 
 I01 no implementa recuperación ni toda la semántica de Spark. E11 crea un checkpoint nuevo por ejecución: el entregable básico es una traza y un análisis de recuperación, no afirmar que se probó reinicio desde el mismo estado. Un experimento de recuperación real puede sustituir una ampliación si se implementa y documenta.
 
