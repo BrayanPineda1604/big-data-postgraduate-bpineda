@@ -4,7 +4,7 @@ Preparado por el PhD Esteban Hernández, CyberColombia.
 
 P01: 3 de octubre. P02: 9 de octubre. P03: 10 de octubre. P04: 23 de octubre. I01: 24 de octubre. Los notebooks acompañan los talleres y comparten las horas de clase; no añaden entregas obligatorias.
 
-Preparar el `.venv` base CPU de la raíz según la guía [Windows/WSL](../../docs/instalacion-wsl.md) o [Linux/macOS](../../docs/instalacion-linux-macos.md). En instalación nativa, adaptar `repositorio` o `REPO` a la ruta real como indica esa guía. Abrir desde `kit/` o `kit/Notebooks/`, usar el mismo entorno Python y ejecutar en orden. Los prerrequisitos son explícitos: P03 y P04 leen los productos de P02; P03 requiere DIVIPOLA; no ejecuta P02 ni descarga fuentes silenciosamente.
+Preparar el `.venv` base CPU de la raíz según la guía [Windows/WSL](../../docs/instalacion-wsl.md) o [Linux/macOS](../../docs/instalacion-linux-macos.md). En instalación nativa, adaptar `repositorio` o `REPO` a la ruta real como indica esa guía. Abrir desde `kit/` o `kit/Notebooks/`, usar el mismo entorno Python y ejecutar en orden. P03 lee los productos de P02 y requiere DIVIPOLA. P04 sigue ahora una ruta independiente con seis cortes completos de 2023–2025, descrita en su enunciado, y no debe sustituirse por la muestra producida en P02.
 
 Para crear o comprobar el entorno y el kernel, consultar [entornos por plataforma](../../docs/entornos-virtuales.md). La [ampliación NVIDIA GPU](../../docs/polars-gpu.md) usa `.venv-gpu` y su propio kernel; no es necesaria para estos notebooks.
 
@@ -21,9 +21,9 @@ Como referencia durante las prácticas, consultar la [guía práctica de pandas]
 | [03 Calidad y consulta](03_Calidad_y_consulta.ipynb) | P03 · clase 4 | Calidad sin exclusiones arbitrarias y consulta diferida de 2024 |
 | [05 Spark: lectura y agregación](05_Spark_lectura_y_agregacion.ipynb) | E07 · clase 5, 16 de octubre | CSV, conversión, Parquet, plan y equivalencia con DuckDB |
 | [06 Spark: joins y ventanas](06_Spark_joins_y_ventanas.ipynb) | E07 · clase 6, 17 de octubre | Cardinalidad, broadcast, top 3 y particiones |
-| [04 Rendimiento y eventos](04_Rendimiento_y_eventos.ipynb) | P04 · clase 7; I01 · clase 8 | Equivalencia entre motores y traza finita NASA |
+| [04 Rendimiento y eventos](04_Rendimiento_y_eventos.ipynb) | Referencia metodológica de P04; I01 · clase 8 | Ejemplo acotado de equivalencia y traza finita NASA |
 
-El notebook 04 se usa en dos momentos: detenerse tras el benchmark en clase 7 y ejecutar la sección de eventos en clase 8. Los eventos requieren `data/raw/nasa.json`, que se descarga desde el manifiesto agroambiental. Los notebooks no incorporan descargas de 1,816 GB como paso automático.
+El notebook 04 conserva un ejemplo acotado del protocolo y la sección I01. No implementa la práctica completa de P04 con los seis cortes 2023–2025. Los eventos requieren `data/raw/nasa.json`, que se descarga desde el manifiesto agroambiental.
 
 Seleccionar **BigData · WSL Ubuntu 26.04 · Python 3.12** en Windows/WSL o **BigData · Linux/macOS · Python 3.12** en instalación nativa. Instalar las dependencias mediante la guía correspondiente.
 
@@ -51,19 +51,11 @@ P02 explica `read_csv`, selección y conversión, `concat`, `groupby`, `to_csv`,
 
 ## Desde P04: operaciones y tiempos visibles
 
-[04 update1: laboratorio de completos](04_Rendimiento_y_eventos_update1.ipynb)
-conserva las 31 celdas del notebook original y reemplaza su segunda parte con
-un flujo independiente: verificar/descargar tres CSV completos PQRS,
-leer y convertir todos a Parquet con Polars y analizar los mismos datos con pandas CPU,
-Polars CPU y Polars GPU. Incluye equivalencia, calentamiento, tres repeticiones,
-controles por periodo y fronteras de tiempo explícitas. Los ejercicios son
-municipios con más quejas y sus departamentos por periodo, y municipios con
-más quejas por grupo etario y género. Empezar en L1, sin P02.
-GPU requiere el entorno NVIDIA verificado. Se entrega sin ejecutar y su
-evidencia forma parte de P04, sin otra entrega.
-Desde `kit/`, el laboratorio usa `python 00_datos.py --descargar pqrs-completos`
-y `python 00_datos.py --verificar pqrs-completos`. El grupo `pqrs` conserva
-su significado: solo tres muestras.
+[04 update1: laboratorio anterior de completos](04_Rendimiento_y_eventos_update1.ipynb)
+se conserva como referencia histórica de pandas, Polars CPU y Polars GPU sobre
+tres cortes. No cubre 2023-I ni 2025-I/II y no sustituye el P04 vigente. El
+ejercicio actual se rige por [P04](../../talleres/P04.md): seis cortes completos,
+lectura inicial Polars–DuckDB, entrada común y benchmark Polars–pandas.
 
 El notebook 04 lee los productos de P02 (`kit/salidas/pandas/P02`); no ejecuta `lab.formatos` ni `lab.benchmark`. Presenta cinco celdas medidas: pandas, Polars, DuckDB sobre Parquet, sobre particiones y sobre CSV. Cada una incluye lectura, agregación y materialización del resultado en pandas; las verificaciones y visualizaciones quedan fuera. Una vuelta de calentamiento y tres vueltas alternadas generan `benchmark_notebook.csv` y su resumen en `kit/salidas/pandas/P04`. Los tiempos del kernel no se mezclan con el benchmark CLI, que además incluye procesos nuevos, exportación y sondeo RSS.
 
