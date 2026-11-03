@@ -1,0 +1,36 @@
+{
+  "filas_eva_entrada": 8,
+  "filas_unificado": 8,
+  "filas_aptas_rendimiento": 7,
+  "eva_sin_divipola": 1,
+  "agrosavia_enlazadas": 6,
+  "agrosavia_sin_enlace": 1,
+  "agrosavia_por_alias": 2,
+  "filas_suelo": 5,
+  "filas_sin_correspondencia": 2,
+  "particiones": 5,
+  "cobertura_suelo_pct": 75.0,
+  "produccion_total_t": 1809.0,
+  "area_cosechada_total_ha": 165.0,
+  "suelo": [
+    {
+      "codigo_municipio": "15001",
+      "anio": 2021,
+      "muestras": 2,
+      "mediana_ph": 5.5
+    },
+    {
+      "codigo_municipio": "15001",
+      "anio": 2022,
+      "muestras": 1,
+      "mediana_ph": null
+    },
+    {
+      "codigo_municipio": "54001",
+      "anio": 2021,
+      "muestras": 1,
+      "mediana_ph": 7.0
+    }
+  ],
+  "area_cosechada_m2_fila_2": 100000.0
+}

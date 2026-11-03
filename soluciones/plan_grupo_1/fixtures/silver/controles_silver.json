@@ -1,0 +1,137 @@
+{
+  "run_id": "c9512e696006",
+  "fecha": "2026-10-31T12:02:14-05:00",
+  "estado": "valida",
+  "version_notebook": "G1_02_silver 1.0.0",
+  "version_reglas": "g1-silver-v1",
+  "entrada": "soluciones/plan_grupo_1/fixtures/raw",
+  "salida": "kit/salidas/grupo_1/c9512e696006/silver",
+  "firma_entrada": "39623be9824f258cbad33c08db31e0fe04468e5932bed8226ba7b780389542dd",
+  "firma_contenido": "d4b72ec4748525dcc16e0fbcea6b8bb27bb123f7d317409de6300a7bc6e7c199",
+  "firmas": {
+    "unificado": "5895951fecc19555d87edefbcb076e6686bb553f8cfac3a3a22c29817a1bcad3",
+    "dim_municipio": "247861d6133aa4264081041e85f86a6acd39e7c55b84751c78884a8572a07e74",
+    "suelo_municipio_anio": "7fef8eab8737be4ea21a8b55fd1a0ac0a9328d7d13ac5b82c12de46a4de371b7",
+    "sin_correspondencia": "0335441ab6b0ebe37ef62e19e831bf56a9f0554e24abee4314cae2e8e572efce"
+  },
+  "agrosavia_entrada": 7,
+  "agrosavia_enlazadas": 6,
+  "agrosavia_sin_enlace": 1,
+  "agrosavia_por_alias": 2,
+  "filas_eva_entrada": 8,
+  "filas_unificado": 8,
+  "filas_aptas_rendimiento": 7,
+  "eva_sin_divipola": 1,
+  "cobertura_suelo_pct": 75.0,
+  "produccion_total_t": 1809.0,
+  "area_cosechada_total_ha": 165.0,
+  "particiones": 5,
+  "memoria_mb_antes": 85.8,
+  "memoria_mb_despues": 78.9,
+  "controles": {
+    "raw_valida": true,
+    "eva_codigo_departamento_2_digitos": true,
+    "eva_codigo_municipio_5_digitos": true,
+    "divipola_codigo_departamento_2_digitos": true,
+    "divipola_codigo_municipio_5_digitos": true,
+    "eva_municipio_en_su_departamento": true,
+    "divipola_codigo_unico": true,
+    "divipola_clave_unica": true,
+    "divipola_clave_normalizada": true,
+    "agrosavia_clave_normalizada": true,
+    "eva_fila_fuente_unica": true,
+    "agrosavia_fila_fuente_unica": true,
+    "salida_nueva": true,
+    "dim_clave_unica": true,
+    "alias_usados_existen_en_divipola": true,
+    "alias_origen_no_existe_en_divipola": true,
+    "agrosavia_conserva_filas": true,
+    "agrosavia_enlazadas_mas_sin_enlace": true,
+    "suelo_clave_unica": true,
+    "suelo_muestras_conciliadas": true,
+    "unificado_conserva_filas_eva": true,
+    "sumas_por_anio_sin_cambio": true,
+    "sumas_totales_sin_cambio": true,
+    "sin_correspondencia_agrosavia": true,
+    "sin_correspondencia_eva": true,
+    "relectura_unificado_filas": true,
+    "relectura_unificado_firma": true,
+    "relectura_codigo_departamento_texto": true,
+    "relectura_dim_municipio": true,
+    "relectura_suelo_municipio_anio": true,
+    "relectura_sin_correspondencia": true,
+    "particiones_anio_departamento": true,
+    "esperado_filas_eva_entrada": true,
+    "esperado_filas_unificado": true,
+    "esperado_filas_aptas_rendimiento": true,
+    "esperado_eva_sin_divipola": true,
+    "esperado_agrosavia_enlazadas": true,
+    "esperado_agrosavia_sin_enlace": true,
+    "esperado_agrosavia_por_alias": true,
+    "esperado_filas_suelo": true,
+    "esperado_filas_sin_correspondencia": true,
+    "esperado_particiones": true,
+    "esperado_cobertura_suelo_pct": true,
+    "esperado_produccion_total_t": true,
+    "esperado_area_cosechada_total_ha": true,
+    "esperado_suelo_15001_2021": true,
+    "esperado_suelo_15001_2022": true,
+    "esperado_suelo_54001_2021": true,
+    "esperado_area_m2_fila_2": true
+  },
+  "errores": [],
+  "entorno": {
+    "capa": "silver",
+    "responsable": "Brayan",
+    "equipo_descripcion": "Portátil personal · Fedora 44",
+    "version_notebook": "G1_02_silver 1.0.0",
+    "version_reglas": "g1-silver-v1",
+    "fecha": "2026-10-31T12:02:14-05:00",
+    "zona_horaria": "America/Bogota",
+    "sistema": {
+      "plataforma": "Linux-7.2.13-200.fc44.x86_64-x86_64-with-glibc2.43",
+      "wsl": false,
+      "arquitectura": "x86_64",
+      "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor",
+      "nucleos_logicos": 8,
+      "ram_total_gb": 30.5
+    },
+    "python": {
+      "version": "3.12.14",
+      "implementacion": "CPython",
+      "interprete": ".venv/bin/python"
+    },
+    "librerias": {
+      "pandas": {
+        "instalada": "2.2.3",
+        "requerida": "2.2.3",
+        "coincide": true
+      },
+      "numpy": {
+        "instalada": "2.2.6",
+        "requerida": "2.2.6",
+        "coincide": true
+      },
+      "pyarrow": {
+        "instalada": "19.0.1",
+        "requerida": "19.0.1",
+        "coincide": true
+      },
+      "duckdb": {
+        "instalada": "1.4.1",
+        "requerida": "1.4.1",
+        "coincide": true
+      },
+      "ipykernel": {
+        "instalada": "6.30.1",
+        "requerida": "6.30.1",
+        "coincide": true
+      }
+    },
+    "git": {
+      "rama": "collaborators/bpineda",
+      "commit": "0881686",
+      "notebook_con_cambios_sin_commit": true
+    }
+  }
+}

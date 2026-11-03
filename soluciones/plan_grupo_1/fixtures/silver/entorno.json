@@ -1,0 +1,54 @@
+{
+  "capa": "silver",
+  "responsable": "Brayan",
+  "equipo_descripcion": "Portátil personal · Fedora 44",
+  "version_notebook": "G1_02_silver 1.0.0",
+  "version_reglas": "g1-silver-v1",
+  "fecha": "2026-10-31T12:02:14-05:00",
+  "zona_horaria": "America/Bogota",
+  "sistema": {
+    "plataforma": "Linux-7.2.13-200.fc44.x86_64-x86_64-with-glibc2.43",
+    "wsl": false,
+    "arquitectura": "x86_64",
+    "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor",
+    "nucleos_logicos": 8,
+    "ram_total_gb": 30.5
+  },
+  "python": {
+    "version": "3.12.14",
+    "implementacion": "CPython",
+    "interprete": ".venv/bin/python"
+  },
+  "librerias": {
+    "pandas": {
+      "instalada": "2.2.3",
+      "requerida": "2.2.3",
+      "coincide": true
+    },
+    "numpy": {
+      "instalada": "2.2.6",
+      "requerida": "2.2.6",
+      "coincide": true
+    },
+    "pyarrow": {
+      "instalada": "19.0.1",
+      "requerida": "19.0.1",
+      "coincide": true
+    },
+    "duckdb": {
+      "instalada": "1.4.1",
+      "requerida": "1.4.1",
+      "coincide": true
+    },
+    "ipykernel": {
+      "instalada": "6.30.1",
+      "requerida": "6.30.1",
+      "coincide": true
+    }
+  },
+  "git": {
+    "rama": "collaborators/bpineda",
+    "commit": "0881686",
+    "notebook_con_cambios_sin_commit": true
+  }
+}

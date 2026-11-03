@@ -1,0 +1,35 @@
+[
+  {
+    "id": "eva",
+    "ruta": "fixture:eva",
+    "bytes": null,
+    "bytes_esperados": null,
+    "sha256": null,
+    "sha256_esperado": null,
+    "coincide": true,
+    "filas_leidas": 9,
+    "columnas": []
+  },
+  {
+    "id": "divipola",
+    "ruta": "fixture:divipola",
+    "bytes": null,
+    "bytes_esperados": null,
+    "sha256": null,
+    "sha256_esperado": null,
+    "coincide": true,
+    "filas_leidas": 4,
+    "columnas": []
+  },
+  {
+    "id": "agrosavia",
+    "ruta": "fixture:agrosavia",
+    "bytes": null,
+    "bytes_esperados": null,
+    "sha256": null,
+    "sha256_esperado": null,
+    "coincide": true,
+    "filas_leidas": 8,
+    "columnas": []
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "run_id": "fixture",
+  "firma_entrada": "fixture",
+  "estado": "valida",
+  "fuentes": {
+    "eva": {
+      "leidas": 9,
+      "aceptadas": 8,
+      "rechazadas": 1,
+      "motivos": {
+        "AREA_INVALIDA": 1
+      }
+    },
+    "divipola": {
+      "leidas": 4,
+      "aceptadas": 4,
+      "rechazadas": 0,
+      "motivos": {}
+    },
+    "agrosavia": {
+      "leidas": 8,
+      "aceptadas": 7,
+      "rechazadas": 1,
+      "motivos": {
+        "DUPLICADO_EXACTO": 1
+      }
+    }
+  },
+  "firmas_contenido": {},
+  "errores": [],
+  "entorno": {
+    "capa": "raw",
+    "responsable": "fixture",
+    "version_notebook": "generar_fixture_raw.py",
+    "python": {
+      "version": "3.12.14"
+    },
+    "librerias": {
+      "pandas": {
+        "instalada": "2.2.3"
+      },
+      "numpy": {
+        "instalada": "2.2.6"
+      },
+      "pyarrow": {
+        "instalada": "19.0.1"
+      }
+    }
+  }
+}
